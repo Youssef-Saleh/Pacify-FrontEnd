@@ -1,2 +1,2 @@
-# Pacify-FrontEnd
-Pacify's Front End Repository
+# Pacify
+Software Engineering Project

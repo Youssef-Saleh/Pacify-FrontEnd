@@ -1,0 +1,31 @@
+
+@font-face{
+
+        font-family: "circular";
+        src:url(./c.ttf)
+        
+}
+
+.help-header{
+    
+        background:  url(https://support.scdn.co/static/img/fw/search-mobile.png) top no-repeat #1c2963;
+        background-size:cover;
+        height: 380px;
+        color: cornsilk;
+        font-family: 'GOTHAM';
+        margin-top:0% ;
+        font-family: circular;
+}
+@media (max-width:800px){
+        .help-header{
+                height: 200px;
+        }
+        .find-account{
+                margin-left: 0px;
+                margin-top: 30px;
+        }
+}
+.help-header a{
+
+        color: cornsilk;
+}
