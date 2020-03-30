@@ -82,7 +82,7 @@
 }
 
 .slider-p {
-    display: block;
+    
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -92,6 +92,7 @@
     font-size: 18px;
     line-height: 1.5;
     color: #222326;
+    position: static;
 }
 .row h1{
 
@@ -104,7 +105,7 @@ carousel-inner>.item {
     display: none;
     position: relative;
 }
-.front-video .video-info a {
+.front-video .carousel-item a {
     display: block;
     padding: 10px;
     color: #000;
@@ -112,15 +113,18 @@ carousel-inner>.item {
     background-color: #fff;
     font-weight: 700;
 }
-.front-video .video-info a:focus, .front-video .video-info a:hover {
+ .front-video .carousel-item a:hover {
     color: #fff;
     background-color: #000;
 }
-.btn{
-    
+.carousel-item a{
+
+    border-radius: 500px;
     font-size: 14px;
     line-height: 2;
-    border-radius: 500px;
+}
+.btn{
+    
     padding: 16px 48px 18px;
     transition-property: background-color,border-color,color,box-shadow,filter;
     transition-duration: .3s;
@@ -135,8 +139,8 @@ carousel-inner>.item {
  #arrows{
 
         margin-top: 10px;
-        max-width: 100px;
-        margin-left: 3px;
+        max-width: 1000px;
+        margin-left: 0px;
     }
     #right{
         width: 2px;
@@ -145,3 +149,4 @@ carousel-inner>.item {
         margin-top: 10%;
         
     }
+    

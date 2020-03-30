@@ -5,80 +5,94 @@
     font-weight: normal;
     src: local('Andika Basic Regular'), url('../Containers/AndBasR.woff') format('woff');
     }
-@media screen and (max-width: 360px) {
-
-
-    #About{
-
-      display: flex;
-      flex-direction: column;
-      /* flex-wrap:initial; */
-      justify-content: top;
-      align-content: center; 
-      align-items: center;
-      background-color: black;
-      
-      }
-    #icon{
-      background-color: black;
-      order:1;
-    }
-    #company{
-      background-color: black;
-
-      order:2;
-    }
-    #communities{
-      background-color: black;
-
-      order: 3;
-    }
-    #usefulLinkes{
-      background-color: black;
-
-      order:4;
-    }
-    #icons{
-      background-color: black;
-
-      order: 5;
-    }
-
+.About {
+    position: relative;
+    text-align: center;
+    /* bottom: 10px; */
+    background: black;
+    height: 370px;
+    width: auto;
   }
-#About {
-   
-    height: 15rem;
-    background-color: black;
+.icon{
+    position: relative;
+    height: 60px;
+    left: 100px;
+    top:60px;
+    width: 110px;
+
   }
 
 .img1{
-    height: 3rem;
-    width: 8rem;
+    height: 60px;
+    width: 110px;
+  }
+.company{
+    position: relative;
+    height: 40px;
+    left: 300px;
+    top: 10px;
+    width: 150px;
+
+    
   }
 
 #c{
     font-family: 'Andika Basic Regular';
+    font-size:20px;
     color:#dcd4e4a9;
   
   }
 #C{
     font-family: 'Andika Basic Regular';
+    font-size:15px;
     color:white;
+  
+  }
+
+.communities{
+    position: relative;
+    height: 40px;
+    left: 500px;
+
+    bottom: 30px;
+    width: 150px;
+
+  }
+
+.usefulLinkes{
+    position: relative;
+    height: 40px;
+  
+    left: 700px;
+    bottom: 70px;
+    width: 150px;
+
+  }
+.icons{
+    position: relative;
+    height: 50px;
+    left: 1150px;
+    bottom: 100px;
+    width: 150px;
+
   }
 .imgi{
-    height: 3rem;
-    width: 3rem; 
-    padding: .5rem; 
+    height: 50px;
+    width: 50px; 
+    padding: 5px; 
+    /* background-color: rgb(99, 45, 81); */
   }
 .imgf{
-    height: 3rem;
-    width: 3rem; 
-    padding: .5rem;
+    height: 50px;
+    width: 50px; 
+    padding: 5px; 
+    /* background-color: rgb(99, 45, 81); */
   }
 .imgt{
-    height: 3rem;
-    width: 3rem; 
-    padding: .5rem;
+    height: 50px;
+    width: 50px; 
+    padding: 5px; 
+    /* background-color: rgb(99, 45, 81); */
   }
 .imgi,.imgf,.imgt
 {

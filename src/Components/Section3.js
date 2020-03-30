@@ -9,12 +9,12 @@ const Section3 =() => {
 
 
  return (
-    <div className= "tc " id="section3">
-        <img className= "pt4 w-40 " id="alldevices" src={alldevices} alt="logo" />
+    <div className="section3 ">
+        <img id="alldevices" src={alldevices} alt="logo" />
         <div className="header4">
-            <h2 id="h2section3" className="fw9 lh-copy white mb1">One account, listen everywhere!</h2>
+            <h2 id="h2section3" className="fw9 lh-copy">One account, listen everywhere!</h2>
         </div>
-        <div id="list" className='list tc'>
+        <div className='list tc'>
           <a className="para3" href="#"> MOBILE </a>
           <a className="para3" href="#"> COMPUTER </a>
           <a className="para3" href="#"> TABLET</a>

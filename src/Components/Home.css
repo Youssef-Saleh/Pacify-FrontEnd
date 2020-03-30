@@ -10,97 +10,63 @@
     font-weight: normal;
     src: local('Andika Basic Regular'), url('../Containers/AndBasR.woff') format('woff');
     }
-
-
-@media screen and (max-width: 360px) {
-
-
-    .Home{
-
-      display: flex;
-      flex-direction: column;
-      flex-wrap:initial;
-      justify-content: top;
-      align-content: top; 
-      align-items: center;
-      width: auto;
-      height: 740px;
-
-      
-      }
-    #H{
-      padding-top: 5rem;
-      font-size: 2rem;
-    }
-    #P{
-      font-size: 1rem;
-    }
-    #bu{
-      border-radius: 1rem;
-      padding: .5rem 1rem;
-
-    }
-    #Button{
-      position: relative;
-      right: 5rem;
-      /* padding-right: rem; */
-    }
-
-  }
-/* @media screen and (max-width: 500px) {
-    #Button{
-      padding-right: 30rem;
-    }
-  } */
 .Home{
     background: linear-gradient(to left,
      rgba(7,27,82,1)20%,
-     rgb(148, 49, 140)100%);
-    /* padding: 133px; */
-    /* background: image() left bottom  no-repeat rgb(33, 17, 70);  */
+     rgb(153, 50, 144)100%);
+    padding: 133px;
 
-    /* text-align: center; */
-    height: 40rem;
-    /* width: auto; */
+    text-align: center;
+    height: 90vh;
+    width: auto;
     
   }
-/* .title{
-
+.title{
+    position: relative;
+    text-align: center;
     height: 60px;
-  } */
+    top: 130px;
+  }
 
 #H{
     font-family: 'Redactor Regular';
-    text-align: center;
-
+    font-size: 40px;
     color: white;
   
   }
 #P{
     font-family: 'Andika Basic Regular';
+    font-size:20px;
     text-align: center;
 
     color:white;
   
   }
-/* 
-#prag{
+
+.prag{
     position: relative;
     text-align: center;
 
     height: 40px;
     top: 130px;
   
-  } */
-
-#bu {
+  }
+.Button{
+    position: relative;
+    height: 30px;
+    top: 130px;
+  
+  }
+.bu {
     background:linear-gradient(to left, rgb(65, 7, 31)20%,rgba(201, 23, 112, 0.534)80%);
     border: none;
-    border-radius: 3rem;
+    border-radius: 25px;
+    /* border: 2px solid #73AD21; */
     font-family: 'Andika Basic Regular';
     color: white;
-    padding: 1rem 2rem;
+    padding: 20px 40px;
     text-align: center;
+    /* className: grow bw2 shadow-5; */
+    font-size: 19px;
     cursor: pointer;
-    align-items: center;
   }

@@ -1,6 +1,6 @@
 import React from "react"
 import "./Sliders.css"
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-4-react'
 
 
 
@@ -30,14 +30,15 @@ return(
                                             </div>
                 </div>
             </div>
+            
             <div className="col-md-6 video-info-container" id="text">
                 <div id="carousel-videos" className="carousel slide" data-ride="carousel">
                     <div className="carousel-inner" role="listbox">
-                                                    <div className="video-info item">
-                                <h1 className='ml4 mb5 f-subheadline lh-title black'>Listen Offline</h1>
-                                <div className="row">
+                                 <div className=" carousel-item active" >
+                                <h1 className=' mb5  lh-title black' alt="First Slide">Listen Offline</h1>
+                                <div className="row ">
                                     <div className="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0">
-                                        <p>How to take your music with you in the car, on the plane, or wherever you may not be able to access the internet</p>
+                                        <p alt="First Slide">How to take your music with you in the car, on the plane, or wherever you may not be able to access the internet</p>
                                         <a className="btn js-ga-event" href="https://player.vimeo.com/video/122512075" data-open="modal" data-vimeo-id="122512075" data-ga-event-category="homepage_video" data-ga-event-action="play_button" data-ga-event-label="Listen Offline">
                                             <svg width="15" height="15" viewBox="0 0 39 48" xmlns="http://www.w3.org/2000/svg"><path d="M0 3.225V44.72c0 2.57 1.936 3.487 4.302 2.035L37.14 26.61c2.364-1.45 2.364-3.825 0-5.277L4.3 1.19C1.936-.263 0 .653 0 3.224z" fill="#000" fillRule="evenodd"></path></svg>
                                             Watch video
@@ -45,9 +46,9 @@ return(
                                     </div>
                                 </div>
                             </div>
-                                                    <div className="video-info item">
-                                <h1 className='ml4 mb5 f-subheadline lh-title black'>Spotify Connect</h1>
-                                <div className="row">
+                                                    <div className="carousel-item">
+                                <h1 className=' mb5  lh-title black'>Spotify Connect</h1>
+                                <div className="row ">
                                     <div className="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0">
                                         <p>Play Spotify on your speaker, sound system, or TV with Spotify Connect. Here's how!</p>
                                         <a className="btn js-ga-event" href="https://player.vimeo.com/video/126925524" data-open="modal" data-vimeo-id="126925524" data-ga-event-category="homepage_video" data-ga-event-action="play_button" data-ga-event-label="Spotify Connect">
@@ -57,9 +58,9 @@ return(
                                     </div>
                                 </div>
                             </div>
-                                                    <div className="video-info item active">
-                                <h1 className='ml4 mb5 f-subheadline lh-title black'>Spotify on Chromecast</h1>
-                                <div className="row">
+                                                    <div className="carousel-item">
+                                <h1 className=' mb5  lh-title black'>Spotify on Chromecast</h1>
+                                <div className="row ">
                                     <div className="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0">
                                         <p>Spotify on your Chromecast? You heard us right! Here's how to team them up!</p>
                                         <a className="btn js-ga-event" href="https://player.vimeo.com/video/143256102" data-open="modal" data-vimeo-id="143256102" data-ga-event-category="homepage_video" data-ga-event-action="play_button" data-ga-event-label="Spotify on Chromecast">
@@ -69,9 +70,9 @@ return(
                                     </div>
                                 </div>
                             </div>
-                                                    <div className="video-info item">
-                                <h1 className='ml4 mb5 f-subheadline lh-title black'>Make a Playlist</h1>
-                                <div className="row">
+                                                    <div className="carousel-item">
+                                <h1 className=' mb5  lh-title black'>Make a Playlist</h1>
+                                <div className="row ">
                                     <div className="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0">
                                         <p>Playlists are your personal mixtapes that you can share or collaborate on with friends. Here's how to get started.</p>
                                         <a className="btn js-ga-event" href="https://player.vimeo.com/video/122512074" data-open="modal" data-vimeo-id="122512074" data-ga-event-category="homepage_video" data-ga-event-action="play_button" data-ga-event-label="Make a Playlist">
@@ -81,8 +82,8 @@ return(
                                     </div>
                                 </div>
                             </div>
-                                                    <div className="video-info item">
-                                <h1 className='ml4 mb5 f-subheadline lh-title black'>Search</h1>
+                                                    <div className="carousel-item">
+                                <h1 className=' mb5  lh-title black'>Search</h1>
                                 <div className="row">
                                     <div className="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0">
                                         <p>Search is the key to Spotify's vast library of music, whether you're looking for a particular artist, album, or song; or if you want Spotify to find music to match a mood, activity, or time of day.</p>
@@ -113,6 +114,8 @@ return(
                                 </svg>
                                 <span className="sr-only">Next</span>
                             </a>
+                            
+    
                         </div>
                     </div>
                 </div>
