@@ -7,8 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Premium from './Containers/Premium'
 import 'tachyons'
 import App from './Pages/App'
-
-ReactDOM.render(<App></App>, document.getElementById('root'));
+import WebFrame from './Containers/WebFrame'
+ReactDOM.render(<WebFrame></WebFrame>, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change
