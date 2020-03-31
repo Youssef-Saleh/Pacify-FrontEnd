@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './SignUp.css';
+import { Link } from 'react-router-dom'
 
 class SignUpFooter extends Component{
     render(){
@@ -19,7 +20,7 @@ class SignUpFooter extends Component{
                     <p className='tc' className="SignUp_p_black" >
                         Already have an account? 
                         {/* <Link to="/Login/" target="_blank"> Login </Link> */}
-                        <a className="SignUp_a" href="#"> Login</a>
+                        <Link to='Login'><a className="SignUp_a" href="#"> Login</a></Link>
                     </p>
                 </div>
             </div>

@@ -33,6 +33,9 @@ class App extends Component{
                 <Route exact path='/'>
                     <HomePage></HomePage>
                 </Route>
+                <Route  path='/HomePage'>
+                    <HomePage></HomePage>
+                </Route>
             </Switch>    
         </Router>
       )
