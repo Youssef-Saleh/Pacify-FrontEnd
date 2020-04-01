@@ -7,6 +7,9 @@ import Download from '../Containers/Download'
 import HomePage from '../Containers/HomePage'
 import Login from '../Containers/Login'
 import SignUp from '../Containers/SignUp'
+import Albums from '../Containers/Albums'
+import Playlist from '../Containers/Playlist.js';
+
 class App extends Component{
   render(){
       return(

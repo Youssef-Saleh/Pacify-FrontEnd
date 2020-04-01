@@ -1,0 +1,14 @@
+
+   #AlbumCards:hover .box {
+    position:unset;
+    opacity:1;
+    pointer-events:auto;
+    position:absolute
+   }
+   #AlbumCards:focus-within .box {
+    position:unset;
+    opacity:1;
+    pointer-events:auto;
+    position:absolute
+   }
+
