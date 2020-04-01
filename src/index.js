@@ -10,7 +10,12 @@ import App from './Pages/App'
 import Playlist from './Containers/Playlist';
 import Albums from './Containers/Albums';
 
+import WebFrame from './Containers/WebFrame'
+import SearchPage from './Containers/SearchPage'
+
 ReactDOM.render(<App></App>, document.getElementById('root'));
+
+// ReactDOM.render(<WebFrame></WebFrame>, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change

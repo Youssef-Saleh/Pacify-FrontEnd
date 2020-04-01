@@ -1,0 +1,8 @@
+.CardC{
+    background: linear-gradient(to bottom ,
+    rgb(43, 95, 86)10%,
+    rgb(20, 24, 23)37%);
+    display: table;
+    height: 55rem; 
+    width: 100%;
+}

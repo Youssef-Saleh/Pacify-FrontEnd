@@ -4,6 +4,7 @@ import HeaderBackground from "../Components/HeaderBackground"
 import NavBar from '../Components/NavBar'
 import Sliders from '../Components/Sliders'
 import BlackNavBar from '../Components/BlackNavBar'
+import Paragraph from "../Components/Paragraph"
 
 const Help = () =>{
 
@@ -14,6 +15,7 @@ const Help = () =>{
             <BlackNavBar></BlackNavBar>
             <HeaderBackground></HeaderBackground>
             <Sliders></Sliders>
+            <Paragraph></Paragraph>
         </div>
     );
 }
