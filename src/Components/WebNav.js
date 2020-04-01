@@ -10,7 +10,7 @@ const WebNav=()=>{
             <Nav className='white mr3 ml-auto fw-500'>
                 <button id='nav-btn' className='white grow ba b--near-white mr3'>UPGRADE</button>
                 <Dropdown>
-                    <Dropdown.Toggle bg='black' id="dropdown-basic"  className='nav-drop'>User Name</Dropdown.Toggle>
+                    <Dropdown.Toggle bg='black' id="dropdown-basic"  className='nav-drop'><span className='white'>User Name</span></Dropdown.Toggle>
                     <Dropdown.Menu>
                         <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                         <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>

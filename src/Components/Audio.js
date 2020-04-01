@@ -10,8 +10,11 @@ const Player = () => (
   <AudioPlayer
     autoPlay
     src={cairokee}
-    onPlay={e => console.log("onPlay")}
+    //onPlay={e => console.log("onPlay")}
+    showJumpControls={false}
+    layout='stacked-reverse'
     showSkipControls
+
     // other props here
   />
 );
