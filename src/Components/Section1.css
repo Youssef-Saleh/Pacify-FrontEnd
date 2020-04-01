@@ -7,95 +7,86 @@
     }
      
 
-@media screen and (max-width: 600px) {
+
+/* @media screen and (max-width: 500px) {
+
+.lap{
+
+  position: relative;
+  bottom: 10rem;
+} */
+
+@media screen and (max-width: 375px) {
 
 
-    .section1{
+    #section1{
 
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-wrap: initial;
-      justify-content: center;
+      justify-content:center ;
       align-content: center; 
       align-items: center;
-     
+
+      
      }
 
-     .laptop{
+    .lap{
 
-      padding-bottom: 50px;
-      padding-right: 50px;
+       width: 13rem;
 
-      /* order:1; */
+       position: relative;
+       left:5rem;
+       top:5rem; 
+
+  
+        order:1;
      }
-    .header1{
-
+    #header1{
+      position: relative;
+      font-size: 1.5rem;
+      text-align: center;
       order:2;
     }
-    #header2{
+    #paraheader2{
+      /* text-align: center; */
       order:3;
     }
 
   }
 
-  .section1 {
+
   
-    background: linear-gradient(to left, rgb(5, 118, 122)40%, rgb(11, 94, 68)100%);
-    padding: 133px;
-    text-align: center;
-    /* height: 100vh; */
-    width:auto;
+  #section1 {
   
-    
+    background: linear-gradient(to left, rgb(5, 72, 75)40%, rgb(11, 94, 68)100%);
+    /* padding: 133px; */
+    height: 42rem;
+    /* background: url(https://image.freepik.com/free-vector/abstract-colorful-flow-shapes-background_23-2148240131.jpg) left bottom/800px  no-repeat rgb(239, 183, 2); */
+
+ 
   }
   
   h1 {
   
     font-family:'Myriad Web Pro';
-    color:white;
   }
   
-  u{
-  
-    color:white;
-    
-  }
-  
-  u:hover{
-   
-    color:rgb(95, 95, 95);
+
+/*   
+  #header1{
   
   }
   
-  .header1{
-    position: relative;
-    float:left;
-    top:100px;
-  }
-  
-  #paraheader2 {
+  /* #paraheader2 {
    margin-top: 90px;
    float: left;
    margin-left: 120px;   
-  }
+  } */ 
+  
+.lap {
+position: relative;
+top:7rem;
 
- #para2 {
-  color: black;
-  font-size: medium;
- }
-  
-  
-  #laptop {
-  
-    position: relative;
-    top: 80px;
-    left: 20px;
-    width: 250px;
-    height:250px;
-  }
-  #tick {
-    position: relative;
-    top:150px;
-    left:17px;
-  }
-  
+
+}

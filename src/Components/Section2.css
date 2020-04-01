@@ -1,41 +1,12 @@
   
-.section2{
-    text-align: center;
-    height: 300px;
-    padding-top: 40px;
-    /* height: 100vh; */
-    /* width: auto; */
-    width:auto;
-}
-
-#headersection2 {
-  margin-top: 10px;
-  font-size: 30px;
-  color: #181818;
-}
-#parag2 {
-
-  text-align: center;
-  margin-top: 20px;
+#section2{
+  padding-top: 7rem;
+    height: 23rem;
+    /* width:auto; */
 }
 #images2 {
   display: inline-block;
-  /* margin-left: 445px;
-  margin-right: auto; 
-  width: 50%;*/
-  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
-#google2{
-    margin-left: 30px;
-    float: left;
-}
-#apple2{
-  margin-left: 30px;
-  float: left;
-}
- #microsoft2{
-  margin-left: 30px;
-  float: left;
-}
+

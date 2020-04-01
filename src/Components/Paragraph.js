@@ -1,7 +1,6 @@
 import React from 'react'
 import './Paragraph.css'
-import 'bootstrap-4-react/dist/bootstrap-4-react'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 

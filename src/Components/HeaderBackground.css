@@ -1,13 +1,14 @@
 
 .help-class{
         color: white;
+        overflow: hidden;
     }
     
     .help-header{
     
         background:  url(https://support.scdn.co/static/img/fw/search-mobile.png) top no-repeat #1c2963;
         padding-top: 8%;
-        padding-bottom: 4%;
+       
         
     }
     #search{

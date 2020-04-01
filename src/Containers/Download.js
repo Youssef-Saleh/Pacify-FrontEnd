@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import Section1 from '../Components/Section1';
 import Section2 from '../Components/Section2';
 import Section3 from '../Components/Section3';
-import Section4 from '../Components/Section4';
 import AboutS from '../Components/AboutS';
 // import MediaQuery from 'react-responsive';
 class Download extends Component {

@@ -1,9 +1,25 @@
 
-.section3 {
+@media screen and (max-width: 500px) {
+
+  #h2section3{
+
+    position: relative;
+    bottom: 2rem;
+  }
+
+  .para3,.para32 {
+
+    position: relative;
+    bottom: 1rem;
+
+  }
+
+}
+
+#section3 {
     background: linear-gradient(to right, rgb(5, 121, 82)50%, rgb(0, 0, 0)100%);
-    text-align: center;
     height:420px;
-    width:auto;
+    /* width:auto; */
   }
   
   .header4{
@@ -11,25 +27,22 @@
     position: relative;
     top: 70px;
   }
-  #h2section3{
-  
-   color: white;
-  
-  }
+ 
   
   #alldevices{
   
-    position: relative;
-    width: 500px;
-    top:55px;
+    width: 35rem;
+   
   }
+
   .list {
     position: relative;
-    top:90px;
+    top:70px;
     height: 32px;
     color: white;
 
   }
+
 
   /* .list2 {
   

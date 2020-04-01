@@ -1,7 +1,6 @@
 import React from 'react'
 import './HeaderBackground.css';
-import SearchBox from './SearchBox';
-import 'bootstrap-4-react/dist/bootstrap-4-react'
+
 
 
 const HeaderBackground= () =>{

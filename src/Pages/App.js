@@ -5,6 +5,8 @@ import {BrowserRouter as Router , Switch , Route , Link} from 'react-router-dom'
 import Help from '../Containers/Help'
 import Download from '../Containers/Download'
 import HomePage from '../Containers/HomePage'
+import Login from '../Containers/Login'
+import SignUp from '../Containers/SignUp'
 class App extends Component{
   render(){
       return(
@@ -22,10 +24,16 @@ class App extends Component{
                 <Route  path='/Download'>
                     <Download></Download>
                 </Route>
-                <Route  path='/HomePage'>
-                    <HomePage></HomePage>
+                <Route  path='/SignUp'>
+                   <SignUp></SignUp>
+                </Route>
+                <Route  path='/Login'>
+                    <Login></Login>
                 </Route>
                 <Route exact path='/'>
+                    <HomePage></HomePage>
+                </Route>
+                <Route  path='/HomePage'>
                     <HomePage></HomePage>
                 </Route>
             </Switch>    

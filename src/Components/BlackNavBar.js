@@ -2,12 +2,11 @@ import React from 'react'
 import '../Components/BlackNavBar.css'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import 'bootstrap-4-react/dist/bootstrap-4-react'
 import { Link } from 'react-router-dom'
 
 const BlackNavBar = () =>{
     return(
-        <Navbar collapseOnSelect expand="lg" bg="black" className='ml0 pt3 react-navi navbar-dark '>
+        <Navbar collapseOnSelect expand="lg" bg="black" className='ml0 pt3 react-navi navbar-dark mb0'>
             <button><Navbar.Brand className='' href=""><span className='logo pl6 ml5 navbar-logo'></span></Navbar.Brand></button>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
