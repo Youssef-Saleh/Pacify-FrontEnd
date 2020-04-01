@@ -1,6 +1,6 @@
 import React from 'react';
-import '../Components/AlbumCards.css';
-import './PlaylistCards.css'
+import './AlbumCards.css';
+import './PlaylistCards.css';
 
 
 
@@ -23,8 +23,8 @@ const AlbumCards=({albumimage,albumname,singer}) =>{
     
                  </div>
 
-                 <div className="box">
-                    <button className="Button"  aria-lable="Play">
+                 <div className="boxplaylist">
+                    <button className="Buttonplaylist"  aria-lable="Play">
                         <svg height="40" role="img" width="40" viewBox="0 0 80 80">
                             <polygon points="32,25 32,58 60,42" fill="currentColor"></polygon>
                         </svg>

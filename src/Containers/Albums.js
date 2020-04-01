@@ -16,7 +16,7 @@ class Album extends Component {
 
           <h1 className='pl3 fw7 pt5 f3 lh-title white'> Albums</h1>
                 
-            <PlaylistHeader></PlaylistHeader>
+            {/* <PlaylistHeader></PlaylistHeader> */}
            <AlbumCardList albumsdata={albumsdata}/>
 
     

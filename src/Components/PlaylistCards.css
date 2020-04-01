@@ -49,11 +49,11 @@
 }
 
 
-.box,.box2{
+.boxplaylist{
     height: 0.5rem;
     width: 0.5rem;
     position: absolute ;
-    top:13rem;
+    bottom:3rem; 
     left:9rem;
     z-index: 1;
     display: block;
@@ -70,24 +70,38 @@ border-radius:500px
 
 
 
-html[dir=ltr] .box {
+html[dir=ltr] .boxplaylist {
     right:16px
    }
-   html[dir=rtl] .box {
+   html[dir=rtl] .boxplaylist {
     left:16px
    }
 
-   #Cards:hover .box {
+   #Cards:hover .boxplaylist {
     position:unset;
     opacity:1;
     pointer-events:auto;
     position:absolute
    }
-   #Cards:focus-within .box {
+   #Cards:focus-within .boxplaylist{
     position:unset;
     opacity:1;
     pointer-events:auto;
     position:absolute
+   }
+
+   
+   .no-focus-outline .Buttonplaylist:focus {
+    outline:none
+   }
+   .Buttonplaylist:focus,
+   .Buttonplaylist:hover {
+    -webkit-transform:scale(1.06);
+    transform:scale(1.06)
+   }
+   .Buttonplaylist:active {
+    -webkit-transform:scale(1);
+    transform:scale(1)
    }
 
 
@@ -97,7 +111,7 @@ html[dir=ltr] .box {
     z-index: auto;
     display: inline;
 }
-.Button, .Button2{
+.Buttonplaylist{
     height: 1.5rem;
     width: 1.5rem;
     position: relative ;
@@ -130,45 +144,85 @@ html[dir=ltr] .box {
 
 /* button in the first Card */
 
-.Button2{
-    
+ .Button2playlist{
+    height: 1.5rem;
+    width: 1.5rem;
+    position: relative ;
+    width: 100%;
+    box-sizing: border-box; 
+    z-index: 1;
+    line-height:12px;
     --size:50px;
-    
+    border:0;
+    border-radius:500px;
+    color:#fff;
+    background-color:#1db954;
+    -webkit-transition:-webkit-transform 33ms cubic-bezier(.3,0,0,1);
+    transition:-webkit-transform 33ms cubic-bezier(.3,0,0,1);
+    transition:transform 33ms cubic-bezier(.3,0,0,1);
+    transition:transform 33ms cubic-bezier(.3,0,0,1),-webkit-transform 33ms cubic-bezier(.3,0,0,1);
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    height:var(--size);
+    width:var(--size)
 }
 
-.box2{
-
+.box2playlist{
+    height: 0.5rem;
+    width: 0.5rem;
+    position: absolute ;
+    bottom:3rem; 
     left:30rem;
+    z-index: 1;
+    display: block;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+
+    opacity:0;
+pointer-events:none;
+-webkit-box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.2);
+box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.2);
+border-radius:500px
 
 }
 
-   .no-focus-outline .Button2:focus {
+
+   .no-focus-outline .Button2playlist:focus {
     outline:none
    }
-   .Button2:focus,
-   .Button2:hover {
+   .Button2playlist:focus,
+   .Button2playlist:hover {
     -webkit-transform:scale(1.06);
     transform:scale(1.06)
    }
-   .Button2:active {
+   .Button2playlist:active {
     -webkit-transform:scale(1);
     transform:scale(1)
    }
 
-   html[dir=ltr] .box2 {
+
+
+   html[dir=ltr] .box2playlist {
     right:16px
    }
-   html[dir=rtl] .box2 {
+   html[dir=rtl] .box2playlist {
     left:16px
    }
   
-   #firstcard:hover .box2 {
+   #firstcard:hover .box2playlist {
     position:unset;
     opacity:1;
     pointer-events:auto;
     position:absolute
    }
-   #firstcard:focus-within .box2 {
+   #firstcard:focus-within .box2playlist {
     position:unset;
     opacity:1;
     pointer-events:auto;

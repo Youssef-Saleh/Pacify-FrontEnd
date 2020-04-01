@@ -10,7 +10,7 @@ const PlaylistCards=({firstcard=true,id,artist,songname, playlistimage, Title, D
 
     return (
         
-<div  id="firstcard" className='dib h-6 w-40 br3 pa3 pt4 ma2 grow bw2'>
+<div  id="firstcard" className=' dtc dib h-6 w-40 br3 pa3 pt4 ma2 grow bw2'>
 
       <div draggable="true">
           <div id="wrapper" className="react-contextmenu-wrapper">
@@ -24,8 +24,8 @@ const PlaylistCards=({firstcard=true,id,artist,songname, playlistimage, Title, D
             </div>
 
                 
-             <div className="box2 ">
-                <button className="Button2"  aria-lable="Play">
+             <div className="box2playlist">
+                <button className="Button2playlist" aria-lable="Play">
                     <svg height="50" role="img" width="60" viewBox="0 0 80 80">
                         <polygon points="32,25 32,58 60,42" fill="currentColor"></polygon>
                     </svg>
@@ -41,7 +41,7 @@ const PlaylistCards=({firstcard=true,id,artist,songname, playlistimage, Title, D
 
  return (
     
-    <div id="Cards" className='bg-dark-gray dib br3 pa3 ma2 grow bw2'>
+    <div id="Cards" className='dtc bg-dark-gray dib br3 pa3 ma2 grow bw2'>
        <div draggable="true">
           <div id="wrapper" className="react-contextmenu-wrapper">
 
@@ -54,8 +54,8 @@ const PlaylistCards=({firstcard=true,id,artist,songname, playlistimage, Title, D
 
              </div>
         
-             <div className="box ">
-                <button className="Button "  aria-lable="Play">
+             <div className="boxplaylist">
+                <button className="Buttonplaylist" aria-lable="Play">
                     <svg height="40" role="img" width="40" viewBox="0 0 80 80">
                         <polygon points="32,25 32,58 60,42" fill="currentColor"></polygon>
                     </svg>

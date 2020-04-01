@@ -15,8 +15,8 @@ class Playlist extends Component {
 
     return (
 
-      <div className=" vh-100 w-100 dt" id="cardsplaylist">
-          <PlaylistHeader></PlaylistHeader>
+      <div className="vh-100 dt w-100" id="cardsplaylist">
+          {/* <PlaylistHeader></PlaylistHeader> */}
 
                 <h1 className='pl3 fw7 pt5 f3 lh-title white'> Playlists</h1>
 {/* 
