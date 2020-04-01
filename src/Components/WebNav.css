@@ -13,4 +13,8 @@
     height: 30px;
     border-radius: 20px;
     padding: 0px;
+    background-color: black;
+}
+.nav-drop:hover{
+    background-color: #282828;
 }

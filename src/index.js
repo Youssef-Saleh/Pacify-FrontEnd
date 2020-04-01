@@ -8,6 +8,7 @@ import Premium from './Containers/Premium'
 import 'tachyons'
 import App from './Pages/App'
 import WebFrame from './Containers/WebFrame'
+import SearchPage from './Containers/SearchPage'
 ReactDOM.render(<WebFrame></WebFrame>, document.getElementById('root'));
 
 

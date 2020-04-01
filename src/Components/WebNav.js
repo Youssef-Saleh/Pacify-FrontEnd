@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import Dropdown from 'react-bootstrap/Dropdown'
 const WebNav=()=>{
     return (
-        <Navbar collapseOnSelect expand="lg"  fixed='top' className='web-nav mt2'>
+        <Navbar collapseOnSelect   fixed='top' className='web-nav '>
             <Nav className='white mr3 ml-auto fw-500'>
                 <button id='nav-btn' className='white grow ba b--near-white mr3'>UPGRADE</button>
                 <Dropdown>
