@@ -4,6 +4,8 @@ import SideBar from '../Components/SideBar'
 import WebNav from '../Components/WebNav'
 import './WebFrame.css'
 import SearchPage from './SearchPage'
+import Playlist from './Playlist';
+import Albums from './Albums';
 const WebFrame = ()=>{
     return (
         <div>
@@ -11,6 +13,7 @@ const WebFrame = ()=>{
             <WebNav></WebNav>
             <div className='web-frame '>    {/*The Content of the page is placed here*/ }
                 {/* <SearchPage></SearchPage> */}
+                <Albums></Albums>
             </div>
             <WebPlayer></WebPlayer>
         </div>
