@@ -6,8 +6,8 @@ import {types} from '../Components/Searchtypes'
 import Card from '../Components/SearchCard'
 const SearchPage = ({id,SectionTitle,title,bg}) => {
   return (
-    <div className="App">
-      <h1 className="f2.5 lh-solid white ">Your top genres</h1>
+    <div className="vh-100 dt w-100">
+      <h1 className="pl3 fw7 pt4 f3 lh-title white  ">Your top genres</h1>
       <div>
         <Card 
           id={types[7].id}
@@ -15,11 +15,11 @@ const SearchPage = ({id,SectionTitle,title,bg}) => {
           source={types[7].source}
           bg={types[7].bg}/>
         </div>
-      <h1 className="f2.5 lh-solid white ">Browse all</h1>
+      <h1 className=" pl3 fw7 pt4 f3 lh-title white ">Browse all</h1>
       <CardList types={types}/>
-      on
+      
     </div>
   );
 }
-
+//  f3 lh-solid white 
 export default SearchPage;
