@@ -7,8 +7,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Premium from './Containers/Premium'
 import 'tachyons'
 import App from './Pages/App'
+import Playlist from './Containers/Playlist';
+import Albums from './Containers/Albums';
 
-ReactDOM.render(<App></App>, document.getElementById('root'));
+import WebFrame from './Containers/WebFrame'
+import SearchPage from './Containers/SearchPage'
+
+ReactDOM.render(<WebFrame></WebFrame>, document.getElementById('root'));
+
+// ReactDOM.render(<WebFrame></WebFrame>, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change

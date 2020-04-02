@@ -148,9 +148,9 @@
   
 @media (max-width :1200px){
 
-    .carousel-iphones .iphone-device{
+    /* .carousel-iphones .iphone-device{
         display: none;
-    }
+    } */
     #tr{
         height:500px
     }
