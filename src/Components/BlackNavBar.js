@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const BlackNavBar = () =>{
     return(
-        <Navbar collapseOnSelect expand="lg" bg="black" className='ml0 pt3 react-navi navbar-dark mb0'>
+        <Navbar collapseOnSelect expand="lg"  className='ml0 pt3 react-navi navbar-dark mb0' bg="black">
             <button><Navbar.Brand className='' href=""><span className='logo pl6 ml5 navbar-logo'></span></Navbar.Brand></button>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
