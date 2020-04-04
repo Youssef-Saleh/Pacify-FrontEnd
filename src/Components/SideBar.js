@@ -2,6 +2,7 @@ import React from 'react'
 import './SideBar.css'
 import './NavBar.css'
 import Library from '../library.PNG'
+import { Link } from 'react-router-dom'
 const SideBar=()=>{
     return (
         <div className='sidenav'>
