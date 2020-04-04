@@ -14,7 +14,7 @@ import Albums from './Containers/Albums';
 import WebFrame from './Containers/WebFrame'
 import SearchPage from './Containers/SearchPage'
 
-ReactDOM.render(<WebFrame></WebFrame>, document.getElementById('root'));
+ReactDOM.render(<App></App>, document.getElementById('root'));
 
 // ReactDOM.render(<WebFrame></WebFrame>, document.getElementById('root'));
 

@@ -7,8 +7,9 @@ import Download from '../Containers/Download'
 import HomePage from '../Containers/HomePage'
 import Login from '../Containers/Login'
 import SignUp from '../Containers/SignUp'
-import Albums from '../Containers/Albums'
-import Playlist from '../Containers/Playlist.js';
+import WebFrame from '../Containers/WebFrame';
+// import Albums from '../Containers/Albums'
+// import Playlist from '../Containers/Playlist.js';
 
 class App extends Component{
   render(){
@@ -38,6 +39,9 @@ class App extends Component{
                 </Route>
                 <Route  path='/HomePage'>
                     <HomePage></HomePage>
+                </Route>
+                <Route path='/WebFrame'>
+                    <WebFrame></WebFrame>
                 </Route>
             </Switch>    
         </Router>
