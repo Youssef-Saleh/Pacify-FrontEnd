@@ -1,4 +1,4 @@
-.header{
+/* .header{
     height: 80vh;
     width: auto;
     background: linear-gradient(to right,rgb(8,50,100),rgb(66,165,247),rgb(0,212,255));
@@ -12,12 +12,12 @@
     #h-tit{
         font-size: 2.2em;
         /*margin-top:var(--spacing-large)*/
-    }
+    /* }
 }/*
 .NavBar{
     float: left;
 }*/
-h1{
+/* h1{
     font-weight: 900;
 }
 #pr-btn{
@@ -31,4 +31,4 @@ h1{
     .header {
         background:url(https://campaigns-test.scdn.co/images/premium_dancer.png) right bottom / 450px no-repeat rgb(80, 155, 245); 
     }
-}
+} */ 

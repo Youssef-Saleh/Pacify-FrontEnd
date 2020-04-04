@@ -11,8 +11,8 @@ const WebFrame = ()=>{
             <SideBar></SideBar>
             <WebNav></WebNav>
             <div className='web-frame '>    {/*The Content of the page is placed here,,routing also will be here*/ }
-                <SearchPage></SearchPage>
-                {/* <PlayList></PlayList> */}
+                {/* <SearchPage></SearchPage> */}
+                <PlayList></PlayList>
             </div>
             <WebPlayer></WebPlayer>
         </div>
