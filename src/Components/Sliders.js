@@ -3,6 +3,7 @@ import "./Sliders.css"
 import Carousel from 'react-bootstrap/Carousel'
 import whitebackground from "../whitebackground.jpg";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import CreatePlaylist from '../Components/CreatePlaylist'
 
 
 var elements;
@@ -39,8 +40,9 @@ class Sliders extends Component {
      }
     render(){
 return(
-
+    
     <div className="container mt-4" id="cont">
+    
     <div className="carousel-exist">
                  <div className="container">
                     <div className="row">
@@ -155,8 +157,10 @@ return(
 
                     </div>
                 </div>
-            </div> 
+            </div>
+             
                         </div>
+                        
 
     );
 }
