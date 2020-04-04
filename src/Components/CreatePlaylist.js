@@ -10,7 +10,8 @@ class CreatePlaylist extends Component{
 CLOSE=()=>{
 
     
-        $("new-playlist").remove();
+        var x =document.getElementById("Container")
+        x.remove();
     
 }
 
@@ -18,7 +19,7 @@ CLOSE=()=>{
     return(
         
         <div>
-        <div class="new-playlist" >
+        <div class="new-playlist" id='Container' >
          <div className="Close">
         <button className="close-icon" type="button" onClick={this.CLOSE.bind(this)} >
         
@@ -37,7 +38,7 @@ CLOSE=()=>{
         </div></div></div></div>
         <div className="button-container">
            <div className="cancel-button">
-           <button className="Cancel" type="button">CANCEL</button>
+           <button className="Cancel" type="button"  onClick={this.CLOSE.bind(this)}>CANCEL</button>
            </div>
            <div className="create-button">
            <button className="create" type="button">CREATE</button>

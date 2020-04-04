@@ -6,16 +6,17 @@ import './WebFrame.css'
 import SearchPage from './SearchPage'
 import CreatePlaylist from '../Components/CreatePlaylist'
 import PlayList from '../Containers/Playlist'
+import LikedSongs from '../Components/LikedSongs'
 const WebFrame = ()=>{
     return (
         <div>
         
             <SideBar></SideBar>
-            <CreatePlaylist></CreatePlaylist>
+            
             <WebNav></WebNav>
             
             <div className='web-frame '>    {/*The Content of the page is placed here,,routing also will be here*/ }
-                
+                <LikedSongs></LikedSongs>
                 
             </div>
             <WebPlayer></WebPlayer>
