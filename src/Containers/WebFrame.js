@@ -6,22 +6,9 @@ import './WebFrame.css'
 import SearchPage from './SearchPage'
 import CreatePlaylist from '../Components/CreatePlaylist'
 import PlayList from '../Containers/Playlist'
-<<<<<<< HEAD
 import LikedSongs from '../Components/LikedSongs'
-const WebFrame = ()=>{
-    return (
-        <div>
-        
-            <SideBar></SideBar>
-            
-            <WebNav></WebNav>
-            
-            <div className='web-frame '>    {/*The Content of the page is placed here,,routing also will be here*/ }
-                <LikedSongs></LikedSongs>
-                
-=======
 import {BrowserRouter as Router , Switch , Route , Link} from 'react-router-dom'
-
+import Pages from './SearchPages'
 class WebFrame extends Component{
     constructor(){
         super();
@@ -52,6 +39,12 @@ class WebFrame extends Component{
                                 <Route  path='/WebFrame/Home'>
                                     <h1>HELLLLLLLLLLLLOOOOOOOOOO!!!!!</h1>
                                 </Route>
+                                <Route  path='/WebFrame/LikedSongs'>
+                                    <LikedSongs></LikedSongs>
+                                </Route>
+                                <Route  path='/WebFrame/Pages'>
+                                    <Pages></Pages>
+                                </Route>
                                 <Route  path='/WebFrame/Search'>
                                     <SearchPage></SearchPage>
                                 </Route>
@@ -67,7 +60,6 @@ class WebFrame extends Component{
                     {/* </Router> */}
                             
                 </div>
->>>>>>> eccf324a37dee7fa95492bde645014502c6e54e6
             </div>
         )
 
