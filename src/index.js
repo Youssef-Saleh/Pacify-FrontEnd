@@ -4,6 +4,7 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Pages/App'
 import Premium from './Containers/Premium'
 import 'tachyons'
 import App from './Pages/App'
@@ -13,7 +14,7 @@ import Albums from './Containers/Albums';
 import WebFrame from './Containers/WebFrame'
 import SearchPage from './Containers/SearchPage'
 
-ReactDOM.render(<WebFrame></WebFrame>, document.getElementById('root'));
+ReactDOM.render(<App></App>, document.getElementById('root'));
 
 // ReactDOM.render(<WebFrame></WebFrame>, document.getElementById('root'));
 

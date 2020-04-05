@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Login.css';
-
+import {Link} from 'react-router-dom'
 class LoginForm extends Component{
     constructor(){
         super()
@@ -50,7 +50,7 @@ class LoginForm extends Component{
                             onChange={event=>this.onLoginChange(event)}
                         />
                         <label className='Login_rememberme' > Remember me </label>
-                        <a href="#"> <button className="Login_button Login_button_login">LOG IN</button> </a>
+                        <Link to='WebFrame'><a href="#"> <button className="Login_button Login_button_login">LOG IN</button> </a></Link>
                     </div>
                 </form>
             </div>
