@@ -13,7 +13,7 @@ const WebFrame = ()=>{
             <WebNav></WebNav>
             <div className='web-frame '>    {/*The Content of the page is placed here*/ }
                 {/* <SearchPage></SearchPage> */}
-                <Albums></Albums>
+                <Playlist></Playlist>
             </div>
             <WebPlayer></WebPlayer>
         </div>
