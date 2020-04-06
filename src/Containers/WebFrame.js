@@ -22,12 +22,18 @@ class WebFrame extends Component{
     TogglePopUp=()=>{
         console.log("function called")
         this.setState({ShowPopUp: true})
+        
     }
+    
     render(){
+    
+            
+        
         return (
 
 
             <div>
+            
                 {/* {
                    this.state.ShowPopUp ? <CreatePlaylist></CreatePlaylist>:<div>not true</div>
                 } */}
@@ -57,8 +63,9 @@ class WebFrame extends Component{
                                     <PlaylistInsidePage></PlaylistInsidePage>
                                 </Route>
                                 <Route  path='/WebFrame/'>
-                                    <h1>Home</h1>
+                                <CreatePlaylist></CreatePlaylist>
                                 </Route>
+                                
                             </Switch>
 
                             </div>
