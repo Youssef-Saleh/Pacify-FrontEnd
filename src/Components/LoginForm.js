@@ -1,22 +1,52 @@
 import React, { Component } from 'react';
 import './Login.css';
-import {Link} from 'react-router-dom'
+import {Link , Redirect} from 'react-router-dom'
 class LoginForm extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state={
+            data:[],
             email: '',
             password:'',
-            checked:true
+            checked:true,
+            MockBack: true,
+            LoggedIn: false
         }
+        this.SubmitForm = this.SubmitForm.bind(this)
+        this.componentDidMount = this.componentDidMount.bind(this)
     }
     onLoginChange=(event)=>{
         this.setState({[event.target.name]: event.target.value })
     }
+    SubmitForm(event){
+        console.log("func called")
+        //event.preventDefault()
+        let find = ''
+        const {email , password, MockBack,data} = this.state
+        let found = data[1].email
+        if (email == found && password == "admin" && MockBack ){
+            this.setState({LoggedIn: true})
+            sessionStorage.setItem("token","asdfjfskfbsfgyfewjsfdk")
+        }
+    }
+    componentDidMount(){
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(users=>{
+        this.setState({ data: users })
+        })
+    console.log(this.state.data)
+
+    }
     render(){
+        const {data}=this.state
+        if (this.state.LoggedIn == true){
+            // console.log("logged")
+            return <Redirect to='/WebFrame'></Redirect>
+        }
         return(
             <div className="Login_container">            
-                <form className='tl'>
+                <form onSubmit={this.SubmitForm} className='tl'>
                     <div class="row">
                         <input
                             className='Login_inText'
@@ -25,7 +55,7 @@ class LoginForm extends Component{
                             placeholder='Email address or username'
                             className="form-control"
                             value={this.state.email}
-                            onChange={event=>this.onLoginChange(event)}
+                            onChange={this.onLoginChange}
                         />
                     </div>
                     <br></br>
@@ -37,7 +67,7 @@ class LoginForm extends Component{
                             placeholder='Password'
                             className="form-control"
                             value={this.state.password}
-                            onChange={event=>this.onLoginChange(event)}
+                            onChange={this.onLoginChange}
                         />
                     </div>
                     <br></br>
@@ -50,7 +80,7 @@ class LoginForm extends Component{
                             onChange={event=>this.onLoginChange(event)}
                         />
                         <label className='Login_rememberme' > Remember me </label>
-                        <Link to='WebFrame'><a href="#"> <button className="Login_button Login_button_login">LOG IN</button> </a></Link>
+                        <button type='submit' className="Login_button Login_button_login">LOG IN</button>
                     </div>
                 </form>
             </div>

@@ -42,7 +42,7 @@ class SideBar extends Component{
                 <div className='mt4'>
                     <div>
                         <img width='24' height='24' className='dib' src='https://previews.123rf.com/images/alionaursu/alionaursu1909/alionaursu190900024/129840824-plus-icon-vector-design-isolated-on-white-background.jpg'></img>
-                        <div  className='dib ml3 fw-900'><span onClick={this.handleModalOpen}>Create Playlist</span></div>
+                        <div  className='dib ml3 fw-900 pointer'><span onClick={this.handleModalOpen}>Create Playlist</span></div>
                     </div>
                     <div className='mt3'>
                         <img width='24' height='24' className='dib' src='https://4.bp.blogspot.com/-XzJ5OnL023w/XHbn9ondWXI/AAAAAAAAIDM/3LZfHpJcGjQ7Qtv5dSKmLpFQnLqtIi4ZwCK4BGAYYCw/s1600/heart%2Blove%2Bicon.png'></img>

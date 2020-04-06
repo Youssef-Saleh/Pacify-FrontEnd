@@ -7,15 +7,23 @@ import SearchPage from './SearchPage'
 import CreatePlaylist from '../Components/CreatePlaylist'
 import PlayList from '../Containers/Playlist'
 import LikedSongs from '../Components/LikedSongs'
-import {BrowserRouter as Router , Switch , Route , Link} from 'react-router-dom'
+import {BrowserRouter as Router , Switch , Route , Link,Redirect} from 'react-router-dom'
 import Pages from './SearchPages'
 class WebFrame extends Component{
-    constructor(){
-        super();
-        this.state ={
-            ShowPopUp: false,
+    constructor(props){
+        super(props);
+
+        let loggedIn=true
+        let token=sessionStorage.getItem("token")
+        console.log("the token is  ",token)
+        if (token == null){
+            loggedIn=false
         }
 
+        this.state ={
+            ShowPopUp: false,
+            loggedIn
+        }
     }
     TogglePopUp=()=>{
         console.log("function called")
@@ -25,7 +33,11 @@ class WebFrame extends Component{
     
     render(){
     
-            
+            if (this.state.loggedIn === false){
+                return(
+                    <Redirect to='../Login'></Redirect>
+                )
+            }
         
         return (
 
@@ -38,6 +50,7 @@ class WebFrame extends Component{
                 <div className=''>
                     <SideBar ></SideBar>
                     <WebPlayer></WebPlayer>
+                    {/* <WebNav></WebNav> */}
                     {/* <Router> */}
                             <div className='web-frame '>    {/*The Content of the page is placed here,,routing also will be here*/ }
                             <Switch>

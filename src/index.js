@@ -10,12 +10,12 @@ import 'tachyons'
 import App from './Pages/App'
 // import Playlist from './Containers/Playlist';
 // import Albums from './Containers/Albums';
-// import {Provider} from 'react-redux';
-// import Store from './Redux/Store';
+import {Provider} from 'react-redux';
+import Store from './Redux/Store';
 // import WebFrame from './Containers/WebFrame'
 // import SearchPage from './Containers/SearchPage'
 
-ReactDOM.render(<App></App>, document.getElementById('root'));
+ReactDOM.render(<Provider store={Store}><App></App></Provider>, document.getElementById('root'));
 
 // ReactDOM.render(<WebFrame></WebFrame>, document.getElementById('root'));
 

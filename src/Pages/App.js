@@ -12,6 +12,9 @@ import WebFrame from '../Containers/WebFrame';
 // import Playlist from '../Containers/Playlist.js';
 
 class App extends Component{
+    constructor(){
+        super()
+    }
   render(){
       return(
         <Router>

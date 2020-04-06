@@ -1,4 +1,4 @@
-import {StreamSong} from './Constants'
+import {StreamSong} from '../Constants'
 
 export const Stream =(Data)=>{
     return {
