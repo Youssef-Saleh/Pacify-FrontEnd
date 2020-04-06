@@ -13,7 +13,7 @@ class WebFrame extends Component{
     constructor(){
         super();
         this.state ={
-            ShowPopUp: false
+            ShowPopUp: false,
         }
 
     }
@@ -22,6 +22,7 @@ class WebFrame extends Component{
         this.setState({ShowPopUp: true})
     }
     render(){
+        var {bg} = this.state;
         return (
 
 
@@ -32,29 +33,29 @@ class WebFrame extends Component{
                 <div className=''>
                     <SideBar ></SideBar>
                     <WebPlayer></WebPlayer>
-                    <WebNav></WebNav>
                     {/* <Router> */}
-                            <div className='web-frame '>    {/*The Content of the page is placed here,,routing also will be here*/ }
-                            <Switch>
-                                <Route  path='/WebFrame/Home'>
-                                    <h1>HELLLLLLLLLLLLOOOOOOOOOO!!!!!</h1>
-                                </Route>
-                                <Route  path='/WebFrame/LikedSongs'>
-                                    <LikedSongs></LikedSongs>
-                                </Route>
-                                <Route  path='/WebFrame/Pages'>
-                                    <Pages></Pages>
-                                </Route>
-                                <Route  path='/WebFrame/Search'>
-                                    <SearchPage></SearchPage>
-                                </Route>
-                                <Route  path='/WebFrame/Library'>
-                                    <PlayList></PlayList>
-                                </Route>
-                                <Route  path='/WebFrame/'>
-                                    <h1>Home</h1>
-                                </Route>
-                            </Switch>
+                    <div className='web-frame '>    {/*The Content of the page is placed here,,routing also will be here*/ }
+                        <WebNav></WebNav>
+                        <Switch>
+                            <Route  path='/WebFrame/Home'>
+                                <h1>HELLLLLLLLLLLLOOOOOOOOOO!!!!!</h1>
+                            </Route>
+                            <Route  path='/WebFrame/LikedSongs'>
+                                <LikedSongs></LikedSongs>
+                            </Route>
+                            <Route  path='/WebFrame/Pages'>
+                                <Pages></Pages>
+                            </Route>
+                            <Route  path='/WebFrame/Search'>
+                                <SearchPage></SearchPage>
+                            </Route>
+                            <Route  path='/WebFrame/Library'>
+                                <PlayList></PlayList>
+                            </Route>
+                            <Route  path='/WebFrame/'>
+                                <h1>Home</h1>
+                            </Route>
+                        </Switch>
 
                             </div>
                     {/* </Router> */}

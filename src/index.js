@@ -5,14 +5,15 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Pages/App'
-import Premium from './Containers/Premium'
+// import Premium from './Containers/Premium'
 import 'tachyons'
 import App from './Pages/App'
-import Playlist from './Containers/Playlist';
-import Albums from './Containers/Albums';
-
-import WebFrame from './Containers/WebFrame'
-import SearchPage from './Containers/SearchPage'
+// import Playlist from './Containers/Playlist';
+// import Albums from './Containers/Albums';
+// import {Provider} from 'react-redux';
+// import Store from './Redux/Store';
+// import WebFrame from './Containers/WebFrame'
+// import SearchPage from './Containers/SearchPage'
 
 ReactDOM.render(<App></App>, document.getElementById('root'));
 

@@ -1,12 +1,13 @@
 
 .grid {
+    display: grid;
     grid-template-areas: "Area Area-2";
     -ms-grid-columns: 0.5fr 1fr;
     grid-template-columns: 0.5fr 1fr;
     -ms-grid-rows: auto;
     grid-template-rows: auto;
 }
-.w-layout-grid {
+/* .w-layout-grid {
     display: -ms-grid;
     display: grid;
     grid-auto-columns: 1fr;
@@ -16,7 +17,7 @@
     grid-template-rows: auto auto;
     grid-row-gap: 16px;
     grid-column-gap: 16px;
-}
+} */
 .div-block-7 {
     margin-top: 41px;
     padding-right: 100px;

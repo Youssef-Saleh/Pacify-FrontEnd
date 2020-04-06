@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './WebPlayer.css'
 import Player from './Audio'
 
-const WebPlayer=() =>{
+class WebPlayer extends Component{
+    constructor(){
+        super()
+    }
+    render(){
     return (
         <nav className='fixed-bottom Player-Footer bt  b--black'>
             <div className='song-img '>
@@ -18,6 +22,7 @@ const WebPlayer=() =>{
             <Player></Player>
         </nav>
     )
+    }
 }
 
 export default WebPlayer

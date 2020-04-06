@@ -6,8 +6,6 @@ const Pages = ({id,SectionTitle,title,bg}) => {
         <div className={bg} >
             <h2 className=" pt6 f1-ns  lh-solid white">{title}</h2>
             <Section title={SectionTitle}/>
-
-
         </div>
         );
     }
