@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import WebPlayer from '../Components/WebPlayer'
 import SideBar from '../Components/SideBar'
 import WebNav from '../Components/WebNav'
+import PlaylistInsidePage from './PlaylistInsidePage'
 import './WebFrame.css'
 import SearchPage from './SearchPage'
-import Pages from './SearchPages'
 import CreatePlaylist from '../Components/CreatePlaylist'
 import PlayList from '../Containers/Playlist'
 import LikedSongs from '../Components/LikedSongs'
@@ -52,6 +52,9 @@ class WebFrame extends Component{
                                 </Route>
                                 <Route  path='/WebFrame/Library'>
                                     <PlayList></PlayList>
+                                </Route>
+                                <Route  path='/WebFrame/PlaylistInsidePage'>
+                                    <PlaylistInsidePage></PlaylistInsidePage>
                                 </Route>
                                 <Route  path='/WebFrame/'>
                                     <h1>Home</h1>

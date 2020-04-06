@@ -1,5 +1,7 @@
 import React from 'react';
-import './PlaylistCards.css'
+import './PlaylistCards.css';
+import {Link} from 'react-router-dom';
+
 //import { Title } from 'react-bootstrap/lib/Modal';
 
 
@@ -17,7 +19,9 @@ const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,playlis
     if(firstcard === true){
 
     return (
-        
+
+    <Link to='../WebFrame/LikedSongs'>
+
 <div  id="firstcard" className=' dtc dib h-6 w-40 br3 pa3 pt4 ma2 grow bw2'>
 
       <div draggable="true">
@@ -44,10 +48,16 @@ const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,playlis
       </div>
           </div>
     
+    
+          </Link>
     );
+
+    
     }
 
  return (
+
+    <Link to= '../WebFrame/PlaylistInsidePage'>
     
     <div id="Cards"  className='dtc bg-dark-gray dib br3 pa3 ma2 grow bw2'>
        <div   draggable="true">
@@ -79,6 +89,7 @@ const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,playlis
         </div>
     </div>
 
+            </Link>
 
         
 
