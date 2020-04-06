@@ -20,6 +20,7 @@
  #Cards{
 
    display: inline-block;
+   width: 13rem;
  
     
 } 
@@ -179,7 +180,7 @@ html[dir=ltr] .boxplaylist {
     width: 0.5rem;
     position: absolute ;
     bottom:3rem; 
-    left:30rem;
+    left:24rem;
     z-index: 1;
     display: block;
     box-sizing: border-box;

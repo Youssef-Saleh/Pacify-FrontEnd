@@ -1,15 +1,27 @@
 import React from 'react';
-import './PlaylistCards.css'
+import './PlaylistCards.css';
+import {Link} from 'react-router-dom';
+
+//import { Title } from 'react-bootstrap/lib/Modal';
 
 
 
-const PlaylistCards=({firstcard=true,id,artist,songname, playlistimage, Title, Description}) =>{
-
+//  const Playmusic =({playlistdata}) =>{
     
+//         console.log("playyy")
+//         console.log(playlistdata)
+//     }
+
+const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,playlistimage,name,email}) =>{
+
+
+
     if(firstcard === true){
 
     return (
-        
+
+    <Link to='../WebFrame/LikedSongs'>
+
 <div  id="firstcard" className=' dtc dib h-6 w-40 br3 pa3 pt4 ma2 grow bw2'>
 
       <div draggable="true">
@@ -36,28 +48,38 @@ const PlaylistCards=({firstcard=true,id,artist,songname, playlistimage, Title, D
       </div>
           </div>
     
+    
+          </Link>
     );
+
+    
     }
 
  return (
+
+    <Link to= '../WebFrame/PlaylistInsidePage'>
     
-    <div id="Cards" className='dtc bg-dark-gray dib br3 pa3 ma2 grow bw2'>
-       <div draggable="true">
+    <div id="Cards"  className='dtc bg-dark-gray dib br3 pa3 ma2 grow bw2'>
+       <div   draggable="true">
           <div id="wrapper" className="react-contextmenu-wrapper">
 
              <img id='cardimage' alt='pic' src={playlistimage}/>
 
-             <div id='cardtext'>
+             <div   id='cardtext'>
 
-                 <h5  className= " pt3 fw6 f6 white">{Title}</h5>
-                 <h5  className= "fw1 f6 white">{Description}</h5>
+                 <h5  className= " pt3 fw6 f6 white">{name}</h5>
+                 <h5  className= "fw1 f6 white">{email}</h5>
 
              </div>
         
-             <div className="boxplaylist">
-                <button className="Buttonplaylist" aria-lable="Play">
-                    <svg height="40" role="img" width="40" viewBox="0 0 80 80">
-                        <polygon points="32,25 32,58 60,42" fill="currentColor"></polygon>
+             <div   className="boxplaylist">
+
+                    <button 
+                    className="Buttonplaylist" aria-lable="Play"
+                    onClick={StreamMusic} IDM= {ID}
+                    >
+                    <svg  onClick={StreamMusic} IDM= {ID} height="40" role="img" width="40" viewBox="0 0 80 80">
+                        <polygon  points="32,25 32,58 60,42" fill="currentColor"></polygon>
                     </svg>
                 </button>
             </div>
@@ -67,6 +89,7 @@ const PlaylistCards=({firstcard=true,id,artist,songname, playlistimage, Title, D
         </div>
     </div>
 
+            </Link>
 
         
 

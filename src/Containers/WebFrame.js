@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import WebPlayer from '../Components/WebPlayer'
 import SideBar from '../Components/SideBar'
 import WebNav from '../Components/WebNav'
+import PlaylistInsidePage from './PlaylistInsidePage'
 import './WebFrame.css'
 import SearchPage from './SearchPage'
 import CreatePlaylist from '../Components/CreatePlaylist'
@@ -9,6 +10,7 @@ import PlayList from '../Containers/Playlist'
 import LikedSongs from '../Components/LikedSongs'
 import {BrowserRouter as Router , Switch , Route , Link,Redirect} from 'react-router-dom'
 import Pages from './SearchPages'
+
 class WebFrame extends Component{
     constructor(props){
         super(props);
@@ -68,6 +70,9 @@ class WebFrame extends Component{
                                 </Route>
                                 <Route  path='/WebFrame/Library'>
                                     <PlayList></PlayList>
+                                </Route>
+                                <Route  path='/WebFrame/PlaylistInsidePage'>
+                                    <PlaylistInsidePage></PlaylistInsidePage>
                                 </Route>
                                 <Route  path='/WebFrame/'>
                                 <CreatePlaylist></CreatePlaylist>
