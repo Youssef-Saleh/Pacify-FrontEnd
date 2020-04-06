@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './SideBar.css'
 import './NavBar.css'
+import Webframe from '../Containers/WebFrame'
 import Library from '../library.PNG'
 import { Link } from 'react-router-dom'
-const SideBar=(OpenWindow)=>{
+import CreatePlaylist from './CreatePlaylist'
+
+class SideBar extends Component{
+    state = {
+        modalOpen: false
+     }
+   
+     handleModalOpen = () => {
+        this.setState((prevState) => {
+           return{
+              modalOpen: !prevState.modalOpen
+           }
+        })
+     }
+    render(){
     return (
         <div className='sidenav'>
             <img className='ml4 mt2' src='https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png' width='131' height='40'></img>
@@ -27,7 +42,7 @@ const SideBar=(OpenWindow)=>{
                 <div className='mt4'>
                     <div>
                         <img width='24' height='24' className='dib' src='https://previews.123rf.com/images/alionaursu/alionaursu1909/alionaursu190900024/129840824-plus-icon-vector-design-isolated-on-white-background.jpg'></img>
-                        <div  className='dib ml3 fw-900'><span>Create Playlist</span></div>
+                        <div  className='dib ml3 fw-900'><span onClick={this.handleModalOpen}>Create Playlist</span></div>
                     </div>
                     <div className='mt3'>
                         <img width='24' height='24' className='dib' src='https://4.bp.blogspot.com/-XzJ5OnL023w/XHbn9ondWXI/AAAAAAAAIDM/3LZfHpJcGjQ7Qtv5dSKmLpFQnLqtIi4ZwCK4BGAYYCw/s1600/heart%2Blove%2Bicon.png'></img>
@@ -36,8 +51,12 @@ const SideBar=(OpenWindow)=>{
                 </div>
                 <hr id='hor-row'></hr>
             </div>
+            <CreatePlaylist
+           modalOpen={this.state.modalOpen}
+           handleModalOpen={this.handleModalOpen}
+        />
         </div>
-    )
+    )};
 }
 
 export default SideBar
