@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { RouteComponentProps, matchPath } from 'react-router';
 import './PlaylistInsidePage.css';
 import PlaylistInsideSec1 from '../Components/PlaylistInsideSec1';
 import PlaylistSongslist from '../Components/PlaylistSongslist';
@@ -21,10 +22,19 @@ class PlaylistInsidePage extends Component{
        }
 }
 
+
+match =()=>{ matchPath(this.props.history.location.pathname, {
+  path: '/WebFrame/PlaylistInsidePage_:id',
+  exact: true,
+  strict: false
+})
+}
 componentDidMount(){
 
 
-  fetch('https://jsonplaceholder.typicode.com/users')   
+  fetch('https://jsonplaceholder.typicode.com/users')
+     
+
 
 .then(response=> {
 
@@ -70,10 +80,10 @@ revert=()=>{
 
                       <PlaylistInsideSec1 
 
-                      key= {playlistsdata[1].id}
-                      id={playlistsdata[1].id}
-                      playlistimage={playlistsdata[1].playlistimage}
-                      Title={playlistsdata[1].Title}
+                      key= {playlistsdata[ this.props.match.params.id-1].id}
+                      id={playlistsdata[ this.props.match.params.id-1].id}
+                      playlistimage={playlistsdata[ this.props.match.params.id-1].playlistimage}
+                      Title={playlistsdata[ this.props.match.params.id-1].Title}
 
                       // playlistdata1={playlistsdata1}
 

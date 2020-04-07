@@ -12,7 +12,7 @@ import {Link} from 'react-router-dom';
 //         console.log(playlistdata)
 //     }
 
-const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,playlistimage,name,email}) =>{
+const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,playlistimage,name,Title,Description}) =>{
 
 
 
@@ -57,7 +57,7 @@ const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,playlis
 
  return (
 
-    <Link to= '../WebFrame/PlaylistInsidePage'>
+    <Link to={ `../WebFrame/PlaylistInsidePage_${id}`}>
     
     <div id="Cards"  className='dtc bg-dark-gray dib br3 pa3 ma2 grow bw2'>
        <div   draggable="true">
@@ -67,8 +67,8 @@ const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,playlis
 
              <div   id='cardtext'>
 
-                 <h5  className= " pt3 fw6 f6 white">{name}</h5>
-                 <h5  className= "fw1 f6 white">{email}</h5>
+                 <h5  className= " pt3 fw6 f6 white">{Title}</h5>
+                 <h5  className= "fw1 f6 white">{Description}</h5>
 
              </div>
         
