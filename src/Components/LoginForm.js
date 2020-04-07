@@ -9,7 +9,7 @@ class LoginForm extends Component{
             email:'',
             password:'',
             checked:true,
-            MockBack: false,
+            MockBack: true,
             LoggedIn: false
         }
         this.SubmitForm = this.SubmitForm.bind(this)
@@ -60,7 +60,7 @@ class LoginForm extends Component{
         fetch('http://localhost:5000/song/5e8b7def535c4723f4666348')   
 
         .then(response=> {
-      
+
             return response.json();
         })
         .then(users => {
