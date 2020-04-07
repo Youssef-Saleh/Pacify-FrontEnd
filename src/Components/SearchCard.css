@@ -191,7 +191,7 @@
     width: 13rem;
 }
 #pod{
-    rotate: 30deg;
+    transform: rotate(30deg);
     width: 50%; 
     height: 50%; 
     /* width:100px;
