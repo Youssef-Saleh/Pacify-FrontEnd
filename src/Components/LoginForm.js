@@ -31,12 +31,11 @@ class LoginForm extends Component{
             const requestOptions = {
                 method: 'POST',
                 headers: { 
-                'Content-Type': 'application/json',  
+                'Content-Type': 'application/x-www-form-urlencoded',  
                 'Accept': 'application/json'},
-                ayhaga: 'string',
-                body: JSON.stringify({
-                    email,
-                    password})
+                body: new URLSearchParams({
+                    'email':email,
+                    'password':password})
             };
             console.log(requestOptions.body)
             fetch('http://localhost:5000/login', requestOptions)

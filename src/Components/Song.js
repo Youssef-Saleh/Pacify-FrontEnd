@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './LikedSongs.css';
 import ReactDOM from 'react-dom';
+import {useSelector,useDispatch} from 'react-redux'
+import {Stream} from '../Redux/songs/StreamActions'
 var check
 const $ = window.$;
 
@@ -12,9 +14,10 @@ function tog(){
 
     console.log("blah")
 }
+const dispatch = useDispatch()
         return(
 
-       <div className="w-dyn-item" onClick={tog}>
+       <div className="w-dyn-item" onClick={()=>dispatch(Stream('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3'))}>
            
       <div data-w-id="d18ccf74-1d76-0cb8-bfbf-22b62c6e332e" className="song">
       <div className="div-block-5"><div>

@@ -2,7 +2,7 @@ import {StreamSong} from '../Constants'
 
 export const Stream =(Data)=>{
     return {
-        type= {StreamSong},
-        payload={Data}
+        type: StreamSong,
+        payload: Data
     }
 }
