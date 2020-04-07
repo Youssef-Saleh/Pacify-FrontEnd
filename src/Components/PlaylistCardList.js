@@ -61,7 +61,9 @@ const PlaylistCardList=({likedsongsdata,playlistsdata,Music}) => {
                       ID={playlistsdata[i].id} 
                       playlistimage={playlistsdata[i].playlistimage}
                        name={playlistsdata[i].name} 
-                       email={playlistsdata[i].email} />  
+                     //   email={playlistsdata[i].email} 
+                     
+                     />  
          
                          );
          

@@ -12,7 +12,7 @@ import {Link} from 'react-router-dom';
 //         console.log(playlistdata)
 //     }
 
-const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,playlistimage,name,email}) =>{
+const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,playlistimage,name}) =>{
 
 
 
@@ -68,7 +68,7 @@ const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,playlis
              <div   id='cardtext'>
 
                  <h5  className= " pt3 fw6 f6 white">{name}</h5>
-                 <h5  className= "fw1 f6 white">{email}</h5>
+                 <h5  className= "fw1 f6 white">{name}</h5>
 
              </div>
         
