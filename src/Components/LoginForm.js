@@ -31,12 +31,11 @@ class LoginForm extends Component{
             const requestOptions = {
                 method: 'POST',
                 headers: { 
-                'Content-Type': 'application/json',  
+                'Content-Type': 'application/x-www-form-urlencoded',  
                 'Accept': 'application/json'},
-                ayhaga: 'string',
-                body: JSON.stringify({
-                    email,
-                    password})
+                body: new URLSearchParams({
+                    'email':email,
+                    'password':password})
             };
             console.log(requestOptions.body)
             fetch('http://localhost:5000/login', requestOptions)
@@ -59,7 +58,7 @@ class LoginForm extends Component{
         fetch('http://localhost:5000/song/5e8c31dc3d162e0ea00780f3')   
 
         .then(response=> {
-      
+
             return response.json();
         })
         .then(users => {
