@@ -1,8 +1,8 @@
 #Section { 
      background-color: rgb(32, 31, 31);
-     height: 22rem;
-     width: 16rem;
-     display: flex;
+     height: 15rem;
+     width: 12rem;
+     display: inline-block;
      position: relative;
      box-sizing: border-box;
 }
@@ -10,8 +10,8 @@
      height: 3.5rem;
      width: 3.5rem;
      position: absolute ;
-     top:18rem;
-     left:12rem;
+     top:11rem;
+     left:8rem;
      z-index: 2;
      display: block;
      box-sizing: border-box;
@@ -58,7 +58,7 @@ html[dir=ltr] .box {
      box-sizing: border-box; 
      z-index: 1;
      line-height:18px;
-     --size:56px;
+     --size:45px;
      border:0;
      border-radius:500px;
      color:#fff;

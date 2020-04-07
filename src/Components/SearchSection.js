@@ -1,12 +1,19 @@
 import React from 'react';
-import {SectionCardTypes} from './SearchSectionCardTypes'
-import SectionCardList from './SearchSectionCardList';
-const Section = ({title}) => {
+import './SearchSection.css'
+
+import { SectionCardTypes } from './SearchSectionCardTypes'
+import { playlistsdata } from './playlistsdata';
+import SectionCardList from '../Components/SearchSectionCardList';
+const Section = ({ title,playlist }) => {
     return (
-       <div className="pt5">
-           <h1 className="  white" >{title}</h1>
-           <SectionCardList SectionCardTypes={SectionCardTypes}/>
-       </div>
-        );
-    }
-    export default Section;
+        <div id="SearchSection ">
+            <div id="seeAllSearch">
+                <a className="LSearch" href="#"><h1 className="  fw7  f3 pl2 white" >{title}</h1></a>
+                </div>
+                <a className="LSearch" href="#">See all</a>
+            
+            <SectionCardList SectionCardTypes={playlist} />
+        </div>
+    );
+}
+export default Section;

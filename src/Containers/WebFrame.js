@@ -66,9 +66,11 @@ class WebFrame extends Component{
                                 <Route  path='/WebFrame/LikedSongs'>
                                     <LikedSongs></LikedSongs>
                                 </Route>
-                                <Route  path='/WebFrame/Pages'>
-                                    <Pages></Pages>
+                                <Route path='/WebFrame/Page_:id' component ={Pages}>
                                 </Route>
+                                {/* <Route  path='/WebFrame/Pages'>
+                                    <Pages></Pages>
+                                </Route> */}
                                 <Route  path='/WebFrame/Search'>
                                     <SearchPage></SearchPage>
                                 </Route>
