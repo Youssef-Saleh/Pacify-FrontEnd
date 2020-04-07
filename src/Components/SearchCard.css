@@ -2,29 +2,29 @@
     background: linear-gradient(to bottom ,
      rgb(201, 128, 19)70%,
      rgb(238, 178, 66)100%);
-     height: 13rem;
-     width: 13rem;
+     height: 12rem;
+     width: 12rem;
 }
 #CardM{
     background: linear-gradient(to bottom ,
     rgb(113, 146, 218)70%,
     rgb(134, 201, 228)100%);
-    height: 13rem;
-    width: 13em;
+    height: 12rem;
+     width: 12rem;
 }
 #CardC{
     background: linear-gradient(to bottom ,
     rgb(43, 95, 86)70%,
     rgb(72, 114, 101)100%);
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+    width: 12rem;
 }
 #CardN{
     background: linear-gradient(to bottom ,
     rgb(113, 132, 141)70%,
     rgb(161, 181, 201)100%);
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+     width: 12rem;
 }
 #CardD{
     background: linear-gradient(to bottom ,
@@ -37,8 +37,8 @@
     background: linear-gradient(to bottom ,
     rgb(83, 153, 218)70%,
     rgb(158, 197, 211)100%);
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+    width: 12rem;
 }
 #CardA{
     background: linear-gradient(to bottom ,
@@ -58,22 +58,22 @@
     background: linear-gradient(to bottom ,
     rgb(192, 137, 54)70%,
     rgb(219, 170, 63)100%);
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+     width: 12rem;
 }
 #CardE{
     background: linear-gradient(to bottom ,
     rgb(137, 202, 204)70%,
     rgb(167, 247, 253)100%);
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+     width: 12rem;
 }
 #CardMood{
     background: linear-gradient(to bottom ,
     rgb(37, 123, 223)70%,
     rgb(120, 195, 238)100%);
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+     width: 12rem;
 }
 #CardDecades{
     background: linear-gradient(to bottom ,
@@ -93,15 +93,15 @@
     background: linear-gradient(to bottom ,
     rgb(78, 4, 33)70%,
     rgb(94, 20, 42)100%);
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+     width: 12rem;
 }
 #CardGaming{
     background: linear-gradient(to bottom ,
     rgb(158, 63, 40)70%,
     rgb(197, 81, 35)100%);
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+     width: 12rem;
 }
 #CardLatin{
     background: linear-gradient(to bottom ,
@@ -128,36 +128,36 @@
     background: linear-gradient(to bottom ,
     rgb(141, 125, 158)70%,
     rgb(180, 162, 184)100%);
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+    width: 12rem;
 }
 #CardChill{
     background: linear-gradient(to bottom ,
     rgb(117, 138, 158)70%,
     rgb(138, 157, 170)100%);
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+     width: 12rem;
 }
 #CardParty{
     background: linear-gradient(to bottom ,
     rgb(172, 55, 119)70%,
     rgb(197, 52, 141)100%);
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+     width: 12rem;
 }
 #CardRock{
     background: linear-gradient(to bottom ,
     rgb(134, 26, 31)70%,
     rgb(184, 41, 41)100%);
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+    width: 12rem;
 }
 #CardWork{
     background: linear-gradient(to bottom ,
     rgb(184, 154, 89)70%,
     rgb(209, 172, 70)100%);
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+     width: 12rem;
 }
 #CardRomance{
     
@@ -180,18 +180,18 @@
     background: linear-gradient(to bottom ,
     rgb(7, 70, 56)70%,
     rgb(27, 75, 63)100%);
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+     width: 12rem;
 }
 #CardKids{
     background: linear-gradient(to bottom ,
     rgb(128, 28, 121)70%,
     rgb(146, 37, 137)100%);
-    height: 13rem;
-    width: 13rem;
+    height: 12rem;
+    width: 12rem;
 }
 #pod{
-    rotate: 30deg;
+    transform: rotate(30deg);
     width: 50%; 
     height: 50%; 
     /* width:100px;
@@ -201,8 +201,8 @@
     -webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
     box-shadow:0 2px 4px 0 rgba(0,0,0,.2) */
     position: relative;
-    right: -7.5rem;
-    bottom: -4rem;
+    right: -6.5rem;
+    bottom: -3rem;
 
 }
 /* .card{
