@@ -54,7 +54,6 @@ componentDidMount(){
                 {Cards}
             </div>
         )
-        
     }
       
     return(
