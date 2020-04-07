@@ -2,15 +2,15 @@ import React from 'react';
 import './SearchSectionCard.css'
 const SectionCard = ({title,source,p}) => {
     return (
-       <div id="Section" className=" vh-100 w-100 dt dib br3 pa3 ma2  bw2 shadow-5">
+       <div id="Section" className="  br3 pa3 ma2  bw2 shadow-5">
           <div draggable="true">
               <div id="two" className="react-contextmenu-wrapper">
                 <div  className="pa1">
                     <img className="tc db ba b--black-10 "src={source}/>
                 </div>
                 <div>
-                    <h4 className="white">{title}</h4>
-                    <p className="light-gray f6 ">{p}</p>
+                    <h1 className=" fw7  f7  white">{title}</h1>
+                    <p className="light-gray f7  ">{p}</p>
                 </div>
                 <div className="box ">
                     <button className="Button "  aria-lable="Play">

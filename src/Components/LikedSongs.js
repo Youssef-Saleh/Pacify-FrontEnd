@@ -44,7 +44,9 @@ componentDidMount(){
 
 
     render(){
+     
       const CardList = () => {
+        console.log(this.state.songs)
         const Cards = this.state.songs.map((user,i)=>{
            return <Song name={this.state.songs[i].name} length={this.state.songs[i].userId}/>})
         return (
