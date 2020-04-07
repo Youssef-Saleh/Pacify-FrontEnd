@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './PlaylistInsidePage.css';
-import PlaylistInsideSec1 from '../Components/PlaylistInsideSec1';
-import PlaylistSongslist from '../Components/PlaylistSongslist';
- import {playlistsdata} from '../Components/playlistsdata';
+import './AlbumInsidePage.css';
+import AlbumInsideSec1 from '../Components/AlbumInsideSec1';
+import AlbumSongslist from '../Components/AlbumSongslist';
+ import {albumsdata} from '../Components/albumsdata';
 //import {playlistsongsdata} from '../Components/playlistsongsdata';
 // import ReactDOM from 'react-dom';
 // var check
 const $ = window.$;
 
-class PlaylistInsidePage extends Component{
+class AlbumInsidePage extends Component{
 
   constructor(props) {        
     super(props)
@@ -68,20 +68,20 @@ revert=()=>{
         <div className="div-block-15">
           <div className="w-layout-grid grid">
 
-                      <PlaylistInsideSec1 
+                      <AlbumInsideSec1 
 
-                      key= {playlistsdata[1].id}
-                      id={playlistsdata[1].id}
-                      playlistimage={playlistsdata[1].playlistimage}
-                      Title={playlistsdata[1].Title}
+                      key= {albumsdata[1].id}
+                      id={albumsdata[1].id}
+                      albumimage={albumsdata[1].albumimage}
+                      albumname={albumsdata[1].albumname}
 
                       // playlistdata1={playlistsdata1}
 
-                      ></PlaylistInsideSec1>
+                      ></AlbumInsideSec1>
 
                    <div className="div-block-6 pt5 pr3">
 
-                          <PlaylistSongslist playlistsongsdata={playlistsongsdata}></PlaylistSongslist>
+                          <AlbumSongslist playlistsongsdata={playlistsongsdata}></AlbumSongslist>
 
                   </div>
 
@@ -91,4 +91,4 @@ revert=()=>{
      
     )}
 };
-export default PlaylistInsidePage;
+export default AlbumInsidePage;

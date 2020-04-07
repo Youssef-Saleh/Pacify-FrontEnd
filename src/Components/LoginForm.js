@@ -17,13 +17,14 @@ class LoginForm extends Component{
     }
     onLoginChange=(event)=>{
         this.setState({[event.target.name]: event.target.value })
+        console.log(this.state.data)
     }
     SubmitForm(event){
         console.log("func called")
         //event.preventDefault()
         let find = ''
         const {email , password, MockBack,data} = this.state
-        let found = data[1].email
+        let found = data[0].email
         if (email == found && password == "admin" && MockBack ){
             this.setState({LoggedIn: true})
             sessionStorage.setItem("token","asdfjfskfbsfgyfewjsfdk")
@@ -35,8 +36,7 @@ class LoginForm extends Component{
         .then(users=>{
         this.setState({ data: users })
         })
-    console.log(this.state.data)
-
+  
     }
     render(){
         const {data}=this.state

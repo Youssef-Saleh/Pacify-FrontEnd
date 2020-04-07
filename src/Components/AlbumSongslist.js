@@ -1,8 +1,8 @@
 import React from 'react';
-import PlaylistSongsSec2 from './PlaylistSongsSec2'
+import AlbumSongsSec2 from './AlbumSongsSec2'
 
 
-const PlaylistSongslist=({playlistsongsdata}) => {
+const AlbumSongslist=({playlistsongsdata}) => {
 
       return (
          
@@ -15,7 +15,7 @@ const PlaylistSongslist=({playlistsongsdata}) => {
                   return (
                   
                        
-                     <PlaylistSongsSec2
+                     <AlbumSongsSec2
                     
                      // key={playlistsongsdata[i].id}
                      //  id={playlistsongsdata[i].id} 
@@ -49,4 +49,4 @@ const PlaylistSongslist=({playlistsongsdata}) => {
     }
 
        
-       export default PlaylistSongslist;
+       export default AlbumSongslist;

@@ -1,10 +1,10 @@
 import React from 'react';
-import './PlaylistSongsSec2.css';
-import '../Containers/PlaylistInsidePage.css';
+import './AlbumSongsSec2.css';
+// import '../Containers/PlaylistInsidePage.css';
 
 
 
-const PlaylistSongsSec2=({id,songname,artist,album ,name,username,website}) =>{
+const AlbumSongsSec2=({id,songname,artist,album ,name,username,website}) =>{
 
   
     return (
@@ -49,4 +49,4 @@ const PlaylistSongsSec2=({id,songname,artist,album ,name,username,website}) =>{
 
 }
     
-    export default PlaylistSongsSec2;
+    export default AlbumSongsSec2;

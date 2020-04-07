@@ -8,7 +8,7 @@ export const albumsdata = [
     {
       id: 1,
       albumimage:require('../album2.jpg'),
-      albumname: 'Cairokee',
+      albumname: 'Amr Diab',
       singer: 'Amir',
     },
     {

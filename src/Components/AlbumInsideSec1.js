@@ -1,18 +1,18 @@
 import React from 'react';
-import './PlaylistInsideSec1.css';
+import './AlbumInsideSec1.css';
 
 
 
-const PlaylistInsideSec1=({id,playlistimage,Title}) =>{
+const AlbumInsideSec1=({id,albumimage,albumname}) =>{
 
   
     return (
               
         <div className=" pt5 ">
             <div className='tc'>
-            <img src={playlistimage} alt=" no image" class=" w-60 h-60 image3"/>
+            <img src={albumimage} alt=" no image" class=" w-60 h-60 image3"/>
             
-            <div className="playlistName pt2">{Title}</div>
+            <div className="playlistName pt2">{albumname}</div>
             <div className="playlistCreator pt1 pb3">Spotify</div>
 
             <div className="play-container">
@@ -38,4 +38,4 @@ const PlaylistInsideSec1=({id,playlistimage,Title}) =>{
 
 }
     
-    export default PlaylistInsideSec1;
+    export default AlbumInsideSec1;
