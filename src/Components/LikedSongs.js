@@ -34,7 +34,7 @@ this.state={
 
 }
 componentDidMount(){
-  fetch('https://jsonplaceholder.typicode.com/users').then(response=>{
+  fetch('http://localhost:5000/likedSongs').then(response=>{
     return response.json();
   }).then(users=>{
     this.setState({songs:users});
@@ -44,9 +44,10 @@ componentDidMount(){
 
 
     render(){
+     
       const CardList = () => {
         const Cards = this.state.songs.map((user,i)=>{
-           return <Song name={this.state.songs[i].username} length={this.state.songs[i].id}/>})
+           return <Song name={this.state.songs[i].name} length={this.state.songs[i].userId}/>})
         return (
             <div>
                 {Cards}
