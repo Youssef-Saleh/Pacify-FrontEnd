@@ -34,7 +34,7 @@ this.state={
 
 }
 componentDidMount(){
-  fetch('https://jsonplaceholder.typicode.com/users').then(response=>{
+  fetch('http://localhost:5000/likedSongs').then(response=>{
     return response.json();
   }).then(users=>{
     this.setState({songs:users});
@@ -46,7 +46,7 @@ componentDidMount(){
     render(){
       const CardList = () => {
         const Cards = this.state.songs.map((user,i)=>{
-           return <Song name={this.state.songs[i].username} length={this.state.songs[i].id}/>})
+           return <Song name={this.state.songs[i].name} length={this.state.songs[i].userId}/>})
         return (
             <div>
                 {Cards}
@@ -61,7 +61,7 @@ componentDidMount(){
       <div className="w-layout-grid grid">
       <div className="div-block-7">
       <div>
-      <img src="https://uploads-ssl.webflow.com/5e36e6f21212670638c0d63c/5e39d85cee05be53d238681a_likedSongs.png" alt="" class="image-3"/>
+      <img src="https://uploads-ssl.webflow.com/5e36e6f21212670638c0d63c/5e39d85cee05be53d238681a_likedSongs.png" alt="" class="image-3" id="liked-songs"/>
       <div className="playlist-name">Liked Songs</div>
       <div className="playlist-creator">Iain Freestone</div>
       <div className="play-container">
