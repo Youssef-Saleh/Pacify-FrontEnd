@@ -8,16 +8,18 @@ var check
 const $ = window.$;
 
 
-const Song = ({ name,length }) =>{
+const Song = ({ name,length,link }) =>{
 
 function tog(){
 
     console.log("blah")
 }
 const dispatch = useDispatch()
+{console.log({link})}
         return(
+          
 
-       <div className="w-dyn-item" onClick={()=>dispatch(Stream('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3'))}>
+       <div className="w-dyn-item" onClick={()=>dispatch(Stream(link))}>
            
       <div data-w-id="d18ccf74-1d76-0cb8-bfbf-22b62c6e332e" className="song">
       <div className="div-block-5"><div>
