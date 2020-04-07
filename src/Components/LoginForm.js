@@ -6,10 +6,10 @@ class LoginForm extends Component{
         super(props)
         this.state={
             data:[],
-            email: '',
+            email:'',
             password:'',
             checked:true,
-            MockBack: true,
+            MockBack: false,
             LoggedIn: false
         }
         this.SubmitForm = this.SubmitForm.bind(this)
@@ -20,23 +20,54 @@ class LoginForm extends Component{
         console.log(this.state.data)
     }
     SubmitForm(event){
-        console.log("func called")
-        //event.preventDefault()
-        let find = ''
+        event.preventDefault()
         const {email , password, MockBack,data} = this.state
-        let found = data[0].email
-        if (email == found && password == "admin" && MockBack ){
+        // let found = data[0].email
+        if (email == 'found' && password == "admin" && MockBack ){
             this.setState({LoggedIn: true})
             sessionStorage.setItem("token","asdfjfskfbsfgyfewjsfdk")
         }
+        else if (!MockBack){
+            const requestOptions = {
+                method: 'POST',
+                headers: { 
+                'Content-Type': 'application/json',  
+                'Accept': 'application/json'},
+                ayhaga: 'string',
+                body: JSON.stringify({
+                    email,
+                    password})
+            };
+            console.log(requestOptions.body)
+            fetch('http://localhost:5000/login', requestOptions)
+            .then(console.log("fetching successfuly"))
+            .then(response => {
+                return response.json()
+                console.log(response)
+            })
+            .then((token)=>{
+                console.log('the token is ',token)
+                sessionStorage.setItem('token',token)
+                this.setState({LoggedIn:true})
+            })
+        }
+    let token = sessionStorage.getItem('token')
+    console.log(token)
     }
     componentDidMount(){
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(users=>{
-        this.setState({ data: users })
+        if(this.state.MockBack){
+        fetch('http://localhost:5000/song/5e8b7def535c4723f4666348')   
+
+        .then(response=> {
+      
+            return response.json();
         })
-  
+        .then(users => {
+
+            this.setState({  data: users })
+        })
+        }
+    
     }
     render(){
         const {data}=this.state
