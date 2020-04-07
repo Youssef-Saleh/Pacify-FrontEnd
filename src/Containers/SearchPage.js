@@ -9,22 +9,22 @@ class SearchPage extends Component{
   constructor(){
     super();
     this.state={
-      types:types,
+      types:[],
       clickid:"0"
     }
 
   }
 
-  // componentDidMount(){
-  //   fetch('http://localhost:5000/song/5e8c3f00f142754aa4d7d9f8 ').then(response=>{
-  //     return response.json();
-  // }).then(properties=>{
-  //     this.setState({
-  //       types:properties ,
-  //       clickid:types
-  //     })
-  // })
-  // }
+  componentDidMount(){
+    fetch('http://localhost:5000/browse ').then(response=>{
+      return response.json();
+  }).then(properties=>{
+      this.setState({
+        types:properties ,
+        clickid:types
+      })
+  })
+  }
   ondivclick=(event)=>{
     this.setState({ clickid: event.target.getAttribute('IDC') })
     // console.log(this.state.clickid);
@@ -46,7 +46,7 @@ class SearchPage extends Component{
             />
            </div> */}
         <h1 className=" pl3 fw7 pt4 f3 lh-title white ">Browse all</h1>
-        <CardList types={this.state.types} EVENT={this.ondivclick}/>
+        <CardList list={this.state.types} EVENT={this.ondivclick}/>
         
     </div>
 

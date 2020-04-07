@@ -1,21 +1,22 @@
 import React from 'react';
 import Card from './SearchCard';
+import {types} from '../Components/Searchtypes'
 
-const CardList = ({ types }) => {
+const CardList = ({ list }) => {
         return (
         <div>
             {
                 
                 // {cardCom}
-                types.map((user, i) => {
+                list.map((user, i) => {
                     return (
                         <Card
                             key={i}
-                            idc={types[i].id}
-                            title={types[i].title}
-                            source={types[i].source}
-                            bg={types[i].bg}
-                            Path={types[i].Path}
+                            idc={list[i].id}
+                            title={list[i].name}
+                            // source={types[i].source}
+                            // bg={types[i].bg}
+                            // Path={types[i].Path}
                         />
                     );
                 })
