@@ -1,14 +1,17 @@
 import React from 'react';
 import './AlbumCards.css';
 import './PlaylistCards.css';
-
+import {Link} from 'react-router-dom';
 
 
 
 const AlbumCards=({albumimage,albumname,singer}) =>{
 
     return (
-    
+
+
+    <Link to= '../WebFrame/AlbumInsidePage'>
+
         <div id="AlbumCards" className=' bg-dark-gray dib h6 br3 pa3 ma2 grow bw2'>
             <div draggable="true">
                <div id="wrapper" className="react-contextmenu-wrapper">
@@ -34,7 +37,8 @@ const AlbumCards=({albumimage,albumname,singer}) =>{
                </div>
            </div>
         </div> 
-            
+
+           </Link> 
     
         );
 

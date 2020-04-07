@@ -4,7 +4,7 @@ import '../Containers/PlaylistInsidePage.css';
 
 
 
-const PlaylistSongsSec2=({id,songname,artist,album}) =>{
+const PlaylistSongsSec2=({id,songname,artist,album ,name,username,website}) =>{
 
   
     return (
@@ -19,12 +19,12 @@ const PlaylistSongsSec2=({id,songname,artist,album}) =>{
 
                 <div>
                     <div>
-                        {songname}
+                        {website}
                     </div>
                     <div className="Song-Name-and-Artist">
 
-                    <div className='pr2 singername'>{artist}</div> -
-                    <div className=' pl2 albumname'>{album}</div>
+                    <div className='pr2 singername'>{name}</div> -
+                    <div className=' pl2 albumname'>{username}</div>
 
                     </div>
                 </div>

@@ -18,7 +18,6 @@ class LoginForm extends Component{
     onLoginChange=(event)=>{
         this.setState({[event.target.name]: event.target.value })
         console.log(this.state.data)
-
     }
     SubmitForm(event){
         event.preventDefault()

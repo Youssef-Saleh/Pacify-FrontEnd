@@ -3,8 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './PlaylistInsidePage.css';
 import PlaylistInsideSec1 from '../Components/PlaylistInsideSec1';
 import PlaylistSongslist from '../Components/PlaylistSongslist';
-import {playlistsdata} from '../Components/playlistsdata';
-import {playlistsongsdata} from '../Components/playlistsongsdata';
+ import {playlistsdata} from '../Components/playlistsdata';
+//import {playlistsongsdata} from '../Components/playlistsongsdata';
 // import ReactDOM from 'react-dom';
 // var check
 const $ = window.$;
@@ -15,10 +15,29 @@ class PlaylistInsidePage extends Component{
     super(props)
     this.state= {
 
+     // playlistsdata1: [], 
+      playlistsongsdata:[],  
      
        }
 }
 
+componentDidMount(){
+
+
+  fetch('https://jsonplaceholder.typicode.com/users')   
+
+.then(response=> {
+
+    return response.json();
+})
+.then(users => {
+
+    //this.setState({  playlistsdata1: users })
+    this.setState({  playlistsongsdata: users })
+})
+
+
+}
 
 
 toggle=(event)=>{
@@ -39,7 +58,11 @@ revert=()=>{
 
 
     render(){
+
+      const {playlistsdata1,playlistsongsdata} =this.state
     return(
+
+      
 
       <div className="content1">
         <div className="div-block-15">
@@ -52,7 +75,8 @@ revert=()=>{
                       playlistimage={playlistsdata[1].playlistimage}
                       Title={playlistsdata[1].Title}
 
-                      
+                      // playlistdata1={playlistsdata1}
+
                       ></PlaylistInsideSec1>
 
                    <div className="div-block-6 pt5 pr3">

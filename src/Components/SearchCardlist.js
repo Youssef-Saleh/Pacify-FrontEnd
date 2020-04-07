@@ -11,7 +11,7 @@ const CardList = ({ types }) => {
                     return (
                         <Card
                             key={i}
-                            id={types[i].id}
+                            idc={types[i].id}
                             title={types[i].title}
                             source={types[i].source}
                             bg={types[i].bg}
