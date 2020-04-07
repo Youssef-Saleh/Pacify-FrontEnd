@@ -44,26 +44,26 @@ const PlaylistCardList=({likedsongsdata,playlistsdata,Music}) => {
 
                   return (
                   
-                     // <PlaylistCards firstcard={false}
-                     // key={playlistsdata[i].id}
-                     //  id={playlistsdata[i].id} 
-                     //  playlistimage={playlistsdata[i].playlistimage}
-                     //   Title={playlistsdata[i].Title} 
-                     //   Description={playlistsdata[i].Description} />  
-                       
-                       
-                       
-                     <PlaylistCards
-                      
-                     StreamMusic={Music}
-                     firstcard={false}
+                     <PlaylistCards firstcard={false}
                      key={playlistsdata[i].id}
-                      ID={playlistsdata[i].id} 
+                      id={playlistsdata[i].id} 
                       playlistimage={playlistsdata[i].playlistimage}
-                       name={playlistsdata[i].name} 
-                     //   email={playlistsdata[i].email} 
+                       Title={playlistsdata[i].Title} 
+                       Description={playlistsdata[i].Description} />  
+                       
+                       
+                       
+                     // <PlaylistCards
+                      
+                     // // StreamMusic={Music}
+                     // // firstcard={false}
+                     // // key={playlistsdata[i].id}
+                     // //  ID={playlistsdata[i].id} 
+                     // //  playlistimage={playlistsdata[i].playlistimage}
+                     // //   name={playlistsdata[i].name} 
+                     // // email={playlistsdata[i].email} 
                      
-                     />  
+                     // />  
          
                          );
          

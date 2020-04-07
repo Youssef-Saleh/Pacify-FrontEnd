@@ -3,7 +3,7 @@ import PlaylistHeader from '../Components/PlaylistHeader'
 import PlaylistCardList from '../Components/PlaylistCardList';
 // import LikedSongsCard from '../Components/LikedSongsCard';
 //import LikedSongslist from '../Components/LikedSongslist';
-//import {playlistsdata} from '../Components/playlistsdata';
+import {playlistsdata} from '../Components/playlistsdata';
 import {likedsongsdata} from '../Components/likedsongsdata';
 
 import './Playlist.css'
@@ -15,28 +15,28 @@ class Playlist extends Component {
     super(props)
     this.state= {
 
-        playlistsdata: [],   
+        playlistsdata: playlistsdata,   
         CardID:" ",                      
         //likedsongsdata:[],
        }
 }
 
-componentDidMount(){
+// componentDidMount(){
 
 
-    fetch('https://jsonplaceholder.typicode.com/users')   
+//     fetch('https://jsonplaceholder.typicode.com/users')   
 
-  .then(response=> {
+//   .then(response=> {
 
-      return response.json();
-  })
-  .then(users => {
+//       return response.json();
+//   })
+//   .then(users => {
 
-      this.setState({  playlistsdata: users })
-  })
+//       this.setState({  playlistsdata: users })
+//   })
 
 
-}
+// }
 
 PlayMusic =(event) =>{                                            
   this.setState({ CardID: event.target.getAttribute('IDM') })
