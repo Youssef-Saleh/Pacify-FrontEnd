@@ -7,6 +7,7 @@ import Albums from '../Containers/Albums'
 import AlbumInsidePage from '../Containers/AlbumInsidePage'
 import './WebFrame.css'
 import SearchPage from './SearchPage'
+import WebPlayerHome from './WebPlayerHome'
 import CreatePlaylist from '../Components/CreatePlaylist'
 import PlayList from '../Containers/Playlist'
 import LikedSongs from '../Components/LikedSongs'
@@ -60,7 +61,7 @@ class WebFrame extends Component{
                             <div className='web-frame '>    {/*The Content of the page is placed here,,routing also will be here*/ }
                             <Switch>
                                 <Route  path='/WebFrame/Home'>
-                                    <h1>HELLLLLLLLLLLLOOOOOOOOOO!!!!!</h1>
+                                    < WebPlayerHome></WebPlayerHome>
                                 </Route>
                                 <Route  path='/WebFrame/LikedSongs'>
                                     <LikedSongs></LikedSongs>
