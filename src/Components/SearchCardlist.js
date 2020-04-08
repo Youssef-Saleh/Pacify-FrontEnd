@@ -3,7 +3,7 @@ import Card from './SearchCard';
 
 const CardList = ({ types }) => {
         return (
-        <div>
+        <div className=''>
             {
                 
                 // {cardCom}
