@@ -33,10 +33,10 @@ class SearchPage extends Component{
   } 
   render(){
     return(
-      <div className="vh-100 dt w-100">
-        <h1 className="pl3 fw7 pt4 f3 lh-title white  ">Your top genres</h1>
-         {/* <div onClick={this.ondivclick}  IDC={this.state.types[7].id}> */}
-          {/* <Card 
+      <div className="vh-100 dt w-100 pl2">
+        <h1 className="pl4 fw7 pt4 f3 lh-title white  ">Your top genres</h1>
+         {/* <div onClick={this.ondivclick}  IDC={this.state.types[7].id}>
+          <Card 
             CardId={this.ondivclick}
             idc={7}
             title={this.state.types[7].name}
@@ -44,8 +44,8 @@ class SearchPage extends Component{
             bg={this.state.types[7].name}
             />
            </div> */}
-        <h1 className=" pl3 fw7 pt4 f3 lh-title white ">Browse all</h1>
-        <CardList list={this.state.types} EVENT={this.ondivclick}/>
+        <h1 className=" pl4 fw7 pt4 f3 lh-title white ">Browse all</h1>
+        <CardList types={this.state.types} EVENT={this.ondivclick}/>
         
     </div>
 

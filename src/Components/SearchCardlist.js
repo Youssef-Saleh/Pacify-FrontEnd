@@ -4,7 +4,7 @@ import {types} from '../Components/Searchtypes'
 
 const CardList = ({ list }) => {
         return (
-        <div>
+        <div className=''>
             {
                 
                 // {cardCom}
