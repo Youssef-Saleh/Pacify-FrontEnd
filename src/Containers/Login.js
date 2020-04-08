@@ -7,6 +7,7 @@ import LoginApple from '../Components/LoginApple'
 import LoginForm from '../Components/LoginForm'
 import LoginFooter from '../Components/LoginFooter'
 //import Button from '@material-ui/core/Button';
+import {Link} from 'react-router-dom'
 class Login extends Component {
 
     render(){ 
@@ -33,7 +34,7 @@ class Login extends Component {
                     <LoginForm></LoginForm>
                     <br></br>
                     <div class="row" className='text-center'>
-                        <a className="Login_a" href="#" >Forgot your password?</a>
+                        <Link to='ForgotPassword'><a className="Login_a" href="#" >Forgot your password?</a></Link>
                     </div> 
                     <br></br>
                     <br></br>

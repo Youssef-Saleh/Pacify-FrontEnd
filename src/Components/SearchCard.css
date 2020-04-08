@@ -8,7 +8,8 @@
 #CardM{
     background: linear-gradient(to bottom ,
     rgb(113, 146, 218)70%,
-    rgb(134, 201, 228)100%);
+    rgb(134, 201, 22
+    8)100%);
     height: 12rem;
      width: 12rem;
 }
@@ -19,7 +20,7 @@
     height: 12rem;
     width: 12rem;
 }
-#CardN{
+#Jazz{
     background: linear-gradient(to bottom ,
     rgb(113, 132, 141)70%,
     rgb(161, 181, 201)100%);
@@ -33,7 +34,7 @@
     height: 16rem;
     width: 16rem;
 }
-#CardArab{
+#Arabic{
     background: linear-gradient(to bottom ,
     rgb(83, 153, 218)70%,
     rgb(158, 197, 211)100%);
@@ -47,21 +48,21 @@
     height: 16rem;
     width: 16rem;
 }
-#CardPop{
+#Pop{
     background: linear-gradient(to bottom ,
     rgb(146, 196, 177)70%,
     rgb(172, 233, 209)100%);
-    height: 16rem;
-    width: 16rem;
+    height: 12rem;
+    width: 12rem;
 }
-#CardH{
+#HipHop{
     background: linear-gradient(to bottom ,
     rgb(192, 137, 54)70%,
     rgb(219, 170, 63)100%);
     height: 12rem;
      width: 12rem;
 }
-#CardE{
+#Electronic{
     background: linear-gradient(to bottom ,
     rgb(137, 202, 204)70%,
     rgb(167, 247, 253)100%);
@@ -89,7 +90,7 @@
     height: 16rem;
     width: 16rem;
 }
-#CardGaming{
+#Gaming{
     background: linear-gradient(to bottom ,
     rgb(78, 4, 33)70%,
     rgb(94, 20, 42)100%);
@@ -124,35 +125,56 @@
     height: 16rem;
     width: 16rem;
 }
-#CardW{
+#Classical{
     background: linear-gradient(to bottom ,
     rgb(141, 125, 158)70%,
     rgb(180, 162, 184)100%);
     height: 12rem;
     width: 12rem;
 }
-#CardChill{
+#Chill{
+    background: linear-gradient(to bottom ,
+    rgb(182, 102, 119)70%,
+    rgb(172, 96, 116)100%);
+    height: 12rem;
+    width: 12rem;
+}
+#Blues{
     background: linear-gradient(to bottom ,
     rgb(117, 138, 158)70%,
     rgb(138, 157, 170)100%);
     height: 12rem;
      width: 12rem;
 }
-#CardParty{
+#Punk{
     background: linear-gradient(to bottom ,
     rgb(172, 55, 119)70%,
     rgb(197, 52, 141)100%);
     height: 12rem;
      width: 12rem;
 }
-#CardRock{
+#R_B{
+    background: linear-gradient(to bottom ,
+    rgb(172, 55, 119)70%,
+    rgb(197, 52, 141)100%);
+    height: 12rem;
+     width: 12rem;
+}
+#Rock{
     background: linear-gradient(to bottom ,
     rgb(134, 26, 31)70%,
     rgb(184, 41, 41)100%);
     height: 12rem;
     width: 12rem;
 }
-#CardWork{
+#Travel{
+    background: linear-gradient(to bottom ,
+    rgb(184, 154, 89)70%,
+    rgb(209, 172, 70)100%);
+    height: 12rem;
+     width: 12rem;
+}
+#Country{
     background: linear-gradient(to bottom ,
     rgb(184, 154, 89)70%,
     rgb(209, 172, 70)100%);
@@ -183,7 +205,7 @@
     height: 12rem;
      width: 12rem;
 }
-#CardKids{
+#Kids{
     background: linear-gradient(to bottom ,
     rgb(128, 28, 121)70%,
     rgb(146, 37, 137)100%);
