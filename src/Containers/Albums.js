@@ -21,19 +21,39 @@ class Album extends Component {
 
     componentDidMount(){
 
-    fetch('http://localhost:5000/likedAlbums')   
+  //   fetch('http://localhost:5000/likedAlbums')   
    
-  .then(response=> {
+  // .then(response=> {
 
-      return response.json();
-  })
-  .then(users => {
+  //     return response.json();
+  // })
+  // .then(users => {
 
-      this.setState({  albumsdata: users })
+  //     this.setState({  albumsdata: users })
       
-  })
+  // })
 
+  // console.log("fetching")
+
+  const requestOptions = {
+    method: 'GET',
+    headers: { 
+    'Content-Type': 'application/x-www-form-urlencoded',  
+    'authorization': sessionStorage.getItem('token'),
+    'Accept': 'application/json'},
+    }
+
+fetch('http://localhost:5000/likedAlbums',requestOptions)
+
+.then(response=>{
+  return response.json();
+})
+.then(users=>{
+  this.setState({albumsdata:users});
   console.log("fetching")
+});
+
+
 
 }
 

@@ -3,7 +3,7 @@ import PlaylistHeader from '../Components/PlaylistHeader'
 import PlaylistCardList from '../Components/PlaylistCardList';
 // import LikedSongsCard from '../Components/LikedSongsCard';
 //import LikedSongslist from '../Components/LikedSongslist';
-import {playlistsdata} from '../Components/playlistsdata';
+//import {playlistsdata} from '../Components/playlistsdata';
 import {likedsongsdata} from '../Components/likedsongsdata';
 
 import './Playlist.css'
@@ -15,30 +15,35 @@ class Playlist extends Component {
     super(props)
     this.state= {
 
-        playlistsdata:playlistsdata,  
+        playlistsdata:[],  
         // likedPlaylists:[] ,
         CardID:" ",                      
         //likedsongsdata:[],
        }
 }
 
-// componentDidMount(){
+componentDidMount(){
 
-//     fetch('http://localhost:5000/likedPlaylists')   
-//     console.log("fetching")
-//   .then(response=> {
 
-//       return response.json();
-//   })
-//   .then(users => {
+  const requestOptions = {
+    method: 'GET',
+    headers: { 
+    'Content-Type': 'application/x-www-form-urlencoded',  
+    'authorization': sessionStorage.getItem('token'),
+    'Accept': 'application/json'},
+    }
 
-//       this.setState({  playlistsdata: users })
-//       console.log("fetching")
-//   })
+fetch('http://localhost:5000/likedPlaylists',requestOptions)
 
-//   console.log("fetching")
+.then(response=>{
+  return response.json();
+})
+.then(users=>{
+  this.setState({playlistsdata:users});
+  console.log("fetching")
+});
 
-// }
+}
 
 PlayMusic =(event) =>{                                            
   this.setState({ CardID: event.target.getAttribute('idm') })

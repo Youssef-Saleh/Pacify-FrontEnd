@@ -63,12 +63,12 @@ const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,url,nam
        <div   draggable="true">
           <div id="wrapper" className="react-contextmenu-wrapper">
 
-             <img id='cardimage' alt='pic' src={playlistimage}/>
+             <img id='cardimage' alt='pic' src={url}/>
 
              <div   id='cardtext'>
 
-                 <h5  className= " pt3 fw6 f6 white">{Title}</h5>
-                 <h5  className= "fw1 f6 white">{Description}</h5>
+                 <h5  className= " pt3 fw6 f6 white">{name}</h5>
+                 <h5  className= "fw1 f6 white">{description}</h5>
 
              </div>
         

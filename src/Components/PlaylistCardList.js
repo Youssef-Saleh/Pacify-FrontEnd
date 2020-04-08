@@ -57,11 +57,11 @@ const PlaylistCardList=({likedsongsdata,playlistsdata,likedPlaylists,Music}) => 
                            StreamMusic={Music}
                            firstcard={false}
                            key={playlistsdata[i].id}
-                            ID={playlistsdata[i].id} 
-                            playlistimage={playlistsdata[i].playlistimage}
-                            Title={playlistsdata[i].Title} 
-                            Description={playlistsdata[i].Description}
-                           
+                           ID={i} 
+                           url={playlistsdata[i].url}
+                           name={playlistsdata[i].name} 
+                           description={playlistsdata[i].description}
+                  
                              
                              />  
 

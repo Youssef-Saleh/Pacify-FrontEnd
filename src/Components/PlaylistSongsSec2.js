@@ -6,10 +6,10 @@ import {Stream} from '../Redux/songs/StreamActions'
 import {LoadSongs} from '../Redux/songs/StreamActions'
 import cairoke from './cairokee.mp3'
 
-const PlaylistSongsSec2=({id,songname,artist,album ,name,username,website}) =>{
+const PlaylistSongsSec2=({id,url,songname,artist,album ,name}) =>{
 
 const Dispatch=useDispatch()
-Dispatch(LoadSongs({id:'1',url:'1',name:'1',description:'1'}))
+Dispatch(LoadSongs({id:'1',url:'1',name:'1',artist:'1'}))
 
     return (
               
@@ -23,12 +23,12 @@ Dispatch(LoadSongs({id:'1',url:'1',name:'1',description:'1'}))
 
                 <div>
                     <div>
-                        {website}
+                        {name}
                     </div>
                     <div className="Song-Name-and-Artist">
 
-                    <div className='pr2 singername'>{name}</div> -
-                    <div className=' pl2 albumname'>{username}</div>
+                    <div className='pr2 singername'>{artist}</div> -
+                    {/* <div className=' pl2 albumname'>{username}</div> */}
 
                     </div>
                 </div>

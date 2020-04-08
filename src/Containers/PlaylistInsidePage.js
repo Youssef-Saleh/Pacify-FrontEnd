@@ -4,7 +4,7 @@ import { RouteComponentProps, matchPath } from 'react-router';
 import './PlaylistInsidePage.css';
 import PlaylistInsideSec1 from '../Components/PlaylistInsideSec1';
 import PlaylistSongslist from '../Components/PlaylistSongslist';
- import {playlistsdata} from '../Components/playlistsdata';
+ //import {playlistsdata} from '../Components/playlistsdata';
 //import {playlistsongsdata} from '../Components/playlistsongsdata';
 // import ReactDOM from 'react-dom';
 // var check
@@ -16,7 +16,7 @@ class PlaylistInsidePage extends Component{
     super(props)
     this.state= {
 
-     // playlistsdata1: [], 
+     playlistdescription: [], 
       playlistsongsdata:[],  
      
        }
@@ -29,25 +29,61 @@ match =()=>{ matchPath(this.props.history.location.pathname, {
   strict: false
 })
 }
+
 componentDidMount(){
+var valueArray=[];
 
 
-  fetch('https://jsonplaceholder.typicode.com/users')
-     
-
-
-.then(response=> {
-
-    return response.json();
+const requestOptions = {
+  method: 'GET',
+  headers: { 
+  'Content-Type': 'application/x-www-form-urlencoded',  
+  'authorization': sessionStorage.getItem('token'),
+  'Accept': 'application/json'},
+  }
+  fetch('http://localhost:5000/likedPlaylists ',requestOptions)
+  .then(res => res.json())
+  .then(function(res) {
+      res.forEach(element => {
+          valueArray.push(element);
+});
 })
-.then(users => {
 
-    //this.setState({  playlistsdata1: users })
-    this.setState({  playlistsongsdata: users })
-})
+.then( this.setState({playlistdescription:valueArray}))
+.then(()=>this.setState({name:this.state.playlistdescription[this.props.match.params.id].name}))
+.then(()=>this.fetching(this.state.playlistdescription))
 
 
 }
+
+fetching=(value)=>{
+  const requestOptions = {
+      method: 'GET',
+      headers: { 
+      'Content-Type': 'application/x-www-form-urlencoded',  
+      'authorization': sessionStorage.getItem('token'),
+      'Accept': 'application/json'},
+      }
+  fetch(`http://localhost:5000/playlist/${value[this.props.match.params.id]._id}`,requestOptions)
+  .then(response=>response.json())
+  .then(properties=> 
+      this.setState({playlistsongsdata:properties}));
+
+}
+
+
+// .then(response=> {
+
+//     return response.json();
+// })
+// .then(users => {
+
+//     //this.setState({  playlistsdata1: users })
+//     this.setState({  playlistsongsdata: users })
+// })
+
+
+
 
 
 toggle=(event)=>{
@@ -78,7 +114,7 @@ revert=()=>{
         <div className="div-block-15">
           <div className="w-layout-grid grid">
 
-                      <PlaylistInsideSec1 
+                      {/* <PlaylistInsideSec1 
 
                       key= {playlistsdata[ this.props.match.params.id-1].id}
                       id={playlistsdata[ this.props.match.params.id-1].id}
@@ -87,7 +123,7 @@ revert=()=>{
 
                       // playlistdata1={playlistsdata1}
 
-                      ></PlaylistInsideSec1>
+                      ></PlaylistInsideSec1> */}
 
                    <div className="div-block-6 pt5 pr3">
 
