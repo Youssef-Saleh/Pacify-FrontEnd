@@ -28,7 +28,7 @@ class SignUp extends Component {
                     <br></br>
                     <SignUpForm></SignUpForm>
                     <br></br>
-                    <SignUpFooter></SignUpFooter>
+                    {/* <SignUpFooter></SignUpFooter> */}
                 </div> 
             </div>
         );

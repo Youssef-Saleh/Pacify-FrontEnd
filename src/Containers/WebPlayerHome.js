@@ -11,15 +11,25 @@ class WebPlayerHome extends Component{
         }
     }
     componentDidMount(){
-        fetch('https://jsonplaceholder.typicode.com/users')   
-      .then(response=> {
-          return response.json();
-      })
-      .then(users => {
-          this.setState({  types: users })
-      })
+        console.log(sessionStorage.getItem('token'))
+        const requestOptions = {
+            method: 'GET',
+            headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',  
+            'Accept': 'application/json',
+            'authorization' : sessionStorage.getItem('token')}
+        };
+        fetch('http://localhost:5000/home', requestOptions)
+        .then(response => {
+            console.log(response)
+            return response.json()
+        })
+        .then((users)=>{
+            this.setState({types:users})
+            console.log(users)
+        });
+        
     }
-
     render(){
         return(
             <div > 

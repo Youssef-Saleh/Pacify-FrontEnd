@@ -8,6 +8,7 @@ import HomePage from '../Containers/HomePage'
 import Login from '../Containers/Login'
 import SignUp from '../Containers/SignUp'
 import WebFrame from '../Containers/WebFrame';
+import ForgetPassword from '../Containers/ForgetPassword'
 // import Albums from '../Containers/Albums'
 // import Playlist from '../Containers/Playlist.js';
 
@@ -45,6 +46,9 @@ class App extends Component{
                 </Route>
                 <Route path='/WebFrame'>
                     <WebFrame></WebFrame>
+                </Route>
+                <Route path='/ForgotPassword'>
+                    <ForgetPassword></ForgetPassword>
                 </Route>
             </Switch>    
         </Router>

@@ -9,63 +9,42 @@ class ForgetPassword extends Component{
             ForgetPassword: false
         }
         this.SubmitForm = this.SubmitForm.bind(this)
-        this.componentDidMount = this.componentDidMount.bind(this)
     }
 
     onForgetPasswordChange=(event)=>{
         this.setState({[event.target.name]: event.target.value })
-        console.log(this.state.data)
+        console.log(this.state.email)
     }
     
     SubmitForm(event){
         event.preventDefault()
         const {email , MockBack, data} = this.state
-        if (email == 'found' && MockBack ){
-            this.setState({ForgetPassword: true})
-            sessionStorage.setItem("token","asdfjfskfbsfgyfewjsfdk")
-        }
-        else if (!MockBack){
+        
+        if (!MockBack){
             const requestOptions = {
                 method: 'POST',
                 headers: { 
                 'Content-Type': 'application/x-www-form-urlencoded',  
                 'Accept': 'application/json'},
                 body: new URLSearchParams({
-                    'email':email,})
+                    'emailUsername':email,})
             };
-            console.log(requestOptions.body)
-            fetch('http://localhost:5000/login', requestOptions)
-            .then(console.log("fetching successfuly"))
+            fetch('http://localhost:5000/password-reset', requestOptions)
             .then(response => {
-                return response.json()
                 console.log(response)
+                return response.json()
             })
-            .then((token)=>{
-                console.log('the token is ',token)
-                sessionStorage.setItem('token',token)
-                this.setState({ForgetPassword:true})
+            .then((result)=>{
+                console.log("wrong email")
             })
-        }
-    let token = sessionStorage.getItem('token')
-    console.log(token)
-    }
-    componentDidMount(){
-        if(this.state.MockBack){
-        fetch('http://localhost:5000/song/5e8c31dc3d162e0ea00780f3')   
-
-        .then(response=> {
-
-            return response.json();
-        })
-        .then(users => {
-
-            this.setState({  data: users })
-        })
+            
         }
     
     }
+    
     render(){
         return(
+            <form onSubmit={this.SubmitForm}>
             <div class='forget-container'>
                 <div> 
                 <h1 className='forget-h1' >Password Reset</h1>
@@ -89,6 +68,7 @@ class ForgetPassword extends Component{
                     <p className='forget-p' >If you still need help, contact Spotify Support.</p>
                 </div>
             </div>
+            </form>
         )
     }
 }
