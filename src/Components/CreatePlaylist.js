@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Modal from 'react-bootstrap/Modal';
 import './CreatePlaylist.css';
+import HeartIcon from "./HeartIcon"
 import ReactDOM from 'react-dom';
 var check
 const $ = window.$;
@@ -12,18 +13,28 @@ const CreatePlaylist = (props) => {
 
 
 
+function Close(){
 
+    document.getElementById('mod').style.display="none";
+    var all = document.getElementsByClassName('modal-backdrop');
+    for (var i = 0; i < all.length; i++) {
+      all[i].style.display = 'none';
+    }
+
+    console.log("aybtngan")
+}
 
 
     
     return(
         
-        <div classname="wrap" id="Contain">
-        <Modal show={props.modalOpen} onHide={props.handleModalOpen}  dialogClassName="custom-modal" >
+        <div classname="wrap" id="hide">
+        <Modal show={props.modalOpen} onHide={props.handleModalOpen}  dialogClassName="custom-modal" id="mod">
         
         <div className="create-playlist active" id="popup">
         <div class="new-playlist" id='Container' >
-         <div className="Close">
+         <div className="Close" onClick={Close}>
+         <HeartIcon></HeartIcon>
         <button className="close-icon" type="button"  >
         
         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -41,7 +52,7 @@ const CreatePlaylist = (props) => {
         </div></div></div></div>
         <div className="button-container">
            <div className="cancel-button">
-           <button className="Cancel" type="button"  >CANCEL</button>
+           <button className="Cancel" type="button" onClick={Close} >CANCEL</button>
            </div>
            <div className="create-button">
            <button className="create" type="button">CREATE</button>
