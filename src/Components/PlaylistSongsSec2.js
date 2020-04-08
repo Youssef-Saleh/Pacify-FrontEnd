@@ -3,11 +3,14 @@ import './PlaylistSongsSec2.css';
 import '../Containers/PlaylistInsidePage.css';
 import {useSelector,useDispatch} from 'react-redux'
 import {Stream} from '../Redux/songs/StreamActions'
+import {LoadSongs} from '../Redux/songs/StreamActions'
 import cairoke from './cairokee.mp3'
 
 const PlaylistSongsSec2=({id,songname,artist,album ,name,username,website}) =>{
 
 const Dispatch=useDispatch()
+Dispatch(LoadSongs({id:'1',url:'1',name:'1',description:'1'}))
+
     return (
               
      <div >
