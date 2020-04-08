@@ -14,7 +14,7 @@ class SignUpFooter extends Component{
                     <p className="tc" className="SignUp_p_black">  To learn more about how Spotify collects, uses, shares and protects your personal data please read Spotify's <a className="SignUp_a" href="#" >Privacy Policy</a>. </p>
                 </div>
                 <div >
-                    <a href="#"> <button className=" SignUp_button SignUp_button_Signup"> SIGN UP </button></a>
+                    <a href="#"> <button type='submit' className=" SignUp_button SignUp_button_Signup"> SIGN UP </button></a>
                 </div>
                 <div>
                     <p className='tc' className="SignUp_p_black" >
