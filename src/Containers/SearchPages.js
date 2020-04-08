@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { RouteComponentProps, matchPath } from 'react-router';
-import './SearchPages.css'
+// import './SearchPages.css'
 import Section from '../Components/SearchSection'
 import {types} from '../Components/Searchtypes'
 import { match } from "react-router-dom";
@@ -10,8 +10,9 @@ class Pages extends Component{
     constructor(){
         super();
         this.state={
-        types:types,
+        types:[],
         specificCard:[],
+        name:'',
         id:""
         }
     
@@ -22,37 +23,49 @@ class Pages extends Component{
           strict: false
         })
     }
-    componentDidMount () {
-        fetch('http://localhost:5000/browse ').then(response=>response.json())
-        .then(properties=>{
-            this.setState({
-              types:properties ,
-            //   clickid:types
-            })
-       
-        fetch(`http://localhost:5000/genre/${this.state.types[this.props.match.params.id].id}`).then(response=>response.json())
-        .then(card=>{
-            this.setState({
-                specificCard:card ,
-            })
-        })
-     })
-        console.log(this.state.types)
-        console.log(Object.keys( this.state.specificCard))
+    componentWillMount () {
+        var valueArray = [];
+        const requestOptions = {
+            method: 'GET',
+            headers: { 
+            'Content-Type': 'application/x-www-form-urlencoded',  
+            'authorization': sessionStorage.getItem('token'),
+            'Accept': 'application/json'},
+            }
+        fetch('http://localhost:5000/browse ',requestOptions)
+        .then(res => res.json())
+        .then(function(res) {
+            res.forEach(element => {
+                valueArray.push(element);
+      });
+    })
+   
+    .then( this.setState({types:valueArray}))
+    .then(()=>this.setState({name:this.state.types[this.props.match.params.id].name}))
+    .then(()=>this.fetching(this.state.types))
+  
 
+}
 
-        // const {idParam} = this.props.match.params.id;
-        // this.setState({
-        //     id: idParam                
-        // })
-        // // this.setState({ ID:  this.props.match.params.id })
-        console.log(this.props.match.params.id)
+    fetching=(value)=>{
+        const requestOptions = {
+            method: 'GET',
+            headers: { 
+            'Content-Type': 'application/x-www-form-urlencoded',  
+            'authorization': sessionStorage.getItem('token'),
+            'Accept': 'application/json'},
+            }
+        fetch(`http://localhost:5000/genre/${value[this.props.match.params.id]._id}`,requestOptions)
+        .then(response=>response.json())
+        .then(properties=> 
+            this.setState({specificCard:properties.playlists}));
+
     }
-    render(){
+
+    render(){ 
         return (
-            <div className={this.state.types[this.props.match.params.id].name} >
-                <h2 className="fw7 pt6 f1-ns  lh-solid white">{this.state.types[this.props.match.params.id].name}</h2>
-                    <Section title="Popular Playlists" playlist={this.state.specificCard}/>
+            <div >
+                    <Section title="Popular Playlists" name={this.state.name} playlist={this.state.specificCard}/>
                     {/* <Section title="New Release"playlist={playlistsdata}/> */}
             </div>
             );

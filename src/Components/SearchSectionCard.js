@@ -10,8 +10,6 @@ const SectionCard = ({id,title,source,p}) => {
                 </div>
                 <div>
                     <h1 className=" fw7  f7  white">{title}</h1>
-                    <h1 className=" fw7  f7  white">{id}</h1>
-
                     <p className="light-gray f7  ">{p}</p>
                 </div>
                 <div className="box ">

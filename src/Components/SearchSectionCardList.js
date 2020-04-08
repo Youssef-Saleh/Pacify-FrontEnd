@@ -4,21 +4,17 @@ const SectionCardList = ({ SectionCardTypes }) => {
     return (
     <div>
         {
-            
+              
             // {cardCom}.slice(0, 5)
-            SectionCardTypes.map((c, i) => {
-                return (<div>
-                    {
-                        c.playlists.map((user,j)=>
-                        <SectionCard
+            SectionCardTypes.map((user, i) => {
+                return (
+                <SectionCard
                             key={i}
-                            id={user[j]._id}
-                            title={user[j].name}
-                            // source={SectionCardTypes[i].playlistimage}
-                            p={SectionCardTypes[i].Description}
+                            id={SectionCardTypes[i]._id}
+                            title={SectionCardTypes[i].name}
+                            source={SectionCardTypes[i].url}
+                            p={SectionCardTypes[i].description}
                         />
-                        )}
-                        </div>
                 );
             })
         }
