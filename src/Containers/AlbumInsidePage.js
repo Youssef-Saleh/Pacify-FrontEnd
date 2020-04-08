@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './AlbumInsidePage.css';
+import { RouteComponentProps, matchPath } from 'react-router';
 import AlbumInsideSec1 from '../Components/AlbumInsideSec1';
 import AlbumSongslist from '../Components/AlbumSongslist';
- import {albumsdata} from '../Components/albumsdata';
-//import {playlistsongsdata} from '../Components/playlistsongsdata';
+ //import {albumsdata} from '../Components/albumsdata';
+import {playlistsongsdata} from '../Components/playlistsongsdata';
 // import ReactDOM from 'react-dom';
 // var check
 const $ = window.$;
@@ -15,16 +16,23 @@ class AlbumInsidePage extends Component{
     super(props)
     this.state= {
 
-     // playlistsdata1: [], 
-      playlistsongsdata:[],  
+      albumsdata: [], 
+      playlistsongsdata:playlistsongsdata,  
      
        }
+}
+
+match =()=>{ matchPath(this.props.history.location.pathname, {
+  path: '/WebFrame/AlbumInsidePage_:ID',
+  exact: true,
+  strict: false
+})
 }
 
 componentDidMount(){
 
 
-  fetch('https://jsonplaceholder.typicode.com/users')   
+  fetch('http://localhost:5000/likedAlbums')   
 
 .then(response=> {
 
@@ -33,7 +41,9 @@ componentDidMount(){
 .then(users => {
 
     //this.setState({  playlistsdata1: users })
-    this.setState({  playlistsongsdata: users })
+    // this.setState({  playlistsongsdata: users })
+    this.setState({  albumsdata: users })
+
 })
 
 
@@ -59,7 +69,7 @@ revert=()=>{
 
     render(){
 
-      const {playlistsdata1,playlistsongsdata} =this.state
+      const {albumsdata,playlistsongsdata} =this.state
     return(
 
       
@@ -70,10 +80,10 @@ revert=()=>{
 
                       <AlbumInsideSec1 
 
-                      key= {albumsdata[1].id}
-                      id={albumsdata[1].id}
-                      albumimage={albumsdata[1].albumimage}
-                      albumname={albumsdata[1].albumname}
+                      key= {albumsdata[ this.props.match.params.ID].id}
+                      ID={albumsdata[ this.props.match.params.ID].id}
+                     url={albumsdata[ this.props.match.params.ID].url}
+                      name={albumsdata[ this.props.match.params.ID].name}
 
                       // playlistdata1={playlistsdata1}
 

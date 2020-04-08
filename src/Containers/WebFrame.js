@@ -80,8 +80,8 @@ class WebFrame extends Component{
                                 <Route  path='/WebFrame/PlaylistInsidePage_:id' component={PlaylistInsidePage}>
                                     {/* <PlaylistInsidePage></PlaylistInsidePage> */}
                                 </Route>
-                                <Route  path='/WebFrame/AlbumInsidePage'>
-                                    <AlbumInsidePage></AlbumInsidePage>
+                                <Route  path='/WebFrame/AlbumInsidePage_:ID' component={AlbumInsidePage} >
+                                    {/* <AlbumInsidePage></AlbumInsidePage> */}
                                 </Route>
                                 <Route  path='/WebFrame/'>
                                 <CreatePlaylist></CreatePlaylist>

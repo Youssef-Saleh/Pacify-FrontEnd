@@ -10,7 +10,7 @@ const PlaylistInsideSec1=({id,playlistimage,Title}) =>{
               
         <div className=" pt5 ">
             <div className='tc'>
-            <img src={playlistimage} alt=" no image" class=" w-60 h-60 image3"/>
+            <img src={playlistimage} alt=" no image" className=" w-60 h-60 image3"/>
             
             <div className="playlistName pt2">{Title}</div>
             <div className="playlistCreator pt1 pb3">Spotify</div>

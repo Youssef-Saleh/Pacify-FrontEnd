@@ -2,7 +2,7 @@ import React from 'react';
 import PlaylistCards from './PlaylistCards';
 
 
-const PlaylistCardList=({likedsongsdata,playlistsdata,Music}) => {
+const PlaylistCardList=({likedsongsdata,playlistsdata,likedPlaylists,Music}) => {
 
       return (
          
@@ -11,10 +11,7 @@ const PlaylistCardList=({likedsongsdata,playlistsdata,Music}) => {
    
              likedsongsdata.reduce((user,i) => {
 
-               // console.log(i.name)
-               // console.log(i.email)
                return (
-
 
                   <PlaylistCards
 
@@ -23,47 +20,58 @@ const PlaylistCardList=({likedsongsdata,playlistsdata,Music}) => {
 
                   />
  
-                  // <PlaylistCards
-
-                  //    name={i.name}
-                  //    email={i.email}
-
-                  // />
                );
 
-             })
-
-            
+             })        
 
             }
 
 
             {
 
-               playlistsdata.map((user,i) => {
+              
 
-                  return (
+               // Object.keys(playlistsdata.likedPlaylists).map((user,i) => {
+
+               //    return (
                   
-                     <PlaylistCards firstcard={false}
-                     key={playlistsdata[i].id}
-                      id={playlistsdata[i].id} 
-                      playlistimage={playlistsdata[i].playlistimage}
-                       Title={playlistsdata[i].Title} 
-                       Description={playlistsdata[i].Description} />  
-                       
-                       
-                       
-                     // <PlaylistCards
-                      
-                     // // StreamMusic={Music}
-                     // // firstcard={false}
-                     // // key={playlistsdata[i].id}
-                     // //  ID={playlistsdata[i].id} 
-                     // //  playlistimage={playlistsdata[i].playlistimage}
-                     // //   name={playlistsdata[i].name} 
-                     // // email={playlistsdata[i].email} 
+               //       <PlaylistCards 
                      
-                     // />  
+               //       StreamMusic={Music}
+               //       firstcard={false}
+               //       key={playlistsdata.likedPlaylists[i].id}
+               //        ID={playlistsdata.likedPlaylists[i].id} 
+               //        url={playlistsdata.likedPlaylists[i].url}
+               //        name={playlistsdata.likedPlaylists[i].name} 
+               //        description={playlistsdata.likedPlaylists[i].description}
+                     
+                       
+               //         />  
+
+                      playlistsdata.map((user,i) => {
+
+                        return (
+                        
+                           <PlaylistCards 
+                           
+                           StreamMusic={Music}
+                           firstcard={false}
+                           key={playlistsdata[i].id}
+                            ID={playlistsdata[i].id} 
+                            playlistimage={playlistsdata[i].playlistimage}
+                            Title={playlistsdata[i].Title} 
+                            Description={playlistsdata[i].Description}
+                           
+                             
+                             />  
+
+
+
+
+
+
+
+
          
                          );
          

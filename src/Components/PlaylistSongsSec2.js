@@ -16,7 +16,7 @@ const Dispatch=useDispatch()
 
                 <div ><div>
                     <img src="https://uploads-ssl.webflow.com/5e36ddfda3d85b56ce206efc/5e38aae52c275481b5f9d25b_transPlay.png"   alt="" className="image2" id="play"/>
-                    <img src="https://uploads-ssl.webflow.com/5e36ddfda3d85b56ce206efc/5e39d9e5cbba74b07e06e9ee_noteTrans.png" alt="" class="image9" id="music"/></div>
+                    <img src="https://uploads-ssl.webflow.com/5e36ddfda3d85b56ce206efc/5e39d9e5cbba74b07e06e9ee_noteTrans.png" alt="" className="image9" id="music"/></div>
 
                 <div>
                     <div>

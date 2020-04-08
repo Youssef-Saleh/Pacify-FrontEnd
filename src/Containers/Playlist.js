@@ -15,7 +15,8 @@ class Playlist extends Component {
     super(props)
     this.state= {
 
-        playlistsdata: playlistsdata,   
+        playlistsdata:playlistsdata,  
+        // likedPlaylists:[] ,
         CardID:" ",                      
         //likedsongsdata:[],
        }
@@ -23,9 +24,8 @@ class Playlist extends Component {
 
 // componentDidMount(){
 
-
-//     fetch('https://jsonplaceholder.typicode.com/users')   
-
+//     fetch('http://localhost:5000/likedPlaylists')   
+//     console.log("fetching")
 //   .then(response=> {
 
 //       return response.json();
@@ -33,13 +33,15 @@ class Playlist extends Component {
 //   .then(users => {
 
 //       this.setState({  playlistsdata: users })
+//       console.log("fetching")
 //   })
 
+//   console.log("fetching")
 
 // }
 
 PlayMusic =(event) =>{                                            
-  this.setState({ CardID: event.target.getAttribute('IDM') })
+  this.setState({ CardID: event.target.getAttribute('idm') })
 
   console.log("Play the song")  
   console.log(this.state.CardID)  
@@ -50,7 +52,9 @@ PlayMusic =(event) =>{
 
   render() {
 
-    const {playlistsdata} =this.state
+    // console.log(this.state.playlistsdata.likedPlaylists)
+
+    const {playlistsdata,likedPlaylists} =this.state
 
     return (
 
@@ -63,7 +67,11 @@ PlayMusic =(event) =>{
                 <PlaylistCardList 
                 Music={this.PlayMusic}
                 playlistsdata={playlistsdata} 
-                likedsongsdata={likedsongsdata} ></PlaylistCardList>
+
+                likedsongsdata={likedsongsdata} 
+
+                // likedPlaylists={likedPlaylists} 
+                ></PlaylistCardList>
                
 
       </div>

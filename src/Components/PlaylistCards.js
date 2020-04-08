@@ -12,7 +12,7 @@ import {Link} from 'react-router-dom';
 //         console.log(playlistdata)
 //     }
 
-const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,playlistimage,name,Title,Description}) =>{
+const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,url,name,description,playlistimage,Title,Description}) =>{
 
 
 
@@ -57,9 +57,9 @@ const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,playlis
 
  return (
 
-    <Link to={ `../WebFrame/PlaylistInsidePage_${id}`}>
+    <Link to={ `../WebFrame/PlaylistInsidePage_${ID}`}>
     
-    <div id="Cards"  className='dtc bg-dark-gray dib br3 pa3 ma2 grow bw2'>
+    <div onClick={StreamMusic} idm= {ID} id="Cards"  className='dtc bg-dark-gray dib br3 pa3 ma2 grow bw2'>
        <div   draggable="true">
           <div id="wrapper" className="react-contextmenu-wrapper">
 
@@ -76,9 +76,9 @@ const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,playlis
 
                     <button 
                     className="Buttonplaylist" aria-lable="Play"
-                    onClick={StreamMusic} IDM= {ID}
+                    onClick={StreamMusic} idm= {ID}
                     >
-                    <svg  onClick={StreamMusic} IDM= {ID} height="40" role="img" width="40" viewBox="0 0 80 80">
+                    <svg  onClick={StreamMusic} idm= {ID} height="40" role="img" width="40" viewBox="0 0 80 80">
                         <polygon  points="32,25 32,58 60,42" fill="currentColor"></polygon>
                     </svg>
                 </button>
