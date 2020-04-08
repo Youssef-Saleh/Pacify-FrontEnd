@@ -12,10 +12,10 @@ const CardList = ({ list }) => {
                     return (
                         <Card
                             key={i}
-                            idc={list[i].id}
+                            idc={i}
                             title={list[i].name}
                             // source={types[i].source}
-                            // bg={types[i].bg}
+                            bg={list[i].name}
                             // Path={types[i].Path}
                         />
                     );

@@ -9,21 +9,20 @@ class SearchPage extends Component{
   constructor(){
     super();
     this.state={
-      types:[],
+      types:types,
       clickid:"0"
     }
 
   }
 
   componentDidMount(){
-    fetch('http://localhost:5000/browse ').then(response=>{
-      return response.json();
-  }).then(properties=>{
+    fetch('http://localhost:5000/browse ').then(response=>response.json()).then(properties=>{
       this.setState({
         types:properties ,
-        clickid:types
+        // clickid:types
       })
   })
+  console.log(this.state.types[2].name)
   }
   ondivclick=(event)=>{
     this.setState({ clickid: event.target.getAttribute('IDC') })
@@ -36,13 +35,13 @@ class SearchPage extends Component{
     return(
       <div className="vh-100 dt w-100">
         <h1 className="pl3 fw7 pt4 f3 lh-title white  ">Your top genres</h1>
-         {/* <div onClick={this.ondivclick}  IDC={this.state.types[7].id}>
-          <Card 
+         {/* <div onClick={this.ondivclick}  IDC={this.state.types[7].id}> */}
+          {/* <Card 
             CardId={this.ondivclick}
-            IDC={this.state.types[7].id}
-            title={this.state.types[7].title}
-            source={this.state.types[7].source}
-            bg={this.state.types[7].bg}
+            idc={7}
+            title={this.state.types[7].name}
+            // source={this.state.types[7].source}
+            bg={this.state.types[7].name}
             />
            </div> */}
         <h1 className=" pl3 fw7 pt4 f3 lh-title white ">Browse all</h1>

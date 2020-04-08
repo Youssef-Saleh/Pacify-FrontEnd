@@ -11,11 +11,11 @@ class Pages extends Component{
         super();
         this.state={
         types:types,
+        specificCard:[],
         id:""
         }
     
       }
-
      match =()=>{ matchPath(this.props.history.location.pathname, {
           path: '/WebFrame/Page_:id',
           exact: true,
@@ -23,19 +23,37 @@ class Pages extends Component{
         })
     }
     componentDidMount () {
-        const {idParam} = this.props.match.params.id;
-        this.setState({
-            id: idParam                
+        fetch('http://localhost:5000/browse ').then(response=>response.json())
+        .then(properties=>{
+            this.setState({
+              types:properties ,
+            //   clickid:types
+            })
+       
+        fetch(`http://localhost:5000/genre/${this.state.types[this.props.match.params.id].id}`).then(response=>response.json())
+        .then(card=>{
+            this.setState({
+                specificCard:card ,
+            })
         })
-        // this.setState({ ID:  this.props.match.params.id })
-        console.log(this.state.id)
+     })
+        console.log(this.state.types)
+        console.log(Object.keys( this.state.specificCard))
+
+
+        // const {idParam} = this.props.match.params.id;
+        // this.setState({
+        //     id: idParam                
+        // })
+        // // this.setState({ ID:  this.props.match.params.id })
+        console.log(this.props.match.params.id)
     }
     render(){
         return (
-            <div className={this.state.types[this.props.match.params.id-1].bg} >
-                <h2 className="fw7 pt6 f1-ns  lh-solid white">{this.state.types[this.props.match.params.id-1].title}</h2>
-                    <Section title="Popular Playlists" playlist={playlistsdata}/>
-                    <Section title="New Release"playlist={playlistsdata}/>
+            <div className={this.state.types[this.props.match.params.id].name} >
+                <h2 className="fw7 pt6 f1-ns  lh-solid white">{this.state.types[this.props.match.params.id].name}</h2>
+                    <Section title="Popular Playlists" playlist={this.state.specificCard}/>
+                    {/* <Section title="New Release"playlist={playlistsdata}/> */}
             </div>
             );
     }

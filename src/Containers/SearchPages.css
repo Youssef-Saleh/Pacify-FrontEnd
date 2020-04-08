@@ -6,7 +6,15 @@
     height: 55rem; 
     width: 100%;
 }
-.CardArab{
+.Blues{
+    background: linear-gradient(to bottom ,
+    rgb(117, 138, 158)10%,
+    rgb(20, 24, 23)70%);
+    display: table;
+    height: 55rem; 
+    width: 100%;
+}
+.Arabic{
     background: linear-gradient(to bottom ,
     rgb(83, 153, 218)10%,
     rgb(20, 24, 23)70%);
@@ -38,7 +46,7 @@
     height: 55rem; 
     width: 100%;
 }
-.CardH{
+.HipHop{
     background: linear-gradient(to bottom ,
     rgb(192, 137, 54)10%,
     rgb(20, 24, 23)70%);
@@ -46,7 +54,7 @@
     height: 55rem; 
     width: 100%;
 }
-.CardE{
+.Electronic{
    background: linear-gradient(to bottom ,
     rgb(137, 202, 204)10%,
     rgb(20, 24, 23)70%);
@@ -62,7 +70,7 @@
     height: 55rem; 
     width: 100%;
 }
-.CardGaming{
+.Gaming{
     background: linear-gradient(to bottom ,
     rgb(78, 4, 33)10%,
     rgb(20, 24, 23)70%);
@@ -70,23 +78,7 @@
     height: 55rem; 
     width: 100%;
 }
-.CardChill{
-    background: linear-gradient(to bottom ,
-    rgb(117, 138, 158)10%,
-    rgb(20, 24, 23)70%);
-    display: table;
-    height: 55rem; 
-    width: 100%;
-}
-.CardRock{
-    background: linear-gradient(to bottom ,
-    rgb(134, 26, 31)10%,
-    rgb(20, 24, 23)70%);
-    display: table;
-    height: 55rem; 
-    width: 100%;
-}
-.CardParty{
+.Punk{
     background: linear-gradient(to bottom ,
     rgb(172, 55, 119)10%,
     rgb(20, 24, 23)70%);
@@ -94,7 +86,55 @@
     height: 55rem; 
     width: 100%;
 }
-.CardW{
+.Jazz{
+    background: linear-gradient(to bottom ,
+    rgb(113, 132, 141)10%,
+    rgb(20, 24, 23)70%);
+    display: table;
+    height: 55rem; 
+    width: 100%;
+}
+.Pop{
+    background: linear-gradient(to bottom ,
+    rgb(146, 196, 177)10%,
+    rgb(20, 24, 23)70%);
+    display: table;
+    height: 55rem; 
+    width: 100%;
+}
+.Travel{
+    background: linear-gradient(to bottom ,
+    rgb(184, 154, 89)10%,
+    rgb(20, 24, 23)70%);
+    display: table;
+    height: 55rem; 
+    width: 100%;
+}
+.Chill{
+    background: linear-gradient(to bottom ,
+    rgb(182, 102, 119)10%,
+    rgb(20, 24, 23)70%);
+    display: table;
+    height: 55rem; 
+    width: 100%;
+}
+.Rock{
+    background: linear-gradient(to bottom ,
+    rgb(134, 26, 31)10%,
+    rgb(20, 24, 23)70%);
+    display: table;
+    height: 55rem; 
+    width: 100%;
+}
+.R_B{
+    background: linear-gradient(to bottom ,
+    rgb(172, 55, 119)10%,
+    rgb(20, 24, 23)70%);
+    display: table;
+    height: 55rem; 
+    width: 100%;
+}
+.Classical{
     background: linear-gradient(to bottom ,
     rgb(141, 125, 158)10%,
     rgb(20, 24, 23)70%);
@@ -102,7 +142,7 @@
     height: 55rem; 
     width: 100%;
 }
-.CardKids{
+.Kids{
     background: linear-gradient(to bottom ,
     rgb(128, 28, 121)10%,
     rgb(20, 24, 23)70%);
@@ -110,7 +150,7 @@
     height: 55rem; 
     width: 100%;
 }
-.CardReggae{
+.Reggae{
     
    background: linear-gradient(to bottom ,
     rgb(7, 70, 56)10%,
@@ -119,7 +159,7 @@
     height: 55rem; 
     width: 100%;
 }
-.CardWork{
+.Country{
     background: linear-gradient(to bottom ,
     rgb(184, 154, 89)10%,
     rgb(20, 24, 23)70%);
