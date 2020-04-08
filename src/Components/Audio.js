@@ -9,6 +9,10 @@ import './Audio.css'
 import cairokee from './cairokee.mp3'
 const Player = () => {
 const Song =useSelector(state=>state.stream.songs)
+const state = useSelector(state=>
+  state.stream
+)
+console.log("the state is ",state)
   return(
   <AudioPlayer
     src={Song}

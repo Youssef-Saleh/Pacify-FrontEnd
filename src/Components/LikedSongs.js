@@ -4,10 +4,22 @@ import './LikedSongs.css';
 import HeartIcon from "./HeartIcon"
 import Song from './Song'
 import ReactDOM from 'react-dom';
+import {connect} from 'react-redux'
+
 var check
 const $ = window.$;
 
+const MapStateToProps = (state) =>{
+  return {
+      LikedSong: state.like.song,
+  }
+}
 
+const MapDispatchToProps = (dispatch) =>{
+  return{
+      execute:()=>dispatch()
+  }
+}
 
 class LikedSongs extends Component{
 toggle=(event)=>{
@@ -35,7 +47,29 @@ this.state={
 
 }
 componentDidMount(){
-  fetch('http://localhost:5000/likedSongs').then(response=>{
+//   const requestOptions = {
+//     method: 'PUT',
+//     headers: { 
+//     'Content-Type': 'application/x-www-form-urlencoded',  
+//     'Accept': 'application/json'},
+//     body: new URLSearchParams({
+//         'song':this.props.LikedSong,})
+// };
+// fetch('http://localhost:5000/LikedSongs', requestOptions)
+// .then(response => {
+//     return response.json()
+//     console.log(response)
+// }).then(users=>{
+//   this.setState({songs:users});
+// });
+const requestOptions = {
+      method: 'GET',
+      headers: { 
+      'Content-Type': 'application/x-www-form-urlencoded',  
+      'authorization': sessionStorage.getItem('token'),
+      'Accept': 'application/json'},
+      }
+  fetch('http://localhost:5000/likedSongs',requestOptions).then(response=>{
     return response.json();
   }).then(users=>{
     this.setState({songs:users});
@@ -58,7 +92,7 @@ componentDidMount(){
     }
       
     return(
-        <div className="content">
+        <div className="content pt5">
       <div className="div-block-15">
       <div className="w-layout-grid grid">
       <div className="div-block-7">
@@ -81,4 +115,4 @@ componentDidMount(){
      
     )}
 };
-export default LikedSongs;
+export default connect(MapStateToProps,MapDispatchToProps)(LikedSongs);

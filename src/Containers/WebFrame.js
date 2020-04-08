@@ -14,6 +14,23 @@ import LikedSongs from '../Components/LikedSongs'
 import {BrowserRouter as Router , Switch , Route , Link,Redirect} from 'react-router-dom'
 import Pages from './SearchPages'
 import Playlist from '../Containers/Playlist'
+import {connect} from 'react-redux'
+
+
+
+const MapStateToProps = (state) =>{
+    return {
+        LikedSong: state.like.song,
+        LikedAlbum: state.like.album,
+        LikedPlaylist: state.like.playlist
+    }
+}
+
+const MapDispatchToProps = (dispatch) =>{
+    return{
+        dispatch
+    }
+}
 
 class WebFrame extends Component{
     constructor(props){
@@ -31,11 +48,14 @@ class WebFrame extends Component{
             loggedIn
         }
     }
-    TogglePopUp=()=>{
-        console.log("function called")
-        this.setState({ShowPopUp: true})
-        
-    }
+    
+    // SubmitSongLike(song){
+
+    // }
+    // SubmitAlbumLike(album){
+
+    // }
+    // SubmitPlaylistLike(play)
     
     render(){
     
@@ -56,12 +76,12 @@ class WebFrame extends Component{
                 <div className=''>
                     <SideBar ></SideBar>
                     <WebPlayer></WebPlayer>
-                    {/* <WebNav></WebNav> */}
                     {/* <Router> */}
                             <div className='web-frame '>    {/*The Content of the page is placed here,,routing also will be here*/ }
+                            <WebNav></WebNav>
                             <Switch>
                                 <Route  path='/WebFrame/Home'>
-                                    < WebPlayerHome></WebPlayerHome>
+                                    <WebPlayerHome></WebPlayerHome>
                                 </Route>
                                 <Route  path='/WebFrame/LikedSongs'>
                                     <LikedSongs></LikedSongs>
@@ -84,7 +104,7 @@ class WebFrame extends Component{
                                     <AlbumInsidePage></AlbumInsidePage>
                                 </Route>
                                 <Route  path='/WebFrame/'>
-                                <CreatePlaylist></CreatePlaylist>
+                                <WebPlayerHome></WebPlayerHome>
                                 </Route>
                                 
                             </Switch>
@@ -101,4 +121,4 @@ class WebFrame extends Component{
     
 
 
-export default WebFrame
+export default connect(MapStateToProps,MapDispatchToProps)(WebFrame)
