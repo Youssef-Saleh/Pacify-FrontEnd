@@ -1,7 +1,7 @@
 .modal-content{
 
 
-    width: 325%;
+    width: 262%;
     margin-top: 33%;
     border: none;
     padding-right: 10%;
@@ -62,6 +62,7 @@
     color: white;
     height: 100%;
 }
+
 #popup.active {
     visibility: visible;
     opacity: 1;

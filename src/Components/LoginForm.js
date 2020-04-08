@@ -46,7 +46,7 @@ class LoginForm extends Component{
             })
             .then((token)=>{
                 console.log('the token is ',token)
-                sessionStorage.setItem('token',token)
+                sessionStorage.setItem('token','bearer '+token)
                 this.setState({LoggedIn:true})
             })
         }
