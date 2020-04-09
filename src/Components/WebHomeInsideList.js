@@ -8,8 +8,8 @@ import cairoke from './cairokee.mp3'
 
 const WebHomeInsideList=({id,songname,artist,album ,name,username,website}) =>{
     const Dispatch=useDispatch()
-    Dispatch(LoadSongs({id:'1',url:'1',name:'1',description:'1'}))
-
+    // Dispatch(LoadSongs({id:'1',url:'1',name:'1',description:'1'}))
+    
     return (        
      <div >
         <div onClick={()=>Dispatch(Stream(cairoke))} className="Song">
