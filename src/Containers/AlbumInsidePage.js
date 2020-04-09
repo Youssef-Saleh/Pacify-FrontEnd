@@ -106,7 +106,11 @@ revert=()=>{
 
       if(this.state.albumsdescription.length===0 || this.state.albumsongsdata.length===0){
 
-        return <h1 className="white">Loading, please wait..</h1> 
+        return(
+          <div className="load4 pt4">
+              <p><p className="loader4 mr3 tc"></p>
+              <h3 >loading, please wait..</h3></p>
+          </div>)
   
       }
       else{

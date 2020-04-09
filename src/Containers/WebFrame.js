@@ -111,6 +111,9 @@ class WebFrame extends Component{
                                 <Route  path='/WebFrame/FirstWebHome'>
                                 <FirstWebHome></FirstWebHome>
                                 </Route>
+                                <Route  path='/WebFrame/Album'>
+                                <Album></Album>
+                                </Route>
                                 <Route  path='/WebFrame/'>
                                 <WebPlayerHome></WebPlayerHome>
                                 </Route>

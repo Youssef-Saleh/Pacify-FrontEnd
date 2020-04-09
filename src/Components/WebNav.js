@@ -19,7 +19,7 @@ const WebNav=()=>{
             <Nav className='ml6 fw-900 f4 lh-copyx'>
                 <div onClick={()=>dispatch(GetPage('library'))} className=' '>
                     <Link to='../WebFrame/Library2'><span className='white'>Playlists</span></Link>
-                    <Link><span className='ml4 white'>Albums</span></Link>
+                    <Link to='../WebFrame/Album'><span className='ml4 white'>Albums</span></Link>
 
                 </div>
             </Nav>

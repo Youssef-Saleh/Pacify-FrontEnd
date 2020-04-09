@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import './Albums.css';
+import './Albums.css';
 import PlaylistHeader from '../Components/PlaylistHeader'
 import AlbumCardList from '../Components/AlbumCardList';
 //import {albumsdata} from '../Components/albumsdata';
@@ -61,7 +61,11 @@ PlayMusicA =(event) =>{
 
     if(albumsdata.length===0){
 
-      return <h1 className="white">Loading, please wait..</h1> 
+      return(
+        <div className="load2">
+            <p><p className="loader2 mr3 tc"></p>
+            <h3 >loading, please wait..</h3></p>
+        </div>)
 
     }
     else {

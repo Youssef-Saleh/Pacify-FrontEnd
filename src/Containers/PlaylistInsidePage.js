@@ -105,7 +105,11 @@ fetching=(value)=>{
 
       if(this.state.playlistdescription.length===0 || this.state.playlistsongsdata.length===0){
 
-        return <h1 className="white pb3">Loading, please wait..</h1> 
+        return(
+          <div className="load3">
+              <p><p className="loader3 mr3 tc"></p>
+              <h3 >loading, please wait..</h3></p>
+          </div>)
   
       }
 
