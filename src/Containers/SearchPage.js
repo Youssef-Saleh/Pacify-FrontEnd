@@ -12,7 +12,8 @@ class SearchPage extends Component{
       types:[],
       clickid:"7",
       topcardname:'',
-      id:''
+      id:'',
+      loaded:false
     }
 
   }
@@ -34,13 +35,20 @@ class SearchPage extends Component{
 });
 })
 
-.then( this.setState({types:valueArray}))
+.then( this.setState({types:valueArray,loaded:true}))
 .then(()=>this.setState({topcardname:this.state.types[7].name}))
 .then(()=>this.setState({id:"7"}))
  
   }
 
   render(){
+  //   if(this.state.loaded == false){
+  //     return(
+  //     <div className="load">
+  //         <p><p className="loader mr3 tc"></p>
+  //         <h1 className="loading-h1">loading</h1></p>
+  //     </div>)
+  // }
     return(
       <div className="vh-100 dt w-100 pl2">
         <h1 className="pl4 fw7 pt4 f3 lh-title white  ">Your top genres</h1>
