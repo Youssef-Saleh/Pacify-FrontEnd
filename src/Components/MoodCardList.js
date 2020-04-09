@@ -2,8 +2,6 @@ import React from 'react';
 import Card from './WebHomeCard';
 
 const MoodCardList =({Mood}) =>{
-    console.log('in moodcardlist')
-    console.log({Mood})
     return(
         <div >
             { 

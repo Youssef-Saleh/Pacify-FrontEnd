@@ -3,8 +3,6 @@ import Section from '../Components/WebPlayerHomeSection';
 // import '../Components/WebPlayerHome.css';
 
 const WebPlayerHomeSectionList = ({SectionTypes}) =>{
-    console.log('section list in sectionlist ')
-    console.log({SectionTypes})
     return (
         <div>
             {
