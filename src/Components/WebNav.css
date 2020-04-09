@@ -1,9 +1,28 @@
 
+@media screen and (max-width: 500px) {
 
 
 
+    .web-nav{
+
+        position: relative;
+
+    }
+
+    .playlist{
+
+    position: relative;
+    right:15rem;
+    }
+
+    .album{
+        position: relative;
+        right:15rem;
+
+    }
 
 
+}
 
 .web-nav{
     margin-left: 230px;
