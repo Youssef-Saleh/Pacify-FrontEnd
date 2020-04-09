@@ -22,6 +22,7 @@ const AlbumSongslist=({albumsongsdata}) => {
                       artist={albumsongsdata[i].artist}
                        name={albumsongsdata[i].name} 
                        mood={albumsongsdata[i].mood}
+                       url={albumsongsdata[i].url}
                        
                      //   key={playlistsongsdata[i].id}
                      //   id={playlistsongsdata[i].id} 
