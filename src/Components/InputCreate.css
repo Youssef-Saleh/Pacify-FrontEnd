@@ -126,6 +126,7 @@
     width: 100%;
     background-color: transparent;
     border: none;
+    margin-left: 0;
 }
 
 .close-icon{
