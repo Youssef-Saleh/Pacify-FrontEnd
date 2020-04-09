@@ -9,6 +9,7 @@ import './WebFrame.css'
 import SearchPage from './SearchPage'
 import WebPlayerHome from './WebPlayerHome'
 import WebHomeInside from './WebHomeInside'
+import FirstWebHome from './FirstWebHome'
 import CreatePlaylist from '../Components/CreatePlaylist'
 import PlayList from '../Containers/Playlist'
 import LikedSongs from '../Components/LikedSongs'
@@ -105,6 +106,9 @@ class WebFrame extends Component{
                                 </Route>
                                 <Route  path='/WebFrame/AlbumInsidePage'>
                                     <AlbumInsidePage></AlbumInsidePage>
+                                </Route>
+                                <Route  path='/WebFrame/FirstWebHome'>
+                                <FirstWebHome></FirstWebHome>
                                 </Route>
                                 <Route  path='/WebFrame/'>
                                 <WebPlayerHome></WebPlayerHome>

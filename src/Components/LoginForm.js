@@ -101,7 +101,7 @@ class LoginForm extends Component{
         const {data}=this.state
         if (this.state.LoggedIn == true){
             // console.log("logged")
-            return <Redirect to='/WebFrame'></Redirect>
+            return <Redirect to='/WebFrame/FirstWebHome'></Redirect>
         }
         return(
             <div className="Login_container">            
