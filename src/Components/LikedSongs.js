@@ -41,13 +41,15 @@ constructor(){
 super()
 this.state={
 
-  songs:[]
+  songs:[],
+  loaded:false
 }
 
 
 }
 componentDidMount(){
-
+  
+  
 //   const requestOptions = {
 //     method: 'PUT',
 //     headers: { 
@@ -75,13 +77,19 @@ const requestOptions = {
     return response.json();
   }).then(users=>{
     this.setState({songs:users});
+    this.setState({loaded:true});
+    
+    
   });
 
 }
 
 
+
     render(){
-     
+      if (this.state.loaded==false){
+        return(<h1 style={{ color: "white" }}>loading</h1>)
+      }
       const CardList = () => {
         console.log(this.state.songs)
         const Cards = this.state.songs.map((user,i)=>{

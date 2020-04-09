@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './FavouriteArtistCard';
 import './FavouriteArtist.css';
+import { Artists } from '../Components/Artists';
 
 const FavouriteArtistCardList =({list}) =>{
     return(
@@ -10,9 +11,9 @@ const FavouriteArtistCardList =({list}) =>{
                     return (
                         <Card 
                             key={i}
-                            id={list[i].id} 
-                            image={list[i].image}
-                            name={list[i].name}
+                            id={list[i]._id} 
+                            image={Artists[7].image}
+                            name={list[i].nickname}
                         />
                     );
                 })

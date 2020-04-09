@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Pages/App'
-// import Premium from './Containers/Premium'
+import Premium from './Containers/Premium'
 import 'tachyons'
 import App from './Pages/App'
 // import Playlist from './Containers/Playlist';

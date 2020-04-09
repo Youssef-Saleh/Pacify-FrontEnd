@@ -17,6 +17,7 @@ class SignUpForm extends Component{
             passwordError: "",
             nickError:"",
             confirmEmailError:"",
+            genderError:"",
             checked: true,
             MockBack: false,
             SignedUp: false
@@ -32,6 +33,7 @@ class SignUpForm extends Component{
         let cError='';
         let nError='';
         let pError='';
+        let gError='';
         if (!this.state.email.includes("@")) {
             eError = "Invalid email! Please enter the correct email address.";
         }
@@ -44,15 +46,18 @@ class SignUpForm extends Component{
         if (!this.state.nickName) {
             nError='What should we call you?';
         }
+        if (!this.state.gender) {
+            gError='Please select your gender.';
+        }
         if (!this.state.password){
             pError='Please enter your password.'; 
         }
         if(this.state.password.length < 8 && this.state.password.length >= 1 ){
             pError= 'The Password is too short.';
         }
-        if(eError || pError || cError || nError){
+        if(eError || pError || cError || nError || gError){
             this.setState({emailError: eError, passwordError:pError});
-            this.setState({confirmEmailError: cError, nickError:nError});
+            this.setState({confirmEmailError: cError, nickError:nError, genderError:gError});
             return false;
         }
         return true;
@@ -64,7 +69,7 @@ class SignUpForm extends Component{
         console.log(this.state);
         // clear form
         this.setState({emailError: '', passwordError:''});
-        this.setState({confirmEmailError: '', nickError:''});
+        this.setState({confirmEmailError: '', nickError:'', genderError:''});
         }
         else{
             console.log('Invalid Form');
@@ -84,8 +89,8 @@ class SignUpForm extends Component{
                     'email':email,
                     'confirmEmail':confirmEmail,
                     'password':password,
-                    'nickName': nickName,
-                    'date':date,
+                    'nickname': nickName,
+                    'birthdate':date,
                     'gender':gender
                 })
             };
@@ -109,21 +114,6 @@ class SignUpForm extends Component{
     let token = sessionStorage.getItem('token')
     console.log(token)
     }
-    // componentDidMount(){
-    //     if(this.state.MockBack){
-    //     fetch('http://localhost:5000/song/5e8c31dc3d162e0ea00780f3')   
-
-    //     .then(response=> {
-
-    //         return response.json();
-    //     })
-    //     .then(users => {
-
-    //         this.setState({  data: users })
-    //     })
-    //     }
-
-    // }
     render(){
         if (this.state.SignedUp == true){
             return <Redirect to='/WebFrame'></Redirect>
@@ -199,6 +189,7 @@ class SignUpForm extends Component{
                             className="SignUp_input"
                             placeholder='Date'
                             className="form-control"
+                            min="1950-01-01" max="2010-12-31" required
                             value={this.state.date}
                             onChange={event=>this.onSignUpChange(event)}
                         />
@@ -208,8 +199,12 @@ class SignUpForm extends Component{
                         <p className="SignUp_p_gray" className='tl'>
                             <label class="SignUp_radiolabel"><input className="SignUp_input" type="radio"  name="gender" value="male" onChange={event=>this.onSignUpChange(event)}/>Male</label>
                             <label class="SignUp_radiolabel"><input className="SignUp_input" type="radio" name="gender" value="female" onChange={event=>this.onSignUpChange(event)}/>Female</label>
+                            <div style={{ fontSize: 12, color: "red" }}>
+                                {this.state.genderError}
+                            </div>
                         </p> 
                     </div>
+                    
                     <div class="row" class="form-check" >
                         <p className="SignUp_p_gray_label"><label> 
                         <input
@@ -231,7 +226,7 @@ class SignUpForm extends Component{
                     <p className="tc" className="SignUp_p_black">  To learn more about how Spotify collects, uses, shares and protects your personal data please read Spotify's <a className="SignUp_a" href="#" >Privacy Policy</a>. </p>
                 </div>
                 <div >
-                   <button type='submit' className=" SignUp_button SignUp_button_Signup"> SIGN UP </button>
+                    <button type='submit' className=" SignUp_button SignUp_button_Signup"> SIGN UP </button>
                 </div>
                 <div>
                     <p className='tc' className="SignUp_p_black" >

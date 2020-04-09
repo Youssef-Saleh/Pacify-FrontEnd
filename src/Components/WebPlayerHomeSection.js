@@ -3,9 +3,6 @@ import CardList from './MoodCardList';
 import '../Components/WebPlayerHome.css';
 
 const WebPlayerHomeSection = ({title,des,type}) =>{
-    console.log('in home section')
-    console.log({title})
-    console.log({type})
     return(
         <div className='web-home'>
             <h1 className='web-h1 pl3'><a className="web-a">{title}</a></h1>
