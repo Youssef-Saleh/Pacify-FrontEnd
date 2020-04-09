@@ -18,7 +18,7 @@ export const RecommendReducer=(state=InitialState,Action)=>{
                 case false:
                     const index=state.artists.indexOf(Action.payload[1])
                     console.log("removed item at",index)
-                    artists:state.artists.splice(state.artists.indexOf(index,1))
+                    artists:state.artists.splice(index,1)
                     return{
                         ...state,
                     }
