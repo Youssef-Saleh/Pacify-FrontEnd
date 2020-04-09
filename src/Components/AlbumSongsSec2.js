@@ -1,17 +1,20 @@
 import React from 'react';
 import './AlbumSongsSec2.css';
+import {useSelector,useDispatch} from 'react-redux'
+import {Stream} from '../Redux/songs/StreamActions'
 // import '../Containers/PlaylistInsidePage.css';
 
 
 
-const AlbumSongsSec2=({id,songname,artist,album ,name,mood}) =>{
+const AlbumSongsSec2=({id,url,artist,album ,name,mood}) =>{
 
-  
+    const Dispatch=useDispatch()
+    
     return (
               
      <div >
 
-        <div  className="Song">
+        <div onClick={()=>Dispatch(Stream(url))} className="Song">
 
                 <div ><div>
                     <img src="https://uploads-ssl.webflow.com/5e36ddfda3d85b56ce206efc/5e38aae52c275481b5f9d25b_transPlay.png"   alt="" className="image2" id="play"/>

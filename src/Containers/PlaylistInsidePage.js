@@ -4,13 +4,32 @@ import { RouteComponentProps, matchPath } from 'react-router';
 import './PlaylistInsidePage.css';
 import PlaylistInsideSec1 from '../Components/PlaylistInsideSec1';
 import PlaylistSongslist from '../Components/PlaylistSongslist';
+import {connect} from 'react-redux'
  //import {playlistsdata} from '../Components/playlistsdata';
 //import {playlistsongsdata} from '../Components/playlistsongsdata';
 // import ReactDOM from 'react-dom';
 // var check
 const $ = window.$;
 
+
+
 class PlaylistInsidePage extends Component{
+
+
+  toggle=(event)=>{
+
+    var x= document.getElementById("play")
+    x.style.display="block"
+    var y=document.getElementById("music")
+    y.style.display="none"
+}
+revert=()=>{
+    var x= document.getElementById("music")
+    x.style.display="block"
+    var y=document.getElementById("play")
+    y.style.display="none"
+}
+
 
   constructor(props) {        
     super(props)
@@ -80,28 +99,13 @@ fetching=(value)=>{
 
 
 
-toggle=(event)=>{
-
-    var x= document.getElementById("play")
-    x.style.display="block"
-    var y=document.getElementById("music")
-    y.style.display="none"
-}
-revert=()=>{
-    var x= document.getElementById("music")
-    x.style.display="block"
-    var y=document.getElementById("play")
-    y.style.display="none"
-}
-
-
 
 
     render(){
 
       if(this.state.playlistdescription.length===0 || this.state.playlistsongsdata.length===0){
 
-        return <h1 className="white">Loading, please wait..</h1> 
+        return <h1 className="white pb3">Loading, please wait..</h1> 
   
       }
 
