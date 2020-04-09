@@ -99,10 +99,17 @@ revert=()=>{
 
     render(){
 
+      if(this.state.playlistdescription.length===0 || this.state.playlistsongsdata.length===0){
+
+        return <h1 className="white">Loading, please wait..</h1> 
+  
+      }
+
+      else{
+
     return(
 
       
-
       <div className="content1 vh-100 dt w-100">
         <div className="div-block-15">
           <div className="w-layout-grid grid">
@@ -128,6 +135,9 @@ revert=()=>{
        </div> 
      </div>
      
-    )}
+    )
+  }
+  
+  }
 };
 export default PlaylistInsidePage;

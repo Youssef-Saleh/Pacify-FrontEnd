@@ -104,6 +104,13 @@ revert=()=>{
 
     render(){
 
+      if(this.state.albumsdescription.length===0 || this.state.albumsongsdata.length===0){
+
+        return <h1 className="white">Loading, please wait..</h1> 
+  
+      }
+      else{
+
     return(
 
       
@@ -135,6 +142,9 @@ revert=()=>{
        </div> 
      </div>
      
-    )}
+    )
+  
+      }
+  }
 };
 export default AlbumInsidePage;

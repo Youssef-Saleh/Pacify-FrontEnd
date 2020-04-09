@@ -59,6 +59,13 @@ PlayMusicA =(event) =>{
 
     const {albumsdata} =this.state
 
+    if(albumsdata.length===0){
+
+      return <h1 className="white">Loading, please wait..</h1> 
+
+    }
+    else {
+
     return (
 
       
@@ -77,6 +84,7 @@ PlayMusicA =(event) =>{
       </div>
 
     );
+    }
 
   }
 
