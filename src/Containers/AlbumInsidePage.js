@@ -5,7 +5,7 @@ import { RouteComponentProps, matchPath } from 'react-router';
 import AlbumInsideSec1 from '../Components/AlbumInsideSec1';
 import AlbumSongslist from '../Components/AlbumSongslist';
  //import {albumsdata} from '../Components/albumsdata';
-import {playlistsongsdata} from '../Components/playlistsongsdata';
+//import {playlistsongsdata} from '../Components/playlistsongsdata';
 // import ReactDOM from 'react-dom';
 // var check
 const $ = window.$;
@@ -16,38 +16,73 @@ class AlbumInsidePage extends Component{
     super(props)
     this.state= {
 
-      albumsdata: [], 
-      playlistsongsdata:playlistsongsdata,  
+      albumsdescription: [], 
+      albumsongsdata:[],  
+      nameA:'',
+      urlA:'',
+      // ID: '',
      
        }
 }
 
 match =()=>{ matchPath(this.props.history.location.pathname, {
-  path: '/WebFrame/AlbumInsidePage_:ID',
+  path: '/WebFrame/AlbumInsidePage_:id',
   exact: true,
   strict: false
 })
 }
 
 componentDidMount(){
+  var valueArray=[];
 
 
-  fetch('http://localhost:5000/likedAlbums')   
+  const requestOptions = {
+    method: 'GET',
+    headers: { 
+    'Content-Type': 'application/x-www-form-urlencoded',  
+    'authorization': sessionStorage.getItem('token'),
+    'Accept': 'application/json'},
+    }
+  
+    fetch('http://localhost:5000/likedAlbums',requestOptions)
+    
+    .then(res => res.json())
+    .then(function(res) {
+        res.forEach(element => {
+            valueArray.push(element);
+            // console.log("fetch this")
+  });
+  })
 
-.then(response=> {
-
-    return response.json();
-})
-.then(users => {
-
-    //this.setState({  playlistsdata1: users })
-    // this.setState({  playlistsongsdata: users })
-    this.setState({  albumsdata: users })
-
-})
+.then( this.setState({albumsdescription:valueArray}))
+.then(()=>this.setState({nameA:this.state.albumsdescription[this.props.match.params.id].name}))
+.then(()=>this.setState({urlA:this.state.albumsdescription[this.props.match.params.id].url}))
+.then(()=>this.fetching(this.state.albumsdescription))
 
 
 }
+
+fetching=(value)=>{
+
+  const requestOptions = {
+      method: 'GET',
+      headers: { 
+      'Content-Type': 'application/x-www-form-urlencoded',  
+      'authorization': sessionStorage.getItem('token'),
+      'Accept': 'application/json'},
+      }
+
+  fetch(`http://localhost:5000/album/${value[this.props.match.params.id]._id}`,requestOptions)
+  .then(response=>response.json())
+  .then(songs=>{
+      this.setState({albumsongsdata:songs});
+      console.log("fetch that")
+  });
+
+}
+
+
+
 
 
 toggle=(event)=>{
@@ -69,29 +104,30 @@ revert=()=>{
 
     render(){
 
-      const {albumsdata,playlistsongsdata} =this.state
     return(
 
       
 
-      <div className="content1">
+      <div className="content1 vh-100 dt w-100">
         <div className="div-block-15">
           <div className="w-layout-grid grid">
 
                       <AlbumInsideSec1 
 
-                      key= {albumsdata[ this.props.match.params.ID].id}
-                      ID={albumsdata[ this.props.match.params.ID].id}
-                     url={albumsdata[ this.props.match.params.ID].url}
-                      name={albumsdata[ this.props.match.params.ID].name}
-
-                      // playlistdata1={playlistsdata1}
+                    //   key= {albumsdata[ this.props.match.params.ID].id}
+                    //   ID={albumsdata[ this.props.match.params.ID].id}
+                    //  url={albumsdata[ this.props.match.params.ID].url}
+                    //   name={albumsdata[ this.props.match.params.ID].name}
+                    nameA={this.state.nameA}
+                    urlA={this.state.urlA}
+                 
+                    
 
                       ></AlbumInsideSec1>
 
                    <div className="div-block-6 pt5 pr3">
 
-                          <AlbumSongslist playlistsongsdata={playlistsongsdata}></AlbumSongslist>
+                          <AlbumSongslist  albumsongsdata={this.state.albumsongsdata}></AlbumSongslist>
 
                   </div>
 

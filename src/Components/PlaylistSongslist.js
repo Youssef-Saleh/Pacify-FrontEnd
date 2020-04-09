@@ -24,7 +24,7 @@ const PlaylistSongslist=({playlistsongsdata}) => {
                      //   songname={playlistsongsdata[i].songname}
                        
                        key={playlistsongsdata[i].id}
-                       id={playlistsongsdata[i].id} 
+                       id={playlistsongsdata[i]._id} 
                        name={playlistsongsdata[i].name}
                         artist={playlistsongsdata[i].artist} 
                         url={playlistsongsdata[i].url} 

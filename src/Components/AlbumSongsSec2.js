@@ -4,7 +4,7 @@ import './AlbumSongsSec2.css';
 
 
 
-const AlbumSongsSec2=({id,songname,artist,album ,name,username,website}) =>{
+const AlbumSongsSec2=({id,songname,artist,album ,name,mood}) =>{
 
   
     return (
@@ -19,12 +19,12 @@ const AlbumSongsSec2=({id,songname,artist,album ,name,username,website}) =>{
 
                 <div>
                     <div>
-                        {songname}
+                        {name}
                     </div>
                     <div className="Song-Name-and-Artist">
 
                     <div className='pr2 singername'>{artist}</div> -
-                    <div className=' pl2 albumname'>{album}</div>
+                    <div className=' pl2 albumname'>{mood}</div>
 
                     </div>
                 </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import AlbumSongsSec2 from './AlbumSongsSec2'
 
 
-const AlbumSongslist=({playlistsongsdata}) => {
+const AlbumSongslist=({albumsongsdata}) => {
 
       return (
          
@@ -10,18 +10,18 @@ const AlbumSongslist=({playlistsongsdata}) => {
            
             {
 
-               playlistsongsdata.map((user,i) => {
+                  albumsongsdata.map((user,i) => {
 
                   return (
                   
                        
                      <AlbumSongsSec2
                     
-                     key={playlistsongsdata[i].id}
-                      id={playlistsongsdata[i].id} 
-                      artist={playlistsongsdata[i].artist}
-                       album={playlistsongsdata[i].album} 
-                       songname={playlistsongsdata[i].songname}
+                     key={albumsongsdata[i].id}
+                      id={albumsongsdata[i]._id} 
+                      artist={albumsongsdata[i].artist}
+                       name={albumsongsdata[i].name} 
+                       mood={albumsongsdata[i].mood}
                        
                      //   key={playlistsongsdata[i].id}
                      //   id={playlistsongsdata[i].id} 

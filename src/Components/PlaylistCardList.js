@@ -64,16 +64,8 @@ const PlaylistCardList=({likedsongsdata,playlistsdata,likedPlaylists,Music}) => 
                   
                              
                              />  
-
-
-
-
-
-
-
-
          
-                         );
+                      );
          
                      })
 

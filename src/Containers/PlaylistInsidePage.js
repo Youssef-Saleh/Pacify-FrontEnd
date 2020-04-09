@@ -18,6 +18,9 @@ class PlaylistInsidePage extends Component{
 
      playlistdescription: [], 
       playlistsongsdata:[],  
+      name:'',
+      url:'',
+
      
        }
 }
@@ -41,6 +44,7 @@ const requestOptions = {
   'authorization': sessionStorage.getItem('token'),
   'Accept': 'application/json'},
   }
+
   fetch('http://localhost:5000/likedPlaylists ',requestOptions)
   .then(res => res.json())
   .then(function(res) {
@@ -51,12 +55,14 @@ const requestOptions = {
 
 .then( this.setState({playlistdescription:valueArray}))
 .then(()=>this.setState({name:this.state.playlistdescription[this.props.match.params.id].name}))
+.then(()=>this.setState({url:this.state.playlistdescription[this.props.match.params.id].url}))
 .then(()=>this.fetching(this.state.playlistdescription))
 
 
 }
 
 fetching=(value)=>{
+
   const requestOptions = {
       method: 'GET',
       headers: { 
@@ -64,25 +70,13 @@ fetching=(value)=>{
       'authorization': sessionStorage.getItem('token'),
       'Accept': 'application/json'},
       }
+
   fetch(`http://localhost:5000/playlist/${value[this.props.match.params.id]._id}`,requestOptions)
   .then(response=>response.json())
-  .then(properties=> 
-      this.setState({playlistsongsdata:properties}));
+  .then(songs=> 
+      this.setState({playlistsongsdata:songs}));
 
 }
-
-
-// .then(response=> {
-
-//     return response.json();
-// })
-// .then(users => {
-
-//     //this.setState({  playlistsdata1: users })
-//     this.setState({  playlistsongsdata: users })
-// })
-
-
 
 
 
@@ -105,29 +99,28 @@ revert=()=>{
 
     render(){
 
-      const {playlistsdata1,playlistsongsdata} =this.state
     return(
 
       
 
-      <div className="content1">
+      <div className="content1 vh-100 dt w-100">
         <div className="div-block-15">
           <div className="w-layout-grid grid">
 
-                      {/* <PlaylistInsideSec1 
+                      <PlaylistInsideSec1 
 
-                      key= {playlistsdata[ this.props.match.params.id-1].id}
-                      id={playlistsdata[ this.props.match.params.id-1].id}
-                      playlistimage={playlistsdata[ this.props.match.params.id-1].playlistimage}
-                      Title={playlistsdata[ this.props.match.params.id-1].Title}
+                      // key= {playlistsdata[ this.props.match.params.id-1].id}
+                      // id={playlistsdata[ this.props.match.params.id-1].id}
+                      // playlistimage={playlistsdata[ this.props.match.params.id-1].playlistimage}
+                      name={this.state.name}
+                      url={this.state.url}
+                   
 
-                      // playlistdata1={playlistsdata1}
-
-                      ></PlaylistInsideSec1> */}
+                      ></PlaylistInsideSec1>
 
                    <div className="div-block-6 pt5 pr3">
 
-                          <PlaylistSongslist playlistsongsdata={playlistsongsdata}></PlaylistSongslist>
+                          <PlaylistSongslist playlistsongsdata={this.state.playlistsongsdata}></PlaylistSongslist>
 
                   </div>
 

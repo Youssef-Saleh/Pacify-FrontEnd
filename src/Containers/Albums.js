@@ -21,19 +21,6 @@ class Album extends Component {
 
     componentDidMount(){
 
-  //   fetch('http://localhost:5000/likedAlbums')   
-   
-  // .then(response=> {
-
-  //     return response.json();
-  // })
-  // .then(users => {
-
-  //     this.setState({  albumsdata: users })
-      
-  // })
-
-  // console.log("fetching")
 
   const requestOptions = {
     method: 'GET',

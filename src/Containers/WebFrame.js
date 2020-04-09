@@ -15,6 +15,7 @@ import {BrowserRouter as Router , Switch , Route , Link,Redirect} from 'react-ro
 import Pages from './SearchPages'
 import Playlist from '../Containers/Playlist'
 import {connect} from 'react-redux'
+import Album from '../Containers/Albums'
 
 
 
@@ -95,12 +96,12 @@ class WebFrame extends Component{
                                     <SearchPage></SearchPage>
                                 </Route>
                                 <Route  path='/WebFrame/Library'>
-                                    <Playlist></Playlist>
+                                    <Albums></Albums>
                                 </Route>
                                 <Route  path='/WebFrame/PlaylistInsidePage_:id' component={PlaylistInsidePage}>
                                     {/* <PlaylistInsidePage></PlaylistInsidePage> */}
                                 </Route>
-                                <Route  path='/WebFrame/AlbumInsidePage_:ID' component={AlbumInsidePage} >
+                                <Route  path='/WebFrame/AlbumInsidePage_:id' component={AlbumInsidePage} >
                                     {/* <AlbumInsidePage></AlbumInsidePage> */}
                                 </Route>
                                 <Route  path='/WebFrame/'>
