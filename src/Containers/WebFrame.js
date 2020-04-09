@@ -8,6 +8,7 @@ import AlbumInsidePage from '../Containers/AlbumInsidePage'
 import './WebFrame.css'
 import SearchPage from './SearchPage'
 import WebPlayerHome from './WebPlayerHome'
+import WebHomeInside from './WebHomeInside'
 import CreatePlaylist from '../Components/CreatePlaylist'
 import PlayList from '../Containers/Playlist'
 import LikedSongs from '../Components/LikedSongs'
@@ -82,6 +83,8 @@ class WebFrame extends Component{
                             <Switch>
                                 <Route  path='/WebFrame/Home'>
                                     <WebPlayerHome></WebPlayerHome>
+                                </Route>
+                                <Route  path='/WebFrame/WebHomeInside_:id' component={WebHomeInside}>
                                 </Route>
                                 <Route  path='/WebFrame/LikedSongs'>
                                     <LikedSongs></LikedSongs>

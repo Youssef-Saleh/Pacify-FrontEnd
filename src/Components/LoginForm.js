@@ -8,6 +8,8 @@ class LoginForm extends Component{
             data:[],
             email:'',
             password:'',
+            emailError: "",
+            passwordError: "",
             checked:true,
             MockBack: false,
             LoggedIn: false
@@ -19,8 +21,36 @@ class LoginForm extends Component{
         this.setState({[event.target.name]: event.target.value })
         console.log(this.state.data)
     }
+    validate = () => {
+        let eError='';
+        let pError='';
+        if (!this.state.email) {
+            eError='Please enter your username or email address.';
+        }
+        if (!this.state.password){
+            pError='Please enter your password.'; 
+        }
+        if(this.state.password.length < 8 && this.state.password.length >= 1 ){
+            pError= 'The Password is too short.';
+        }
+        if(eError || pError){
+            this.setState({emailError: eError, passwordError:pError});
+            return false;
+        }
+        return true;
+    };
     SubmitForm(event){
         event.preventDefault()
+        const isValid = this.validate();
+        if (isValid) {
+        console.log(this.state);
+        // clear form
+        this.setState({emailError:''});
+        this.setState({passwordError:''});
+        }
+        else{
+            console.log('Invalid Form');
+        }
         const {email , password, MockBack,data} = this.state
         // let found = data[0].email
         if (email == 'found' && password == "admin" && MockBack ){
@@ -87,6 +117,9 @@ class LoginForm extends Component{
                             onChange={this.onLoginChange}
                         />
                     </div>
+                    <div style={{ fontSize: 12, color: "red" }}>
+                        {this.state.emailError}
+                    </div>
                     <br></br>
                     <div class="row">
                         <input
@@ -98,6 +131,9 @@ class LoginForm extends Component{
                             value={this.state.password}
                             onChange={this.onLoginChange}
                         />
+                    </div>
+                    <div style={{ fontSize: 12, color: "red" }}>
+                        {this.state.passwordError}
                     </div>
                     <br></br>
                     <div class="row" class="form-check" >
