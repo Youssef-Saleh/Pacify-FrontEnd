@@ -52,10 +52,10 @@ revert=()=>{
                 <div className="div-block-15">
                     <div className="w-layout-grid grid">
                         <WebHomeInsideCard 
-                            key= {playlistsdata[ this.props.match.params.id-1].id}
-                            id={playlistsdata[ this.props.match.params.id-1].id}
-                            playlistimage={playlistsdata[ this.props.match.params.id-1].playlistimage}
-                            Title={playlistsdata[ this.props.match.params.id-1].Title}
+                            // // key= {playlistsdata[ this.props.match.params.id-1].id}
+                            // id={WebHomeInsideSongs[ this.props.match.params.id-1]._id}
+                            // playlistimage={WebHomeInsideSongs[ this.props.match.params.id-1].url}
+                            // Title={WebHomeInsideSongs[ this.props.match.params.id-1].title}
                         ></WebHomeInsideCard>
                         <div className="div-block-6 pt5 pr3">
                             <WebHomeInsideList2 WebHomeInsideData={WebHomeInsideSongs}></WebHomeInsideList2>
