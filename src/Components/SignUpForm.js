@@ -90,7 +90,7 @@ class SignUpForm extends Component{
                     'confirmEmail':confirmEmail,
                     'password':password,
                     'nickname': nickName,
-                    'date':date,
+                    'birthdate':date,
                     'gender':gender
                 })
             };
