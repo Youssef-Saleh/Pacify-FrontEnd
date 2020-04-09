@@ -28,7 +28,6 @@ class WebPlayerHome extends Component{
         .then((users)=>{
             this.setState({types:users, loaded:true})
             console.log(users)
-           
         });
         
     }
@@ -40,11 +39,14 @@ class WebPlayerHome extends Component{
                 <h1 className="loading-h1">loading</h1></p>
             </div>)
         }
-        return(
-            <div > 
-                <SectionList SectionTypes={this.state.types}/>
-            </div>
-        )
+        else{
+            this.setState({loaded:true})
+            return(
+                <div > 
+                    <SectionList SectionTypes={this.state.types}/>
+                </div>
+            )
+        }
     }
 }
 
