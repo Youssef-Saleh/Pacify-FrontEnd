@@ -8,6 +8,8 @@ import AlbumInsidePage from '../Containers/AlbumInsidePage'
 import './WebFrame.css'
 import SearchPage from './SearchPage'
 import WebPlayerHome from './WebPlayerHome'
+import WebHomeInside from './WebHomeInside'
+import FirstWebHome from './FirstWebHome'
 import CreatePlaylist from '../Components/CreatePlaylist'
 import PlayList from '../Containers/Playlist'
 import LikedSongs from '../Components/LikedSongs'
@@ -16,6 +18,7 @@ import Pages from './SearchPages'
 import Playlist from '../Containers/Playlist'
 import {connect} from 'react-redux'
 import {GetPage} from '../Redux/Pages/PagesAction'
+import Album from '../Containers/Albums'
 
 
 
@@ -86,6 +89,8 @@ class WebFrame extends Component{
                                 <Route  path='/WebFrame/Home'>
                                     <WebPlayerHome></WebPlayerHome>
                                 </Route>
+                                <Route  path='/WebFrame/WebHomeInside_:id' component={WebHomeInside}>
+                                </Route>
                                 <Route  path='/WebFrame/LikedSongs'>
                                     <LikedSongs></LikedSongs>
                                 </Route>
@@ -104,8 +109,11 @@ class WebFrame extends Component{
                                 <Route  path='/WebFrame/PlaylistInsidePage_:id' component={PlaylistInsidePage}>
                                     {/* <PlaylistInsidePage></PlaylistInsidePage> */}
                                 </Route>
-                                <Route  path='/WebFrame/AlbumInsidePage'>
-                                    <AlbumInsidePage></AlbumInsidePage>
+                                <Route  path='/WebFrame/AlbumInsidePage_:id' component={AlbumInsidePage} >
+                                    {/* <AlbumInsidePage></AlbumInsidePage> */}
+                                </Route>
+                                <Route  path='/WebFrame/FirstWebHome'>
+                                <FirstWebHome></FirstWebHome>
                                 </Route>
                                 <Route  path='/WebFrame/'>
                                 <WebPlayerHome></WebPlayerHome>

@@ -24,10 +24,11 @@ const PlaylistSongslist=({playlistsongsdata}) => {
                      //   songname={playlistsongsdata[i].songname}
                        
                        key={playlistsongsdata[i].id}
-                       id={playlistsongsdata[i].id} 
+                       id={playlistsongsdata[i]._id} 
                        name={playlistsongsdata[i].name}
-                        username={playlistsongsdata[i].username} 
-                        website={playlistsongsdata[i].website}
+                        artist={playlistsongsdata[i].artist} 
+                        url={playlistsongsdata[i].url} 
+                  
                        
                        
                        

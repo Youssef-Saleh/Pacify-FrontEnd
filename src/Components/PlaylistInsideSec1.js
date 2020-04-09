@@ -3,16 +3,16 @@ import './PlaylistInsideSec1.css';
 
 
 
-const PlaylistInsideSec1=({id,playlistimage,Title}) =>{
+const PlaylistInsideSec1=({id,url,name}) =>{
 
   
     return (
               
         <div className=" pt5 ">
             <div className='tc'>
-            <img src={playlistimage} alt=" no image" class=" w-60 h-60 image3"/>
+            <img src={url} alt=" no image" className=" w-60 h-60 image3"/>
             
-            <div className="playlistName pt2">{Title}</div>
+            <div className="playlistName pt2">{name}</div>
             <div className="playlistCreator pt1 pb3">Spotify</div>
 
             <div className="play-container">

@@ -33,7 +33,7 @@ class WebPlayerHome extends Component{
     render(){
         return(
             <div > 
-                <SectionList SectionTypes={HomeSectionTypes}/>
+                <SectionList SectionTypes={this.state.types}/>
             </div>
         )
     }

@@ -13,6 +13,11 @@ class SignUpForm extends Component{
             nickName: '',
             date:'',
             gender:'',
+            emailError: "",
+            passwordError: "",
+            nickError:"",
+            confirmEmailError:"",
+            genderError:"",
             checked: true,
             MockBack: false,
             SignedUp: false
@@ -23,8 +28,52 @@ class SignUpForm extends Component{
     onSignUpChange=(event)=>{
         this.setState({[event.target.name]: event.target.value })
     }
+    validate = () => {
+        let eError='';
+        let cError='';
+        let nError='';
+        let pError='';
+        let gError='';
+        if (!this.state.email.includes("@")) {
+            eError = "Invalid email! Please enter the correct email address.";
+        }
+        if (!this.state.confirmEmail.includes("@")) {
+            cError = "Invalid email! Please enter the correct email address.";
+        }
+        if (this.state.confirmEmail != this.state.email) {
+            cError = "Please confirm your email address.";
+        }
+        if (!this.state.nickName) {
+            nError='What should we call you?';
+        }
+        if (!this.state.gender) {
+            gError='Please select your gender.';
+        }
+        if (!this.state.password){
+            pError='Please enter your password.'; 
+        }
+        if(this.state.password.length < 8 && this.state.password.length >= 1 ){
+            pError= 'The Password is too short.';
+        }
+        if(eError || pError || cError || nError || gError){
+            this.setState({emailError: eError, passwordError:pError});
+            this.setState({confirmEmailError: cError, nickError:nError, genderError:gError});
+            return false;
+        }
+        return true;
+    };
     SubmitForm(event){
         event.preventDefault()
+        const isValid = this.validate();
+        if (isValid) {
+        console.log(this.state);
+        // clear form
+        this.setState({emailError: '', passwordError:''});
+        this.setState({confirmEmailError: '', nickError:'', genderError:''});
+        }
+        else{
+            console.log('Invalid Form');
+        }
         const {email ,confirmEmail, password, nickName,date,gender, MockBack,data} = this.state
         // if (email == 'found' && confirmEmail == 'found' && password == 'admin' && nickName == 'found' && date=='06/07/1999' && gender=='Male'  && MockBack ){
         //     this.setState({SignedUp: true})
@@ -40,7 +89,7 @@ class SignUpForm extends Component{
                     'email':email,
                     'confirmEmail':confirmEmail,
                     'password':password,
-                    'nickName': nickName,
+                    'nickname': nickName,
                     'date':date,
                     'gender':gender
                 })
@@ -65,21 +114,6 @@ class SignUpForm extends Component{
     let token = sessionStorage.getItem('token')
     console.log(token)
     }
-    // componentDidMount(){
-    //     if(this.state.MockBack){
-    //     fetch('http://localhost:5000/song/5e8c31dc3d162e0ea00780f3')   
-
-    //     .then(response=> {
-
-    //         return response.json();
-    //     })
-    //     .then(users => {
-
-    //         this.setState({  data: users })
-    //     })
-    //     }
-
-    // }
     render(){
         if (this.state.SignedUp == true){
             return <Redirect to='/WebFrame'></Redirect>
@@ -98,6 +132,9 @@ class SignUpForm extends Component{
                             onChange={event=>this.onSignUpChange(event)}       
                         />
                     </div>
+                    <div style={{ fontSize: 12, color: "red" }}>
+                        {this.state.emailError}
+                    </div>
                     <br></br>
                     <div class="row" >
                         <input
@@ -109,6 +146,9 @@ class SignUpForm extends Component{
                             value={this.state.confirmEmail}
                             onChange={event=>this.onSignUpChange(event)}
                         />
+                    </div>
+                    <div style={{ fontSize: 12, color: "red" }}>
+                        {this.state.confirmEmailError}
                     </div>
                     <br></br>
                     <div class="row">
@@ -122,6 +162,9 @@ class SignUpForm extends Component{
                             onChange={event=>this.onSignUpChange(event)}
                         />
                     </div>
+                    <div style={{ fontSize: 12, color: "red" }}>
+                        {this.state.passwordError}
+                    </div>
                     <br></br>
                     <div class="row" >
                         <input
@@ -134,6 +177,9 @@ class SignUpForm extends Component{
                             onChange={event=>this.onSignUpChange(event)}
                         />
                     </div>
+                    <div style={{ fontSize: 12, color: "red" }}>
+                        {this.state.nickError}
+                    </div>
 
                     <div class="row">
                         <label className="SignUp_birth_label"> Date of birth    </label>
@@ -143,6 +189,7 @@ class SignUpForm extends Component{
                             className="SignUp_input"
                             placeholder='Date'
                             className="form-control"
+                            min="1950-01-01" max="2010-12-31" required
                             value={this.state.date}
                             onChange={event=>this.onSignUpChange(event)}
                         />
@@ -152,8 +199,12 @@ class SignUpForm extends Component{
                         <p className="SignUp_p_gray" className='tl'>
                             <label class="SignUp_radiolabel"><input className="SignUp_input" type="radio"  name="gender" value="male" onChange={event=>this.onSignUpChange(event)}/>Male</label>
                             <label class="SignUp_radiolabel"><input className="SignUp_input" type="radio" name="gender" value="female" onChange={event=>this.onSignUpChange(event)}/>Female</label>
+                            <div style={{ fontSize: 12, color: "red" }}>
+                                {this.state.genderError}
+                            </div>
                         </p> 
                     </div>
+                    
                     <div class="row" class="form-check" >
                         <p className="SignUp_p_gray_label"><label> 
                         <input
@@ -175,7 +226,7 @@ class SignUpForm extends Component{
                     <p className="tc" className="SignUp_p_black">  To learn more about how Spotify collects, uses, shares and protects your personal data please read Spotify's <a className="SignUp_a" href="#" >Privacy Policy</a>. </p>
                 </div>
                 <div >
-                   <button type='submit' className=" SignUp_button SignUp_button_Signup"> SIGN UP </button>
+                    <button type='submit' className=" SignUp_button SignUp_button_Signup"> SIGN UP </button>
                 </div>
                 <div>
                     <p className='tc' className="SignUp_p_black" >

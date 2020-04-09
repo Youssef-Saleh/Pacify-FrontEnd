@@ -12,8 +12,8 @@ const WebPlayerHomeSectionList = ({SectionTypes}) =>{
                             key={i}
                             // id={SectionTypes[i].id}
                             title={SectionTypes[i].title}
-                            des={SectionTypes[i].des}
-                            type={SectionTypes[i].type}
+                            // des={SectionTypes[i].des}
+                            type={SectionTypes[i].data}
                         />
                     );
                 })

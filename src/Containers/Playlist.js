@@ -3,7 +3,7 @@ import PlaylistHeader from '../Components/PlaylistHeader'
 import PlaylistCardList from '../Components/PlaylistCardList';
 // import LikedSongsCard from '../Components/LikedSongsCard';
 //import LikedSongslist from '../Components/LikedSongslist';
-import {playlistsdata} from '../Components/playlistsdata';
+//import {playlistsdata} from '../Components/playlistsdata';
 import {likedsongsdata} from '../Components/likedsongsdata';
 
 import './Playlist.css'
@@ -15,31 +15,57 @@ class Playlist extends Component {
     super(props)
     this.state= {
 
-        playlistsdata: playlistsdata,   
+        playlistsdata:[],  
+        likedsongsdata:likedsongsdata ,
         CardID:" ",                      
         //likedsongsdata:[],
        }
 }
 
-// componentDidMount(){
+componentDidMount(){
 
 
-//     fetch('https://jsonplaceholder.typicode.com/users')   
+  const requestOptions = {
+    method: 'GET',
+    headers: { 
+    'Content-Type': 'application/x-www-form-urlencoded',  
+    'authorization': sessionStorage.getItem('token'),
+    'Accept': 'application/json'},
+    }
 
-//   .then(response=> {
+// fetch('http://localhost:5000/likedPlaylists',requestOptions)
 
-//       return response.json();
-//   })
-//   .then(users => {
+// .then(response=>{
+//   return response.json();
+// })
+// .then(users=>{
+//   this.setState({playlistsdata:users});
+//   console.log("fetching")
+// });
 
-//       this.setState({  playlistsdata: users })
-//   })
+Promise.all([
+  fetch('http://localhost:5000/likedPlaylists',requestOptions),
+  fetch('http://localhost:5000/likedSongs',requestOptions)
+])
+
+.then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
+
+.then(([res1, res2]) => this.setState({
+  playlistsdata: res1, 
+  likedsongsdata: res2
+}));
 
 
-// }
+
+
+
+
+
+
+}
 
 PlayMusic =(event) =>{                                            
-  this.setState({ CardID: event.target.getAttribute('IDM') })
+  this.setState({ CardID: event.target.getAttribute('idm') })
 
   console.log("Play the song")  
   console.log(this.state.CardID)  
@@ -50,7 +76,9 @@ PlayMusic =(event) =>{
 
   render() {
 
-    const {playlistsdata} =this.state
+    // console.log(this.state.playlistsdata.likedPlaylists)
+
+    const {playlistsdata,likedsongsdata} =this.state
 
     return (
 
@@ -63,7 +91,11 @@ PlayMusic =(event) =>{
                 <PlaylistCardList 
                 Music={this.PlayMusic}
                 playlistsdata={playlistsdata} 
-                likedsongsdata={likedsongsdata} ></PlaylistCardList>
+
+                likedsongsdata={likedsongsdata} 
+
+                // likedPlaylists={likedPlaylists} 
+                ></PlaylistCardList>
                
 
       </div>

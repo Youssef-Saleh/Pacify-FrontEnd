@@ -1,6 +1,6 @@
 import React from 'react';
 import './SearchSectionCard.css'
-const SectionCard = ({title,source,p}) => {
+const SectionCard = ({id,title,source,p}) => {
     return (
        <div id="Section" className="  br3 pa3 ma2  bw2 shadow-5">
           <div draggable="true">

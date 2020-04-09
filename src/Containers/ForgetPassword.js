@@ -5,6 +5,7 @@ class ForgetPassword extends Component{
         super()
         this.state={
             email:'',
+            emailError: "",
             MockBack: false,
             ForgetPassword: false
         }
@@ -15,9 +16,24 @@ class ForgetPassword extends Component{
         this.setState({[event.target.name]: event.target.value })
         console.log(this.state.email)
     }
-    
+    validate = () => {
+        if (!this.state.email) {
+            this.setState({emailError:'Please enter your username or email address'});
+            return false;
+        }
+        return true;
+    };
     SubmitForm(event){
         event.preventDefault()
+        const isValid = this.validate();
+        if (isValid) {
+        console.log(this.state);
+        // clear form
+        this.setState({emailError:''});
+        }
+        else{
+            console.log('Invalid Form');
+        }
         const {email , MockBack, data} = this.state
         
         if (!MockBack){
@@ -47,13 +63,15 @@ class ForgetPassword extends Component{
             <form onSubmit={this.SubmitForm}>
             <div class='forget-container'>
                 <div> 
-                <h1 className='forget-h1' >Password Reset</h1>
-                <p className='forget-p' >Enter your Spotify username, or the email address that you used to register. We'll send you an email with your username and a link to reset your password.</p>
+                    <div className="pl5">
+                <h1 className='forget-h1  ' >Password Reset</h1>
+                </div>
+                <p className='forget-p pr3 tc' >Enter your Spotify username, or the email address that you used to register. We'll send you an email with your username and a link to reset your password.</p>
                 </div> 
                 <div>
                     <label className='forget-label' > Email address or username </label>
                     <input
-                        className='email'
+                        className='email-input'
                         type="text"
                         name='email'
                         placeholder='Email address or username'
@@ -62,12 +80,15 @@ class ForgetPassword extends Component{
                         onChange={this.onForgetPasswordChange}
                     />
                 </div>
+                <div style={{ fontSize: 12, color: "red" }}>
+                    {this.state.emailError}
+                </div>
                 <br></br>
                 <div>
-                    <button type='submit' className="forget-button">SEND</button>
-                    <p className='forget-p' >If you still need help, contact Spotify Support.</p>
+                    <button type='submit' className="forget-button pb2 tc ml6">SEND</button>
+                    <p className='forget-p pr6 pt3 tc' >If you still need help, contact Spotify Support.</p>
                 </div>
-            </div>
+            </div> 
             </form>
         )
     }

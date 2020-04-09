@@ -6,10 +6,10 @@ import {Stream} from '../Redux/songs/StreamActions'
 import {LoadSongs} from '../Redux/songs/StreamActions'
 import cairoke from './cairokee.mp3'
 
-const PlaylistSongsSec2=({id,songname,artist,album ,name,username,website}) =>{
+const PlaylistSongsSec2=({id,url,songname,artist,album ,name}) =>{
 
 const Dispatch=useDispatch()
-Dispatch(LoadSongs({id:'1',url:'1',name:'1',description:'1'}))
+Dispatch(LoadSongs({id:'1',url:'1',name:'1',artist:'1'}))
 
     return (
               
@@ -19,16 +19,16 @@ Dispatch(LoadSongs({id:'1',url:'1',name:'1',description:'1'}))
 
                 <div ><div>
                     <img src="https://uploads-ssl.webflow.com/5e36ddfda3d85b56ce206efc/5e38aae52c275481b5f9d25b_transPlay.png"   alt="" className="image2" id="play"/>
-                    <img src="https://uploads-ssl.webflow.com/5e36ddfda3d85b56ce206efc/5e39d9e5cbba74b07e06e9ee_noteTrans.png" alt="" class="image9" id="music"/></div>
+                    <img src="https://uploads-ssl.webflow.com/5e36ddfda3d85b56ce206efc/5e39d9e5cbba74b07e06e9ee_noteTrans.png" alt="" className="image9" id="music"/></div>
 
                 <div>
                     <div>
-                        {website}
+                        {name}
                     </div>
                     <div className="Song-Name-and-Artist">
 
-                    <div className='pr2 singername'>{name}</div> -
-                    <div className=' pl2 albumname'>{username}</div>
+                    <div className='pr2 singername'>{artist}</div> -
+                    {/* <div className=' pl2 albumname'>{username}</div> */}
 
                     </div>
                 </div>
