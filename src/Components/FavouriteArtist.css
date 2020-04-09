@@ -35,13 +35,15 @@
     background-color:#121212 ;
     border:none;
  }
- 
-.unstyled-button:active{
+.clicked{
     opacity: 0.4;
 }
-.unstyled-button:focus{
+/* #unstyled-button:active{
     opacity: 0.4;
-}
+} */
+/* .unstyled-button:focus{
+    opacity: 0.4;
+} */
 
 @media (max-width:500){
     .card-img{

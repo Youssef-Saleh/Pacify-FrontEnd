@@ -38,9 +38,9 @@ class SideBar extends Component{
      }
     render(){
     return (
-        <div className='sidenav'>
-            <img className='ml4 mt2' src='https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png' width='131' height='40'></img>
-            <div className='mt4 ml4'>
+        <div className='pl4 sidenav'>
+            <img className=' mt2' src='https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png' width='131' height='40'></img>
+            <div className='mt4 '>
                 <div className=''>
                     <img className='dib mb1' width='24' height='24' src='https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5559065.jpg'></img>
                     <Link to='../WebFrame/Home'><div onClick={()=>this.props.UpdateCurrPage('home')} className='dib  ml3 fw-900'>Home</div></Link>
@@ -55,7 +55,7 @@ class SideBar extends Component{
                 </div>
                 
             </div>
-            <div className='ml4 mt4'>
+            <div className=' mt4'>
                 <p className='f6 lh-copy'>PLAYLISTS</p>
                 <div className='mt4'>
                     <div>

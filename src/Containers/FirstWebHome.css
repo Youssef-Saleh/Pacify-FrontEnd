@@ -4,6 +4,7 @@
     white-space: wrap;
     text-justify: auto;
     max-width: 100rem;
+    padding-top: 60px;
 }
 .first-h1{
     display: block;

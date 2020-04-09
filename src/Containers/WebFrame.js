@@ -72,13 +72,9 @@ class WebFrame extends Component{
             }
         
         return (
-
+            
 
             <div>
-            
-                {/* {
-                   this.state.ShowPopUp ? <CreatePlaylist></CreatePlaylist>:<div>not true</div>
-                } */}
                 <div className=''>
                     <SideBar ></SideBar>
                     <WebPlayer></WebPlayer>
@@ -102,8 +98,8 @@ class WebFrame extends Component{
                                 <Route  path='/WebFrame/Search:id'>
                                     <SearchPage></SearchPage>
                                 </Route>
-                                <Route  path='/WebFrame/Library:id'>
-                                    {this.UpdateCurrentPage()}
+                                <Route  path='/WebFrame/Library:id' >
+                                    {window.location.href=='http://localhost:3000/WebFrame/Library2'? this.UpdateCurrentPage():<div></div>}
                                     <Playlist></Playlist>
                                 </Route>
                                 <Route  path='/WebFrame/PlaylistInsidePage_:id' component={PlaylistInsidePage}>

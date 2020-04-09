@@ -13,7 +13,7 @@ const WebNav=()=>{
     const page = useSelector(state=>state.page.PageName)
 
     return (
-        <Navbar collapseOnSelect   fixed='top' className='web-nav '>
+        <Navbar collapseOnSelect    fixed='top' className='web-nav '>
         {
             (page=='library')?
             <Nav className='ml6 fw-900 f4 lh-copyx'>
