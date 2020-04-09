@@ -15,6 +15,7 @@ import {BrowserRouter as Router , Switch , Route , Link,Redirect} from 'react-ro
 import Pages from './SearchPages'
 import Playlist from '../Containers/Playlist'
 import {connect} from 'react-redux'
+import {GetPage} from '../Redux/Pages/PagesAction'
 
 
 
@@ -28,14 +29,14 @@ const MapStateToProps = (state) =>{
 
 const MapDispatchToProps = (dispatch) =>{
     return{
-        dispatch
+        UpdateCurrPage: (page)=> dispatch(GetPage(page))
     }
 }
 
 class WebFrame extends Component{
     constructor(props){
         super(props);
-
+        this.UpdateCurrentPage= this.UpdateCurrentPage.bind(this)
         let loggedIn=true
         let token=sessionStorage.getItem("token")
         console.log("the token is  ",token)
@@ -48,7 +49,9 @@ class WebFrame extends Component{
             loggedIn
         }
     }
-    
+    UpdateCurrentPage(){
+        this.props.UpdateCurrPage('library')
+    }
     // SubmitSongLike(song){
 
     // }
@@ -91,10 +94,11 @@ class WebFrame extends Component{
                                 {/* <Route  path='/WebFrame/Pages'>
                                     <Pages></Pages>
                                 </Route> */}
-                                <Route  path='/WebFrame/Search'>
+                                <Route  path='/WebFrame/Search:id'>
                                     <SearchPage></SearchPage>
                                 </Route>
-                                <Route  path='/WebFrame/Library'>
+                                <Route  path='/WebFrame/Library:id'>
+                                    {this.UpdateCurrentPage()}
                                     <Playlist></Playlist>
                                 </Route>
                                 <Route  path='/WebFrame/PlaylistInsidePage_:id' component={PlaylistInsidePage}>

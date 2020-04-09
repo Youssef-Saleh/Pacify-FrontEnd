@@ -4,7 +4,7 @@ import './GoPremium.css'
 const GoPremium=()=>{
     return (
                 <div className='container-fluid'>
-                    <div className='row justify-content-center dib shadow-5 br3 pa3 ma2  bw2 mt5 mb5'>
+                    <div className='row justify-content-center dib shadow-2 br3 pa3 ma2  bw2 mt5 mb5'>
                             <h2>Spotify Premium</h2>
                             <p><span className='f1'>EGP 49.99</span>/month</p>
                             <p className='f7 gray'>1 month free</p>
