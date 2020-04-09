@@ -12,7 +12,7 @@ import {Link} from 'react-router-dom';
 //         console.log(playlistdata)
 //     }
 
-const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,url,name,description,playlistimage,Title,Description}) =>{
+const PlaylistCards=({firstcard=true,id,ID,artistL,songnameL,nameL,StreamMusic,url,name,description}) =>{
 
 
 
@@ -29,7 +29,7 @@ const PlaylistCards=({firstcard=true,id,ID, artist,StreamMusic, songname,url,nam
 
             <div className="  ma4 mt5 pb2 " id="cardtext2">
 
-                <h5 className= "f5 lh-copy white">{artist}<span className=' pl1 fw3'>{songname}</span></h5>
+                <h5 className= "f5 lh-copy white">{songnameL}<span className=' pl1 fw3'>{artistL}</span></h5>
                 <h5 className="f2 fw7 lh-title white "> Liked Songs</h5>
                 <h5 className= "f5  lh-copy white "> 10 Liked Songs</h5>
 

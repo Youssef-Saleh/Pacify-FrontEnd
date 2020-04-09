@@ -100,7 +100,7 @@ class WebFrame extends Component{
                                     <SearchPage></SearchPage>
                                 </Route>
                                 <Route  path='/WebFrame/Library'>
-                                    <Albums></Albums>
+                                    <Playlist></Playlist>
                                 </Route>
                                 <Route  path='/WebFrame/PlaylistInsidePage_:id' component={PlaylistInsidePage}>
                                     {/* <PlaylistInsidePage></PlaylistInsidePage> */}

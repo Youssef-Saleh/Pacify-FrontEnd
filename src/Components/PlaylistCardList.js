@@ -2,7 +2,7 @@ import React from 'react';
 import PlaylistCards from './PlaylistCards';
 
 
-const PlaylistCardList=({likedsongsdata,playlistsdata,likedPlaylists,Music}) => {
+const PlaylistCardList=({likedsongsdata,playlistsdata,Music}) => {
 
       return (
          
@@ -15,8 +15,8 @@ const PlaylistCardList=({likedsongsdata,playlistsdata,likedPlaylists,Music}) => 
 
                   <PlaylistCards
 
-                     artist={i.artist}
-                     songname={i.songname}
+                     artistL={i.artist}
+                     songnameL={i.name}
 
                   />
  
@@ -29,24 +29,7 @@ const PlaylistCardList=({likedsongsdata,playlistsdata,likedPlaylists,Music}) => 
 
             {
 
-              
-
-               // Object.keys(playlistsdata.likedPlaylists).map((user,i) => {
-
-               //    return (
-                  
-               //       <PlaylistCards 
-                     
-               //       StreamMusic={Music}
-               //       firstcard={false}
-               //       key={playlistsdata.likedPlaylists[i].id}
-               //        ID={playlistsdata.likedPlaylists[i].id} 
-               //        url={playlistsdata.likedPlaylists[i].url}
-               //        name={playlistsdata.likedPlaylists[i].name} 
-               //        description={playlistsdata.likedPlaylists[i].description}
-                     
-                       
-               //         />  
+           
 
                       playlistsdata.map((user,i) => {
 

@@ -16,7 +16,7 @@ class Playlist extends Component {
     this.state= {
 
         playlistsdata:[],  
-        // likedPlaylists:[] ,
+        likedsongsdata:likedsongsdata ,
         CardID:" ",                      
         //likedsongsdata:[],
        }
@@ -33,15 +33,34 @@ componentDidMount(){
     'Accept': 'application/json'},
     }
 
-fetch('http://localhost:5000/likedPlaylists',requestOptions)
+// fetch('http://localhost:5000/likedPlaylists',requestOptions)
 
-.then(response=>{
-  return response.json();
-})
-.then(users=>{
-  this.setState({playlistsdata:users});
-  console.log("fetching")
-});
+// .then(response=>{
+//   return response.json();
+// })
+// .then(users=>{
+//   this.setState({playlistsdata:users});
+//   console.log("fetching")
+// });
+
+Promise.all([
+  fetch('http://localhost:5000/likedPlaylists',requestOptions),
+  fetch('http://localhost:5000/likedSongs',requestOptions)
+])
+
+.then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
+
+.then(([res1, res2]) => this.setState({
+  playlistsdata: res1, 
+  likedsongsdata: res2
+}));
+
+
+
+
+
+
+
 
 }
 
@@ -59,7 +78,7 @@ PlayMusic =(event) =>{
 
     // console.log(this.state.playlistsdata.likedPlaylists)
 
-    const {playlistsdata,likedPlaylists} =this.state
+    const {playlistsdata,likedsongsdata} =this.state
 
     return (
 
