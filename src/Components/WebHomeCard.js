@@ -7,6 +7,7 @@ import Copy from '../copyLink.png'
 import Radio from '../radio2.png'
 import Desktop from '../desktop.png'
 const Card = ({id,image,title,text}) =>{
+    console.log('in cards')
     return(
         <Link to={ `../WebFrame/WebHomeInside_${id}`}>
             <div class="card__collection clear-fix">

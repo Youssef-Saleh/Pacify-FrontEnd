@@ -31,11 +31,13 @@ class WebPlayerHome extends Component{
         
     }
     render(){
+        console.log('section list is home')
         return(
             <div > 
-                <SectionList SectionTypes={HomeSectionTypes}/>
+                <SectionList SectionTypes={this.state.types}/>
             </div>
         )
+        console.log('returned to home');
     }
 }
 

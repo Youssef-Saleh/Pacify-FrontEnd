@@ -97,8 +97,8 @@ transform: scale(1.05);
 }
 
 .img-responsive {
-    width: 16rem;
-    height: 21rem;
+    width: 13rem;
+    height: 16rem;
 }
 
 .card__collection {
@@ -112,7 +112,7 @@ transform: scale(1.05);
 }
 .card__collection .cards {
   width: 13rem;
-  height: 18rem;
+  height: 16rem;
   display: block;
   background-size: cover;
   float: left;
