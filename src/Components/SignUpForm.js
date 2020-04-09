@@ -13,6 +13,10 @@ class SignUpForm extends Component{
             nickName: '',
             date:'',
             gender:'',
+            emailError: "",
+            passwordError: "",
+            nickError:"",
+            confirmEmailError:"",
             checked: true,
             MockBack: false,
             SignedUp: false
@@ -23,8 +27,48 @@ class SignUpForm extends Component{
     onSignUpChange=(event)=>{
         this.setState({[event.target.name]: event.target.value })
     }
+    validate = () => {
+        let eError='';
+        let cError='';
+        let nError='';
+        let pError='';
+        if (!this.state.email.includes("@")) {
+            eError = "Invalid email! Please enter the correct email address.";
+        }
+        if (!this.state.confirmEmail.includes("@")) {
+            cError = "Invalid email! Please enter the correct email address.";
+        }
+        if (this.state.confirmEmail != this.state.email) {
+            cError = "Please confirm your email address.";
+        }
+        if (!this.state.nickName) {
+            nError='What should we call you?';
+        }
+        if (!this.state.password){
+            pError='Please enter your password.'; 
+        }
+        if(this.state.password.length < 8 && this.state.password.length >= 1 ){
+            pError= 'The Password is too short.';
+        }
+        if(eError || pError || cError || nError){
+            this.setState({emailError: eError, passwordError:pError});
+            this.setState({confirmEmailError: cError, nickError:nError});
+            return false;
+        }
+        return true;
+    };
     SubmitForm(event){
         event.preventDefault()
+        const isValid = this.validate();
+        if (isValid) {
+        console.log(this.state);
+        // clear form
+        this.setState({emailError: '', passwordError:''});
+        this.setState({confirmEmailError: '', nickError:''});
+        }
+        else{
+            console.log('Invalid Form');
+        }
         const {email ,confirmEmail, password, nickName,date,gender, MockBack,data} = this.state
         // if (email == 'found' && confirmEmail == 'found' && password == 'admin' && nickName == 'found' && date=='06/07/1999' && gender=='Male'  && MockBack ){
         //     this.setState({SignedUp: true})
@@ -98,6 +142,9 @@ class SignUpForm extends Component{
                             onChange={event=>this.onSignUpChange(event)}       
                         />
                     </div>
+                    <div style={{ fontSize: 12, color: "red" }}>
+                        {this.state.emailError}
+                    </div>
                     <br></br>
                     <div class="row" >
                         <input
@@ -109,6 +156,9 @@ class SignUpForm extends Component{
                             value={this.state.confirmEmail}
                             onChange={event=>this.onSignUpChange(event)}
                         />
+                    </div>
+                    <div style={{ fontSize: 12, color: "red" }}>
+                        {this.state.confirmEmailError}
                     </div>
                     <br></br>
                     <div class="row">
@@ -122,6 +172,9 @@ class SignUpForm extends Component{
                             onChange={event=>this.onSignUpChange(event)}
                         />
                     </div>
+                    <div style={{ fontSize: 12, color: "red" }}>
+                        {this.state.passwordError}
+                    </div>
                     <br></br>
                     <div class="row" >
                         <input
@@ -133,6 +186,9 @@ class SignUpForm extends Component{
                             value={this.state.nickName}
                             onChange={event=>this.onSignUpChange(event)}
                         />
+                    </div>
+                    <div style={{ fontSize: 12, color: "red" }}>
+                        {this.state.nickError}
                     </div>
 
                     <div class="row">

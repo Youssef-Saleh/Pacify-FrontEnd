@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Login.css';
-//import { Link } from 'react-router';
+import {Link , Redirect} from 'react-router-dom'
 class LoginFooter extends Component{
     render(){
         return(
@@ -9,10 +9,11 @@ class LoginFooter extends Component{
                         <h4 className="Login_h4" >Don't have an account?</h4>
                 </div>
                 <br></br>
+                <Link to="/SignUp">
                 <div class="row">
                     <button class="Login_button_signup">SIGN UP FOR SPOTIFY</button>
-                     {/* <Link to="/SignUp">React</Link> */}
                 </div>
+                </Link>
                 <br></br>
                 <div class="row">
                     <hr className="Login_hr" /> 

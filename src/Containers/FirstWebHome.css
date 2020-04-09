@@ -1,0 +1,22 @@
+.first-home{
+    display: grid;
+    background-color:#121212 ;
+    white-space: wrap;
+    text-justify: auto;
+    max-width: 100rem;
+}
+.first-h1{
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* .buttonTrue {
+    background-color:rgb(29, 28, 28);
+    border:none;
+    }
+    
+    .buttonFalse {
+    background-color: #7FFF00;  
+    } */

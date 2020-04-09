@@ -1,18 +1,27 @@
 .modal-content{
 
 
-    width: 262%;
+    
     margin-top: 33%;
     border: none;
     padding-right: 10%;
-    align-self: center;
+    align-items: center;
     
 
 }
+#text-box{
+
+    float: left;
+    align-content: flex-start;
+}
 .modal.show .modal-dialog {
     transform: none;
-    margin-right: 98%;
+    
 }
+.modal-ku {
+    width: 750px;
+    margin: auto;
+  }
 .new-playlist {
     display: flex;
    position: fixed;
@@ -194,4 +203,11 @@ transform: scale(1.2) perspective(1px)
     display: inline-block;
     cursor: pointer;
     text-align: center;
+}
+._7c0399398b8b07b1b1fa6764a3ed59b1-scss {
+    width: 100vw;
+    position: relative;
+    margin-left: -35vw;
+
+    background-color: #282828;
 }

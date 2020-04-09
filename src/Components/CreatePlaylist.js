@@ -2,13 +2,12 @@ import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Modal from 'react-bootstrap/Modal';
 import './CreatePlaylist.css';
-import HeartIcon from "./HeartIcon"
+import InputCreate from './InputCreate'
 import ReactDOM from 'react-dom';
 var check
 const $ = window.$;
 
 const CreatePlaylist = (props) => { 
-
 
 
 
@@ -19,22 +18,26 @@ function Close(){
     var all = document.getElementsByClassName('modal-backdrop');
     for (var i = 0; i < all.length; i++) {
       all[i].style.display = 'none';
+      
     }
+    
 
     console.log("aybtngan")
 }
+
+
 
 
     
     return(
         
         <div classname="wrap" id="hide">
-        <Modal show={props.modalOpen} onHide={props.handleModalOpen}  dialogClassName="custom-modal" id="mod">
+        <Modal show={props.modalOpen} onHide={props.handleModalOpen}  dialogClassName="custom-modal" id="mod" aria-labelledby="contained-modal-title-vcenter">
         
         <div className="create-playlist active" id="popup">
         <div class="new-playlist" id='Container' >
          <div className="Close" onClick={Close}>
-         <HeartIcon></HeartIcon>
+        
         <button className="close-icon" type="button"  >
         
         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -44,12 +47,7 @@ function Close(){
         </path></svg></button>
         
         </div>
-        <h1 className="heading-48">Create a new playlist</h1><div className="div-block-16">
-        <div className="_7c0399398b8b07b1b1fa6764a3ed59b1-scss">
-        <div className="inputBox"><div class="contentSpacing">
-        <h4 className="inputBox-label">Playlist Name</h4>
-        <input type="text" className="inputBox-input" id='input-holder' placeholder="New Playlist" />
-        </div></div></div></div>
+        <InputCreate></InputCreate>
         <div className="button-container">
            <div className="cancel-button">
            <button className="Cancel" type="button" onClick={Close} >CANCEL</button>

@@ -4,7 +4,8 @@
     font-weight: bold;
 }
 .web-home{
-    display: inline-table;
+    display: grid;
+    background-color:#121212;
 }
 .web-h4 {
     display: block;
