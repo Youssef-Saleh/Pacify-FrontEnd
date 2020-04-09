@@ -7,7 +7,8 @@ class WebPlayerHome extends Component{
     constructor(){
         super()
         this.state={
-            types: []
+            types: [],
+            loaded:false
         }
     }
     componentDidMount(){
@@ -25,17 +26,27 @@ class WebPlayerHome extends Component{
             return response.json()
         })
         .then((users)=>{
-            this.setState({types:users})
+            this.setState({types:users, loaded:true})
             console.log(users)
         });
         
     }
     render(){
-        return(
-            <div > 
-                <SectionList SectionTypes={this.state.types}/>
-            </div>
-        )
+        if(this.state.loaded == false){
+            return(
+            <div className="load">
+                <p><p className="loader mr3 tc"></p>
+                <h1 className="loading-h1">loading</h1></p>
+            </div>)
+        }
+        else{
+            this.setState({loaded:true})
+            return(
+                <div > 
+                    <SectionList SectionTypes={this.state.types}/>
+                </div>
+            )
+        }
     }
 }
 

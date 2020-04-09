@@ -34,13 +34,15 @@
 .unstyled-button {
     background-color:#121212 ;
     border:none;
+    display: inline-block;
  }
  
-.unstyled-button:active{
+/* .unstyled-button:active{
     opacity: 0.4;
-}
+} */
 .unstyled-button:focus{
     opacity: 0.4;
+    display: inline-block;
 }
 
 @media (max-width:500){
