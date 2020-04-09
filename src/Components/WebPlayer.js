@@ -12,7 +12,7 @@ class WebPlayer extends Component{
             <div className='song-img '>
                 <img className='' src='https://i.scdn.co/image/ab67616d00004851a0419b40e3d657cdfb0d9343'></img>
                 <div className='ml2'>
-                    <p className='white mb0 '>Kan Lak ma'aya cairokee</p>
+                    <p className='white mb0 desc'>Kan Lak ma'aya cairokee</p>
                     <p id='band' className='f7 lh-copy'> cairokee</p>
                 </div>
             </div>

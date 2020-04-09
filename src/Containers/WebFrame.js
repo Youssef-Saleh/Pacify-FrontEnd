@@ -17,6 +17,7 @@ import {BrowserRouter as Router , Switch , Route , Link,Redirect} from 'react-ro
 import Pages from './SearchPages'
 import Playlist from '../Containers/Playlist'
 import {connect} from 'react-redux'
+import {GetPage} from '../Redux/Pages/PagesAction'
 import Album from '../Containers/Albums'
 
 
@@ -31,14 +32,14 @@ const MapStateToProps = (state) =>{
 
 const MapDispatchToProps = (dispatch) =>{
     return{
-        dispatch
+        UpdateCurrPage: (page)=> dispatch(GetPage(page))
     }
 }
 
 class WebFrame extends Component{
     constructor(props){
         super(props);
-
+        this.UpdateCurrentPage= this.UpdateCurrentPage.bind(this)
         let loggedIn=true
         let token=sessionStorage.getItem("token")
         console.log("the token is  ",token)
@@ -51,7 +52,9 @@ class WebFrame extends Component{
             loggedIn
         }
     }
-    
+    UpdateCurrentPage(){
+        this.props.UpdateCurrPage('library')
+    }
     // SubmitSongLike(song){
 
     // }
@@ -69,13 +72,9 @@ class WebFrame extends Component{
             }
         
         return (
-
+            
 
             <div>
-            
-                {/* {
-                   this.state.ShowPopUp ? <CreatePlaylist></CreatePlaylist>:<div>not true</div>
-                } */}
                 <div className=''>
                     <SideBar ></SideBar>
                     <WebPlayer></WebPlayer>
@@ -96,10 +95,11 @@ class WebFrame extends Component{
                                 {/* <Route  path='/WebFrame/Pages'>
                                     <Pages></Pages>
                                 </Route> */}
-                                <Route  path='/WebFrame/Search'>
+                                <Route  path='/WebFrame/Search:id'>
                                     <SearchPage></SearchPage>
                                 </Route>
-                                <Route  path='/WebFrame/Library'>
+                                <Route  path='/WebFrame/Library:id' >
+                                    {window.location.href=='http://localhost:3000/WebFrame/Library2'? this.UpdateCurrentPage():<div></div>}
                                     <Playlist></Playlist>
                                 </Route>
                                 <Route  path='/WebFrame/PlaylistInsidePage_:id' component={PlaylistInsidePage}>
@@ -110,6 +110,9 @@ class WebFrame extends Component{
                                 </Route>
                                 <Route  path='/WebFrame/FirstWebHome'>
                                 <FirstWebHome></FirstWebHome>
+                                </Route>
+                                <Route  path='/WebFrame/Album'>
+                                <Album></Album>
                                 </Route>
                                 <Route  path='/WebFrame/'>
                                 <WebPlayerHome></WebPlayerHome>

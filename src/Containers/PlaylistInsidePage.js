@@ -4,13 +4,32 @@ import { RouteComponentProps, matchPath } from 'react-router';
 import './PlaylistInsidePage.css';
 import PlaylistInsideSec1 from '../Components/PlaylistInsideSec1';
 import PlaylistSongslist from '../Components/PlaylistSongslist';
+import {connect} from 'react-redux'
  //import {playlistsdata} from '../Components/playlistsdata';
 //import {playlistsongsdata} from '../Components/playlistsongsdata';
 // import ReactDOM from 'react-dom';
 // var check
 const $ = window.$;
 
+
+
 class PlaylistInsidePage extends Component{
+
+
+  toggle=(event)=>{
+
+    var x= document.getElementById("play")
+    x.style.display="block"
+    var y=document.getElementById("music")
+    y.style.display="none"
+}
+revert=()=>{
+    var x= document.getElementById("music")
+    x.style.display="block"
+    var y=document.getElementById("play")
+    y.style.display="none"
+}
+
 
   constructor(props) {        
     super(props)
@@ -80,29 +99,25 @@ fetching=(value)=>{
 
 
 
-toggle=(event)=>{
-
-    var x= document.getElementById("play")
-    x.style.display="block"
-    var y=document.getElementById("music")
-    y.style.display="none"
-}
-revert=()=>{
-    var x= document.getElementById("music")
-    x.style.display="block"
-    var y=document.getElementById("play")
-    y.style.display="none"
-}
-
-
 
 
     render(){
 
+      if(this.state.playlistdescription.length===0 || this.state.playlistsongsdata.length===0){
+
+        return(
+          <div className="load3">
+              <p><p className="loader3 mr3 tc"></p>
+              <h3 >loading, please wait..</h3></p>
+          </div>)
+  
+      }
+
+      else{
+
     return(
 
       
-
       <div className="content1 vh-100 dt w-100">
         <div className="div-block-15">
           <div className="w-layout-grid grid">
@@ -128,6 +143,9 @@ revert=()=>{
        </div> 
      </div>
      
-    )}
+    )
+  }
+  
+  }
 };
 export default PlaylistInsidePage;

@@ -39,14 +39,11 @@ class WebPlayerHome extends Component{
                 <h1 className="loading-h1">loading</h1></p>
             </div>)
         }
-        else{
-            this.setState({loaded:true})
-            return(
-                <div > 
-                    <SectionList SectionTypes={this.state.types}/>
-                </div>
-            )
-        }
+        return(
+            <div className='home-content pt5' > 
+                <SectionList SectionTypes={this.state.types}/>
+            </div>
+        )
     }
 }
 

@@ -5,6 +5,20 @@ import './WebHomeInside.css';
 import WebHomeInsideCard from '../Components/WebHomeInsideCard';
 import WebHomeInsideList2 from '../Components/WebHomeInsideList2';
 import {playlistsdata} from '../Components/playlistsdata';
+import {connect} from 'react-redux'
+import {LoadSongs} from '../Redux/songs/StreamActions'
+const MapStateToProps = (state) =>{
+    return {
+        data: state.stream,
+        
+    }
+}
+
+const MapDispatchToProps = (dispatch) =>{
+    return{
+        LoadData: (data)=> dispatch(LoadSongs(data))
+    }
+}
 
 const $ = window.$;
 
@@ -12,7 +26,8 @@ class WebHomeInside extends Component{
   constructor(props) {        
     super(props)
     this.state= { 
-      WebHomeInsideSongs:[],  
+      WebHomeInsideSongs:[],
+      id: ''  
     }
 }
 
@@ -23,12 +38,20 @@ match =()=>{ matchPath(this.props.history.location.pathname, {
     })
 }
 componentDidMount(){
-    fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response=> {
-        return response.json();
-    })
-    .then(users => {
-        this.setState({ WebHomeInsideSongs: users })
+    const id =this.props.data.id
+    const requestOptions = {
+        method: 'GET',
+        headers: { 
+        'Content-Type': 'application/x-www-form-urlencoded',  
+        'authorization': sessionStorage.getItem('token'),
+        'Accept': 'application/json'},
+        }
+    fetch('http://localhost:5000/playlist/:id',requestOptions).then(response=>{
+      return response.json();
+    }).then(users=>{
+      this.setState({WebHomeInsideSongs:users});
+      console.log(users)
+      this.setState({loaded:true});
     })
 }
 
@@ -66,4 +89,4 @@ revert=()=>{
         )
     }
 };
-export default WebHomeInside;
+export default connect(MapStateToProps,MapDispatchToProps)(WebHomeInside);

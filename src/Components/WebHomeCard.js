@@ -6,10 +6,15 @@ import Library from '../WebHomeLibrary.png'
 import Copy from '../copyLink.png'
 import Radio from '../radio2.png'
 import Desktop from '../desktop.png'
+import {useDispatch,useSelector} from 'react-redux'
+import {LoadSongs} from '../Redux/songs/StreamActions'
+
 const Card = ({id,image,title,text}) =>{
+    const dispatch = useDispatch()
+    console.log(title)
     return(
         <Link to={ `../WebFrame/WebHomeInside_${id}`}>
-            <div class="card__collection clear-fix">
+            <div class="card__collection clear-fix" onClick={()=>dispatch(LoadSongs({id:id,url:image,name:title,artist:'1'}))}>
                 <div class="cards cards--three">
                     <img src={`${image}`} class="img-responsive" alt=""></img>
                     <span class="cards--three__rect-1">

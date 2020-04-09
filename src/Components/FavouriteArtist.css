@@ -36,14 +36,15 @@
     border:none;
     display: inline-block;
  }
- 
-/* .unstyled-button:active{
+.clicked{
+    opacity: 0.4;
+}
+/* #unstyled-button:active{
     opacity: 0.4;
 } */
-.unstyled-button:focus{
+/* .unstyled-button:focus{
     opacity: 0.4;
-    display: inline-block;
-}
+} */
 
 @media (max-width:500){
     .card-img{

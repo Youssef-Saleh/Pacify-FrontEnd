@@ -80,6 +80,18 @@ PlayMusic =(event) =>{
 
     const {playlistsdata,likedsongsdata} =this.state
 
+    if(playlistsdata.length===0 || likedsongsdata.length===0){
+    
+        return(
+        <div className="load1">
+            <p><p className="loader1 mr3 tc"></p>
+            <h3 >loading, please wait..</h3></p>
+        </div>)
+    }
+
+
+    else {
+
     return (
 
       <div className="vh-100 dt w-100" id="cardsplaylist">
@@ -100,7 +112,8 @@ PlayMusic =(event) =>{
 
       </div>
 
-    );
+          );
+    }
 
   }
 

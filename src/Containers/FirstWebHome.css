@@ -4,6 +4,7 @@
     white-space: wrap;
     text-justify: auto;
     max-width: 100rem;
+    padding-top: 60px;
 }
 .first-h1{
     display: block;
@@ -11,7 +12,11 @@
     font-weight: bold;
     text-align: center;
 }
-
+.btn{
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* .buttonTrue {
     background-color:rgb(29, 28, 28);
     border:none;
