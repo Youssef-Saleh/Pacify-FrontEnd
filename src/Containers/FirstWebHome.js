@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import CardList from '../Components/FavouriteArtistCardList';
 import './FirstWebHome.css';
 import {connect} from 'react-redux'
-
+import {Link , Redirect} from 'react-router-dom'
 const MapStateToProps = (state) =>{
     return {
         Artists: state.recommend.artists,
@@ -20,6 +20,7 @@ class FirstWebHome extends Component{
         super(props)
         this.state={
            list:[],
+           Submitted:false
         }
         // this.handleClick = this.handleClick.bind(this);
     }
@@ -62,6 +63,7 @@ class FirstWebHome extends Component{
         }
         };
         fetch('http://localhost:5000/select/artists', requestOptions)
+        this.setState({Submitted:true})
         // .then(response => {
         //     console.log(response)
         //     return response.json()
@@ -72,6 +74,7 @@ class FirstWebHome extends Component{
         // });
     }
     render(){
+        if(this.state.Submitted){return<Redirect to='../WebFrame/Home'></Redirect>}
         return(
             <div className='first-home tc'> 
                 <h1 className='first-h1'> Choose 3 or more artists you like. </h1>
