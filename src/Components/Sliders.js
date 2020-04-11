@@ -11,6 +11,12 @@ var checkvisible;
 
 
 class Sliders extends Component {
+    /**
+ * Represents a book.
+ * @constructor
+ * @param {checkvisible} title - The slider which is active.
+ * 
+ */
 
     handelindexchange =(event)=>{
 

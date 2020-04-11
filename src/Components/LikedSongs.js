@@ -22,10 +22,12 @@ const MapDispatchToProps = (dispatch) =>{
 }
 
 class LikedSongs extends Component{
+  
 toggle=(event)=>{
 
     console.log("blabla")
 }
+ /** This is a function to toggle between 2 icons in the liked songs */
 revert=()=>{
     var x= document.getElementById("music")
     x.style.display="block"
@@ -65,6 +67,9 @@ componentDidMount(){
 // }).then(users=>{
 //   this.setState({songs:users});
 // });
+
+
+/** This is the fetching part. */
 const requestOptions = {
       method: 'GET',
       headers: { 
@@ -72,6 +77,7 @@ const requestOptions = {
       'authorization': sessionStorage.getItem('token'),
       'Accept': 'application/json'},
       }
+      
   fetch('http://localhost:5000/likedSongs',requestOptions).then(response=>{
     return response.json();
   }).then(users=>{
