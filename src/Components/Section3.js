@@ -2,7 +2,13 @@ import React from 'react';
 import alldevices from '../alldevices.svg';
 import './Section3.css'
 
-
+/**
+ * @file Third section in Download Page, listen to music everywhere
+ *
+ * @module Static_Section3_Download_Page
+ * @extends Component
+ * 
+ */
 
 const Section3 =() => {
 

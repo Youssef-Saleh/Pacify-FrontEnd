@@ -5,15 +5,13 @@ import instas from '../insta.png';
 import facebook from '../facebook1.png';
 import twitter from '../twitter1.png';
 
-
 /**
- * @file Footer About for Home Page
+ * @file Fourth section in Download Page, Footer and in Home page
  *
- * @module Static_About
+ * @module Static_Footer_Download_Page_and_Home_page
  * @extends Component
  * 
  */
-
 
 
 const AboutS=()=>{

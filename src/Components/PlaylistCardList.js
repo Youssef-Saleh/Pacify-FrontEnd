@@ -2,6 +2,20 @@ import React from 'react';
 import PlaylistCards from './PlaylistCards';
 
 
+/**
+ * @file Playlist Cardlist
+ *
+ * @module Playlist_Cardlist
+ * @extends Component
+ * 
+ */
+
+  /**
+  * @name Playlist_Cardlist 
+  * @property {Array} likedsongsdata provides data of liked songs, in the form of array of objects
+  * @property {Array} playlistsdata provides data of playlist cards, in the form of array of objects
+  */
+
 const PlaylistCardList=({likedsongsdata,playlistsdata,Music}) => {
 
       return (
