@@ -4,6 +4,12 @@ import Modal from 'react-bootstrap/Modal';
 import './InputCreate.css';
 import HeartIcon from "./HeartIcon"
 import ReactDOM from 'react-dom';
+/**
+ * @file input create is a component that is responsible for the request of the createplaylist
+ *
+ * @module inputcreate
+ * @extends Component
+ */
 var check
 const $ = window.$;
 
