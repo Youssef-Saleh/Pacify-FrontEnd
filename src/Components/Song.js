@@ -14,6 +14,8 @@ function tog(){
 
     console.log("blah")
 }
+
+/** function to connect between the song and the player */
 const dispatch = useDispatch()
 {console.log({link})}
         return(

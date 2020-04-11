@@ -20,7 +20,7 @@ const $ = window.$;
         this.setState({[event.target.name]: event.target.value })
         console.log(this.state.data)
     }
-
+/** function to send the playlist name to the backend */
     onSubmit(e) {
        
         console.log( this.refs.ayhaga.value);
@@ -46,6 +46,8 @@ const $ = window.$;
                 })
         
     }
+    
+/** function to close the modal */
      Close(){
 
         document.getElementById('mod').style.display="none";
