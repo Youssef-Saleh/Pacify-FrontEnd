@@ -4,6 +4,18 @@ import iconS from '../iconS.JPG';
 import instas from '../insta.png';
 import facebook from '../facebook1.png';
 import twitter from '../twitter1.png';
+
+
+/**
+ * @file Footer About for Home Page
+ *
+ * @module Static_About
+ * @extends Component
+ * 
+ */
+
+
+
 const AboutS=()=>{
 
 

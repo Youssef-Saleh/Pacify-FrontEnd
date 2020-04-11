@@ -1,5 +1,16 @@
 import React from 'react'
 import './Home.css';
+
+
+/**
+ * @file Home Section
+ *
+ * @module Static_Home
+ * @extends Component
+ * 
+ */
+
+
 const Home = () => {
     return (
         
