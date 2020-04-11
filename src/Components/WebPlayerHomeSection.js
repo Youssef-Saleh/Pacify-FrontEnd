@@ -2,6 +2,14 @@ import React, {Component} from 'react';
 import CardList from './MoodCardList';
 import '../Components/WebPlayerHome.css';
 
+/**
+ * @file WebPlayer Home Section 
+ *
+ * The Component is just returns a section in WebPlayer HomePage
+ *  @module WebPlayer-HomeSection
+ * @extends Component
+ * 
+ */
 const WebPlayerHomeSection = ({title,des,type}) =>{
     return(
         <div className='web-home'>

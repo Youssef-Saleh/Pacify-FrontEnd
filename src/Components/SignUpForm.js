@@ -2,6 +2,28 @@ import React, { Component } from 'react';
 import './SignUp.css';
 import {Link,Redirect} from 'react-router-dom'
 
+/**
+ * @file SignUp Form 
+ *
+ * @module Static_SignUpForm
+ * @extends Component
+ * 
+ */
+/**
+  * @name SignUp_Form 
+  * @property {String} email input parameter 
+  * @property {String} confirmEmail input parameter 
+  * @property {String} password input parameter
+  * @property {String} nickname input parameter 
+  * @property {String} gender input parameter 
+  * @property {Number} date input parameter 
+  * @property {String} emailError is used for validating user's email  address
+  * @property {String} passwordError is used for validating user's password 
+  * @property {String} nickError is used for validating user's nickname
+  * @property {String} conFirmError is used for validating user's confirmEmail
+  * @property {String} genderError is used for validating user's gender
+  * @property {Boolean} SignedUp SignedUp equals to true if the user enters all the information correct
+  */
 
 class SignUpForm extends Component{
     constructor(){

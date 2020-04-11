@@ -1,6 +1,23 @@
 import React, { Component } from 'react';
 import './Login.css';
 import {Link , Redirect} from 'react-router-dom'
+/**
+ * @file Login Form 
+ *
+ * @module Static_LoginForm
+ * @extends Component
+ * 
+ */
+/**
+  * @name Login_Form 
+  * @property {String} email input parameter 
+  * @property {String} password input parameter
+  * @property {String} emailError is used for validating user's email  address
+  * @property {String} passwordError is used for validating user's password 
+  * @property {Boolean} LoggedIn logging equals to true if the user enters the correct password and email
+  */
+
+ 
 class LoginForm extends Component{
     constructor(props){
         super(props)

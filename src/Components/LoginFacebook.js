@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import './Login.css';
 import facebook from '../Facebook_Icon.png';
 
+
+/**
+ * @file Login with Facebook
+ *
+ * It contains Facebook Button 
+ * @module Static_Login-Facebook-Button
+ * @extends Component
+ * 
+ */
+
 class LoginFacebook extends Component{
     render(){
         return(

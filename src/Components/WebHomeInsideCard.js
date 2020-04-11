@@ -1,6 +1,15 @@
 import React from 'react';
 import './WebHomeInsideCard.css';
 
+
+/**
+ * @file WebHomeInsideCard
+ *
+ * The Component is just a card for the page when the user clicks on the homepage card.
+ * @module WebHomeInsideCard
+ * @extends Component
+ * 
+ */
 const WebHomeInsideCard=({id,image,Title}) =>{
     return (       
         <div className=" pt5 ">

@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 import './Login.css';
 import {Link , Redirect} from 'react-router-dom'
+
+/**
+ * @file Login Footer
+ *
+ * It contains the Sign Up button if the user does not have an account 
+ * @module Static_LoginFooter
+ * @extends Component
+ * 
+ */
+
 class LoginFooter extends Component{
     render(){
         return(

@@ -3,6 +3,16 @@ import Card from './FavouriteArtistCard';
 import './FavouriteArtist.css';
 import { Artists } from '../Components/Artists';
 
+
+/**
+ * @file Favourite Artist CardList
+ *
+ * The Component is just returns a list of Artist Cards
+ * @module  FavouriteArtist-CardList
+ * @extends Component
+ * 
+ */
+
 const FavouriteArtistCardList =({list}) =>{
     return(
         <div >

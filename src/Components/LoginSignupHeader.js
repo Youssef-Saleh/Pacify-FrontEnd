@@ -4,6 +4,15 @@ import './Login.css';
 import { Link } from 'react-router-dom'
 
 
+/**
+ * @file Login and Sign Up Header 
+ *
+ * The component is just contains the logo and the title.
+ * @module Static_Login-SignUp-Header
+ * @extends Component
+ * 
+ */
+
 class LoginSignupHeader extends Component{
     render(){
         return(

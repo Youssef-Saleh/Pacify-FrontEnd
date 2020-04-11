@@ -2,6 +2,15 @@ import React,{useState} from 'react'
 import './FavouriteArtist.css';
 import {useSelector,useDispatch} from 'react-redux'
 import {RecommendArtist} from '../Redux/Recommend/RecommendAction'
+
+/**
+ * @file Favourite Artist Card
+ *  This card appears for the user's first LogIn 
+ * @module  FavouriteArtist-Card
+ * @extends Component
+ * 
+ */
+
 const FavouriteArtistCard=({id,image,name})=>{
     const dispatch=useDispatch()
     const [clicked,setclicked] = useState(false)

@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import './SignUp.css';
-
+/**
+ * @file SignUp with Facebook
+ *
+ * @module Static_SignUpFacebook
+ * @extends Component
+ * 
+ */
 class SignFacebook extends Component{
     render(){
         return(
