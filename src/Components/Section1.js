@@ -1,9 +1,21 @@
 import React from 'react';
-// import capture from './capture.PNG';
 import laptop from '../laptop.svg';
-// import 'tachyons';
 import './Section1.css'
 import NavBar from './NavBar'
+
+
+
+/**
+ * @file First section in Download Page, download Spotify from here
+ *
+ * @module Static_Section1_Download_Page
+ * @extends Component
+ * 
+ */
+
+
+
+
 
 const Section1=() =>{
 
@@ -42,5 +54,6 @@ return (
 );
 
 }
+
 
 export default Section1;

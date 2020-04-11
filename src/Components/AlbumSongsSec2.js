@@ -5,6 +5,20 @@ import {Stream} from '../Redux/songs/StreamActions'
 // import '../Containers/PlaylistInsidePage.css';
 
 
+/**
+ * @file Second section inside album page that shows album songs
+ * @module Album_Inside_Section_2
+ * @extends Component
+ * 
+ */
+
+  /**
+  * @name Album_Inside_Section_2
+  * @property {Paramter} url link of album's songs
+  * @property {Paramter} name Name of album's song
+  * @property {Paramter} artist Name of song's artist
+  * @property {Paramter} mood   Type of mood of the song
+  */
 
 const AlbumSongsSec2=({id,url,artist,album ,name,mood}) =>{
 

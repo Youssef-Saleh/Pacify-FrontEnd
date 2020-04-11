@@ -94,7 +94,7 @@ PlayMusic =(event) =>{
 
     return (
 
-      <div className="vh-100 dt w-100" id="cardsplaylist">
+      <div className="vh-100 dt w-100" >
           {/* <PlaylistHeader></PlaylistHeader> */}
 
                 <h1 className='pl3 fw7 pt5 f3 lh-title white'> Playlists</h1>

@@ -1,5 +1,18 @@
 import React from 'react';
 import SectionCard from '../Components/SearchSectionCard';
+/**
+ * @file in Search section cardList
+ *
+ * @module CardList
+ * @extends Component
+ * 
+ */
+/**
+  * @name Section_Card_List
+  * @property {Array} SectionCardTypes  list in search type section cards
+ 
+  */
+
 const SectionCardList = ({ SectionCardTypes }) => {
     return (
     <div>

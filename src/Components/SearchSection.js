@@ -4,6 +4,22 @@ import './SearchSection.css'
 import { SectionCardTypes } from './SearchSectionCardTypes'
 import { playlistsdata } from './playlistsdata';
 import SectionCardList from '../Components/SearchSectionCardList';
+
+
+/**
+ * @file Section 
+ *
+ * @module Section
+ * @extends Component
+ * 
+ */
+/**
+  * @name Search_Section
+  * @property {Paramter} name  name of type
+  * @property {Paramter} title Name of the section
+  * @property {Array} playlist Array of play lists in section
+  */
+
 const Section = ({ name,title,playlist }) => {
     return (
         <div className={name}>

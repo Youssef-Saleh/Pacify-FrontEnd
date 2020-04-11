@@ -65,6 +65,7 @@ class Pages extends Component{
     render(){ 
         return (
             <div >
+                <h1>{this.state.name}</h1>
                     <Section title="Popular Playlists" name={this.state.name} playlist={this.state.specificCard}/>
                     {/* <Section title="New Release"playlist={playlistsdata}/> */}
             </div>
