@@ -5,6 +5,16 @@ import microsoft from '../microsoft.PNG';
 import './Section2.css'
 
 
+
+/**
+ * @file Second section in Download Page, download Spotify from Appstore, Google Play or Microsoft
+ *
+ * @module Static_Section2_Download_Page
+ * @extends Component
+ * 
+ */
+
+
 const Section2 =() => {
 
 

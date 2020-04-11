@@ -2,7 +2,6 @@ import React from 'react';
 import './PlaylistCards.css';
 import {Link} from 'react-router-dom';
 
-//import { Title } from 'react-bootstrap/lib/Modal';
 
 
 
@@ -11,6 +10,27 @@ import {Link} from 'react-router-dom';
 //         console.log("playyy")
 //         console.log(playlistdata)
 //     }
+
+
+/**
+ * @file Playlist Card
+ *
+ * @module Playlist_Card
+ * @extends Component
+ * 
+ */
+
+  /**
+  * @name Playlist_Card
+  * @property {Boolean} firstcard for checking, to return the first different card with the repeated ones
+  * @property {Paramter} ID  ID of a playlist card
+  * @property {Paramter} artistL Name of the artist in liked songs
+  * @property {Paramter} songnameL Name of the liked songs
+  * @property {Paramter} url     link of the liked song
+  * @property {Paramter} name Name of the playlist
+  * @property {Paramter} description Description of the playlist
+  */
+
 
 const PlaylistCards=({firstcard=true,id,ID,artistL,songnameL,nameL,StreamMusic,url,name,description}) =>{
 

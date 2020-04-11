@@ -4,6 +4,16 @@ import iconS from '../iconS.JPG';
 import instas from '../insta.png';
 import facebook from '../facebook1.png';
 import twitter from '../twitter1.png';
+
+/**
+ * @file Fourth section in Download Page, Footer
+ *
+ * @module Static_Footer_Download_Page
+ * @extends Component
+ * 
+ */
+
+
 const AboutS=()=>{
 
 

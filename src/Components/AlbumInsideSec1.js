@@ -2,6 +2,19 @@ import React from 'react';
 import './AlbumInsideSec1.css';
 
 
+/**
+ * @file First section inside album page that shows album image and name
+ * @module Album_Inside_Section_1
+ * @extends Component
+ * 
+ */
+
+  /**
+  * @name Album_Inside_Section_1
+  * @property {Paramter} urlA link of album image
+  * @property {Paramter} nameA Name of album
+  */
+
 
 const AlbumInsideSec1=({ID,urlA,nameA}) =>{
 
