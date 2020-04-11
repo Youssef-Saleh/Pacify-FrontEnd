@@ -28,7 +28,6 @@ class WebPlayerHome extends Component{
         .then((users)=>{
             this.setState({types:users, loaded:true})
             console.log(users)
-           
         });
         
     }
