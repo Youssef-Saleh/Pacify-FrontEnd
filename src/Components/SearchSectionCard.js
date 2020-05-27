@@ -1,21 +1,6 @@
 import React from 'react';
 import './SearchSectionCard.css'
-
-/**
- * @file Section card
- *
- * @module Section_Card
- * @extends Component
- * 
- */
-/**
-  * @name Search_Section_Card
-  * @property {Paramter} p  description
-  * @property {Paramter} tilte Name of the playlist
-  * @property {Paramter} source link for image of the card
-  */
-
-const SectionCard = ({title,source,p}) => {
+const SectionCard = ({id,title,source,p}) => {
     return (
        <div id="Section" className="  br3 pa3 ma2  bw2 shadow-5">
           <div draggable="true">

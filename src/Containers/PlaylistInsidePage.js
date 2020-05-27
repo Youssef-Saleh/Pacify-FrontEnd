@@ -64,7 +64,7 @@ const requestOptions = {
   'Accept': 'application/json'},
   }
 
-  fetch('http://localhost:5000/likedPlaylists ',requestOptions)
+  fetch('http://23.96.41.241/api/likedPlaylists ',requestOptions)
   .then(res => res.json())
   .then(function(res) {
       res.forEach(element => {
@@ -90,7 +90,7 @@ fetching=(value)=>{
       'Accept': 'application/json'},
       }
 
-  fetch(`http://localhost:5000/playlist/${value[this.props.match.params.id]._id}`,requestOptions)
+  fetch(`http://23.96.41.241/api/playlist/${value[this.props.match.params.id]._id}`,requestOptions)
   .then(response=>response.json())
   .then(songs=> 
       this.setState({playlistsongsdata:songs}));

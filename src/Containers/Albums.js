@@ -30,7 +30,7 @@ class Album extends Component {
     'Accept': 'application/json'},
     }
 
-fetch('http://localhost:5000/likedAlbums',requestOptions)
+fetch('http://23.96.41.241/api/likedAlbums',requestOptions)
 
 .then(response=>{
   return response.json();

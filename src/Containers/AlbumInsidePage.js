@@ -44,7 +44,7 @@ componentDidMount(){
     'Accept': 'application/json'},
     }
   
-    fetch('http://localhost:5000/likedAlbums',requestOptions)
+    fetch('http://23.96.41.241/api/likedAlbums',requestOptions)
     
     .then(res => res.json())
     .then(function(res) {
@@ -72,7 +72,7 @@ fetching=(value)=>{
       'Accept': 'application/json'},
       }
 
-  fetch(`http://localhost:5000/album/${value[this.props.match.params.id]._id}`,requestOptions)
+  fetch(`http://23.96.41.241/api/album/${value[this.props.match.params.id]._id}`,requestOptions)
   .then(response=>response.json())
   .then(songs=>{
       this.setState({albumsongsdata:songs});

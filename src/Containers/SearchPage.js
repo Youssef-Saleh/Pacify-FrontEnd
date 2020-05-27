@@ -12,8 +12,7 @@ class SearchPage extends Component{
       types:[],
       clickid:"7",
       topcardname:'',
-      id:'',
-      loaded:false
+      id:''
     }
 
   }
@@ -27,7 +26,7 @@ class SearchPage extends Component{
       'authorization': sessionStorage.getItem('token'),
       'Accept': 'application/json'},
       }
-    fetch('http://localhost:5000/browse ',requestOptions)
+    fetch('http://23.96.41.241/api/browse ',requestOptions)
     .then(response=>response.json())
     .then(function(res) {
       res.forEach(element => {
@@ -35,18 +34,13 @@ class SearchPage extends Component{
 });
 })
 
-.then( this.setState({types:valueArray,loaded:true}))
+.then( this.setState({types:valueArray}))
 .then(()=>this.setState({topcardname:this.state.types[7].name}))
 .then(()=>this.setState({id:"7"}))
  
   }
 
   render(){
-    if(this.state.loaded == false){
-      return(
-          <h1 className="loading-h1">loading</h1>
-     )
-  }
     return(
       <div className="vh-100 dt w-100 pl2">
         <h1 className="pl4 fw7 pt4 f3 lh-title white  ">Your top genres</h1>

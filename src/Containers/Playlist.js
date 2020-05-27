@@ -33,7 +33,7 @@ componentDidMount(){
     'Accept': 'application/json'},
     }
 
-// fetch('http://localhost:5000/likedPlaylists',requestOptions)
+// fetch('http://23.96.41.241/api/likedPlaylists',requestOptions)
 
 // .then(response=>{
 //   return response.json();
@@ -44,8 +44,8 @@ componentDidMount(){
 // });
 
 Promise.all([
-  fetch('http://localhost:5000/likedPlaylists',requestOptions),
-  fetch('http://localhost:5000/likedSongs',requestOptions)
+  fetch('http://23.96.41.241/api/likedPlaylists',requestOptions),
+  fetch('http://23.96.41.241/api/likedSongs',requestOptions)
 ])
 
 .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
@@ -94,7 +94,7 @@ PlayMusic =(event) =>{
 
     return (
 
-      <div className="vh-100 dt w-100" >
+      <div className="vh-100 dt w-100" id="cardsplaylist">
           {/* <PlaylistHeader></PlaylistHeader> */}
 
                 <h1 className='pl3 fw7 pt5 f3 lh-title white'> Playlists</h1>

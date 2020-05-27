@@ -38,7 +38,7 @@ class FirstWebHome extends Component{
             'Accept': 'application/json',
             'authorization' : sessionStorage.getItem('token')}
         };
-        fetch('http://localhost:5000/select/artists', requestOptions)
+        fetch('http://23.96.41.241/api/select/artists', requestOptions)
         .then(response => {
             console.log(response)
             return response.json()
@@ -62,7 +62,7 @@ class FirstWebHome extends Component{
                 })
         }
         };
-        fetch('http://localhost:5000/select/artists', requestOptions)
+        fetch('http://23.96.41.241/api/select/artists', requestOptions)
         this.setState({Submitted:true})
         // .then(response => {
         //     console.log(response)

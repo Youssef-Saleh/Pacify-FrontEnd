@@ -2,19 +2,6 @@ import React from 'react';
 import AlbumCards from './AlbumCards';
 
 
-/**
- * @file Album Cardlist
- *
- * @module Album_Cardlist
- * @extends Component
- * 
- */
-
-  /**
-  * @name Album_Cardlist 
-  * @property {Array} albumsdata provides data of an album, in the form of array of objects
-  */
-
 const AlbumCardList =({albumsdata,MusicA}) => {
 
     return(

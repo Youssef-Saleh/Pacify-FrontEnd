@@ -32,7 +32,7 @@ class Pages extends Component{
             'authorization': sessionStorage.getItem('token'),
             'Accept': 'application/json'},
             }
-        fetch('http://localhost:5000/browse ',requestOptions)
+        fetch('http://23.96.41.241/api/browse ',requestOptions)
         .then(res => res.json())
         .then(function(res) {
             res.forEach(element => {
@@ -55,7 +55,7 @@ class Pages extends Component{
             'authorization': sessionStorage.getItem('token'),
             'Accept': 'application/json'},
             }
-        fetch(`http://localhost:5000/genre/${value[this.props.match.params.id]._id}`,requestOptions)
+        fetch(`http://23.96.41.241/api/genre/${value[this.props.match.params.id]._id}`,requestOptions)
         .then(response=>response.json())
         .then(properties=> 
             this.setState({specificCard:properties.playlists}));
@@ -65,7 +65,6 @@ class Pages extends Component{
     render(){ 
         return (
             <div >
-                <h1>{this.state.name}</h1>
                     <Section title="Popular Playlists" name={this.state.name} playlist={this.state.specificCard}/>
                     {/* <Section title="New Release"playlist={playlistsdata}/> */}
             </div>

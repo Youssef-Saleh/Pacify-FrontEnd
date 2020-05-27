@@ -44,15 +44,3 @@
 .nav-drop:hover{
     background-color: #282828;
 }
-.playlist:hover {
-
-    text-decoration: underline;
-    font-weight: 600;
-
-}
-
-.album:hover{
-
-    text-decoration: underline;
-    font-weight: 600;
-}

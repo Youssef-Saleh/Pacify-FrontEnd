@@ -2,18 +2,6 @@ import React from 'react';
 import './PlaylistInsideSec1.css';
 
 
-/**
- * @file First section inside playlist page that shows playlist image and name
- * @module Playlist_Inside_Section_1
- * @extends Component
- * 
- */
-
-  /**
-  * @name Playlist_Inside_Section_1
-  * @property {Paramter} url link of playlist image
-  * @property {Paramter} name Name of playlist
-  */
 
 const PlaylistInsideSec1=({id,url,name}) =>{
 
@@ -22,7 +10,7 @@ const PlaylistInsideSec1=({id,url,name}) =>{
               
         <div className=" pt5 ">
             <div className='tc'>
-            <img src={url} alt=" no image" className=" w-70 h-70 image3"/>
+            <img src={url} alt=" no image" className=" w-60 h-60 image3"/>
             
             <div className="playlistName pt2">{name}</div>
             <div className="playlistCreator pt1 pb3">Spotify</div>

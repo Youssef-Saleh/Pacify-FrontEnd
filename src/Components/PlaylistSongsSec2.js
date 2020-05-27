@@ -6,24 +6,6 @@ import {Stream} from '../Redux/songs/StreamActions'
 import {LoadSongs} from '../Redux/songs/StreamActions'
 import cairoke from './cairokee.mp3'
 
-
-/**
- * @file Second section inside playlist page that shows playlist songs
- * @module Playlist_Inside_Section_2
- * @extends Component
- * 
- */
-
-  /**
-  * @name Playlist_Inside_Section_2
-  * @property {Paramter} url link of playlist's songs
-  * @property {Paramter} name Name of playlist's song
-  * @property {Paramter} artist Name of song's artist
-  * @property {Paramter} genre Name of song's genre
-  */
-
-
-
 const PlaylistSongsSec2=({id,url,genre,artist,album ,name}) =>{
 
 const Dispatch=useDispatch()

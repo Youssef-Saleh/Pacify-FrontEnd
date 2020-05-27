@@ -4,22 +4,6 @@ import './PlaylistCards.css';
 import {Link} from 'react-router-dom';
 
 
-/**
- * @file Album Card
- *
- * @module Album_Card
- * @extends Component
- * 
- */
-
-  /**
-  * @name Album_Card
-  * @property {Paramter} id  ID of an album card
-  * @property {Paramter} artist Name of the artist singing the album
-  * @property {Paramter} url    Image of the album
-  * @property {Paramter} name Name of the album
-  * @property {Paramter} description Description of the album
-  */
 
 const AlbumCards=({id,url,name,artist,description,StreamMusicA}) =>{
 

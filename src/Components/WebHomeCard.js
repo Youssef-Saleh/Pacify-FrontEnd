@@ -9,7 +9,7 @@ import Desktop from '../desktop.png'
 import {useDispatch,useSelector} from 'react-redux'
 import {LoadSongs} from '../Redux/songs/StreamActions'
 
-export const Card = ({id,image,title,text}) =>{
+const Card = ({id,image,title,text}) =>{
     const dispatch = useDispatch()
     console.log(title)
     return(

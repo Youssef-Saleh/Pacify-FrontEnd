@@ -20,7 +20,7 @@ class WebPlayerHome extends Component{
             'Accept': 'application/json',
             'authorization' : sessionStorage.getItem('token')}
         };
-        fetch('http://localhost:5000/home', requestOptions)
+        fetch('http://23.96.41.241/api/home', requestOptions)
         .then(response => {
             console.log(response)
             return response.json()
@@ -28,6 +28,7 @@ class WebPlayerHome extends Component{
         .then((users)=>{
             this.setState({types:users, loaded:true})
             console.log(users)
+           
         });
         
     }

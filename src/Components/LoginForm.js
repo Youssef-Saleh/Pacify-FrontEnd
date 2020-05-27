@@ -1,23 +1,6 @@
 import React, { Component } from 'react';
 import './Login.css';
 import {Link , Redirect} from 'react-router-dom'
-/**
- * @file Login Form 
- *
- * @module Static_LoginForm
- * @extends Component
- * 
- */
-/**
-  * @name Login_Form 
-  * @property {String} email input parameter 
-  * @property {String} password input parameter
-  * @property {String} emailError is used for validating user's email  address
-  * @property {String} passwordError is used for validating user's password 
-  * @property {Boolean} LoggedIn logging equals to true if the user enters the correct password and email
-  */
-
- 
 class LoginForm extends Component{
     constructor(props){
         super(props)
@@ -85,7 +68,7 @@ class LoginForm extends Component{
                     'password':password})
             };
             console.log(requestOptions.body)
-            fetch('http://localhost:5000/login', requestOptions)
+            fetch('http://23.96.41.241/api/login', requestOptions)
             .then(console.log("fetching successfuly"))
             .then(response => {
                 return response.json()
@@ -101,7 +84,7 @@ class LoginForm extends Component{
     }
     componentDidMount(){
         if(this.state.MockBack){
-        fetch('http://localhost:5000/song/5e8c31dc3d162e0ea00780f3')   
+        fetch('http://23.96.41.241/api/song/5e8c31dc3d162e0ea00780f3')   
 
         .then(response=> {
 

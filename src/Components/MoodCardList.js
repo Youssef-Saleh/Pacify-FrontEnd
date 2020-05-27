@@ -1,15 +1,6 @@
 import React from 'react';
 import Card from './WebHomeCard';
 
-
-/**
- * @file Web Player Home CardList
- *
- * The Component is just returns a list of cards.
- * @module WebPlayer-Home-CardList
- * @extends Component
- * 
- */
 const MoodCardList =({Mood}) =>{
     return(
         <div >
