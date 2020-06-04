@@ -46,7 +46,7 @@ componentDidMount(){
         'authorization': sessionStorage.getItem('token'),
         'Accept': 'application/json'},
         }
-    fetch('http://23.96.41.241/api/playlist/:id',requestOptions).then(response=>{
+    fetch('http://13.72.75.179/api/playlist/:id',requestOptions).then(response=>{
       return response.json();
     }).then(users=>{
       this.setState({WebHomeInsideSongs:users});

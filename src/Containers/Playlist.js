@@ -33,7 +33,7 @@ componentDidMount(){
     'Accept': 'application/json'},
     }
 
-// fetch('http://23.96.41.241/api/likedPlaylists',requestOptions)
+// fetch('http://13.72.75.179/api/likedPlaylists',requestOptions)
 
 // .then(response=>{
 //   return response.json();
@@ -44,8 +44,8 @@ componentDidMount(){
 // });
 
 Promise.all([
-  fetch('http://23.96.41.241/api/likedPlaylists',requestOptions),
-  fetch('http://23.96.41.241/api/likedSongs',requestOptions)
+  fetch('http://13.72.75.179/api/likedPlaylists',requestOptions),
+  fetch('http://13.72.75.179/api/likedSongs',requestOptions)
 ])
 
 .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))

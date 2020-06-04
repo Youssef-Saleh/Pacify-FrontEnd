@@ -68,7 +68,7 @@ class LoginForm extends Component{
                     'password':password})
             };
             console.log(requestOptions.body)
-            fetch('http://23.96.41.241/api/login', requestOptions)
+            fetch('http://13.72.75.179/api/login', requestOptions)
             .then(console.log("fetching successfuly"))
             .then(response => {
                 return response.json()
@@ -84,7 +84,7 @@ class LoginForm extends Component{
     }
     componentDidMount(){
         if(this.state.MockBack){
-        fetch('http://23.96.41.241/api/song/5e8c31dc3d162e0ea00780f3')   
+        fetch('http://13.72.75.179/api/song/5e8c31dc3d162e0ea00780f3')   
 
         .then(response=> {
 

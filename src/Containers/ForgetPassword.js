@@ -45,7 +45,7 @@ class ForgetPassword extends Component{
                 body: new URLSearchParams({
                     'emailUsername':email,})
             };
-            fetch('http://23.96.41.241/api/password-reset', requestOptions)
+            fetch('http://13.72.75.179/api/password-reset', requestOptions)
             .then(response => {
                 console.log(response)
                 return response.json()
