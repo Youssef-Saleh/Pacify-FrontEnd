@@ -95,7 +95,7 @@ class SignUpForm extends Component{
                 })
             };
             console.log(requestOptions.body)
-            fetch('http://23.96.41.241/api/signup', requestOptions)
+            fetch('http://13.72.75.179/api/signup', requestOptions)
             .then(console.log("fetching successfuly"))
             .then(response => {
                 if (response.status < 200 || response.status >= 300) {

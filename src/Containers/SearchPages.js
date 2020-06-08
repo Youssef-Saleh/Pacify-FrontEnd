@@ -32,7 +32,7 @@ class Pages extends Component{
             'authorization': sessionStorage.getItem('token'),
             'Accept': 'application/json'},
             }
-        fetch('http://23.96.41.241/api/browse ',requestOptions)
+        fetch('http://13.72.75.179/api/browse ',requestOptions)
         .then(res => res.json())
         .then(function(res) {
             res.forEach(element => {
@@ -55,7 +55,7 @@ class Pages extends Component{
             'authorization': sessionStorage.getItem('token'),
             'Accept': 'application/json'},
             }
-        fetch(`http://23.96.41.241/api/genre/${value[this.props.match.params.id]._id}`,requestOptions)
+        fetch(`http://13.72.75.179/api/genre/${value[this.props.match.params.id]._id}`,requestOptions)
         .then(response=>response.json())
         .then(properties=> 
             this.setState({specificCard:properties.playlists}));

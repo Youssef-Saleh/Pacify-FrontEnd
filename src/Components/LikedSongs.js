@@ -58,7 +58,7 @@ componentDidMount(){
 //     body: new URLSearchParams({
 //         'song':this.props.LikedSong,})
 // };
-// fetch('http://23.96.41.241/api/LikedSongs', requestOptions)
+// fetch('http://13.72.75.179/api/LikedSongs', requestOptions)
 // .then(response => {
 //     return response.json()
 //     console.log(response)
@@ -73,7 +73,7 @@ const requestOptions = {
       'authorization': sessionStorage.getItem('token'),
       'Accept': 'application/json'},
       }
-  fetch('http://23.96.41.241/api/likedSongs',requestOptions).then(response=>{
+  fetch('http://13.72.75.179/api/likedSongs',requestOptions).then(response=>{
     return response.json();
   }).then(users=>{
     this.setState({songs:users});

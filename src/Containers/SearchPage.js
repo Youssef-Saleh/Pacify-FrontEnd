@@ -26,7 +26,7 @@ class SearchPage extends Component{
       'authorization': sessionStorage.getItem('token'),
       'Accept': 'application/json'},
       }
-    fetch('http://23.96.41.241/api/browse ',requestOptions)
+    fetch('http://13.72.75.179/api/browse ',requestOptions)
     .then(response=>response.json())
     .then(function(res) {
       res.forEach(element => {
